@@ -73,6 +73,7 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
+        public static final int alterar=0x7f060019;
         public static final int apagar=0x7f060018;
         public static final int app_name=0x7f060000;
         public static final int atualizarCliente=0x7f06000b;
@@ -83,6 +84,7 @@ public final class R {
         public static final int cep=0x7f060011;
         public static final int cpf=0x7f060012;
         public static final int endereco=0x7f060010;
+        public static final int excluir=0x7f06001a;
         public static final int excluirCliente=0x7f06000d;
         /**  strings do MENUPRINCIPAL 
          */
@@ -93,7 +95,12 @@ public final class R {
         public static final int gerenciarVendas=0x7f060006;
         public static final int gerenciarVendedor=0x7f060003;
         public static final int menuprincipal=0x7f060008;
-        /**  strings do GERENCIARCLIENTE -> CADASTRARCLIENTE 
+        /**  strings do GERENCIARCLIENTE -> 
+    	 CADASTRARCLIENTE 
+    	 ATUALIZARCLINTE
+    	 BUSCARCLIENTE
+    	 EXCLUIRCLIENTE
+    
          */
         public static final int nome=0x7f06000f;
         public static final int numeroCasa=0x7f060015;

@@ -21,7 +21,12 @@
     <string name="excluirCliente">EXCLUIR CLIENTE</string>
     <string name="title_activity_cadastrar_cliente">Cadastrar Cliente</string>
     
-    <!-- strings do GERENCIARCLIENTE -> CADASTRARCLIENTE -->
+    <!-- strings do GERENCIARCLIENTE -> 
+    	 CADASTRARCLIENTE 
+    	 ATUALIZARCLINTE
+    	 BUSCARCLIENTE
+    	 EXCLUIRCLIENTE
+    -->
     <string name="nome">NOME:</string>
     <string name="endereco">ENDEREÇO:</string>
     <string name="cep">CEP:</string>
@@ -30,9 +35,11 @@
     <string name="telefone">TELEFONE:</string>
     <string name="numeroCasa">NUMERO:</string>
     <string name="title_activity_novo_cliente">NOVO CLIENTE</string>
-    
-    <!-- strings do botão SALVAR e APAGAR -->
+   
+    <!-- strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR -->
     <string name="salvar">SALVAR</string>
     <string name="apagar">APAGAR</string>
+    <string name="alterar">ALTERAR</string>
+    <string name="excluir">EXCLUIR</string>
 
 </resources>
