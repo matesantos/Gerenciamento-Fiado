@@ -27,7 +27,8 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
-        android:text="@string/cadastrarCliente" />
+        android:text="@string/cadastrarCliente"
+        android:onClick="casdastrarCLiente" />
 
     <Button
         android:id="@+id/Button02"

@@ -54,6 +54,5 @@ public class MenuPrincipalActivity extends Activity {
     	Intent newIntent = new Intent(this,activityClass2);
     	startActivity(newIntent);
     }
-
     
 }
