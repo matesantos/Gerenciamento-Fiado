@@ -2,15 +2,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Black"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MenuPrincipalActivity" >
+    
+    <Button
+        android:id="@+id/menu_principal_gerenciar_vendas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menu_principal_gerenciar_contas"
+        android:layout_below="@+id/menu_principal_gerenciar_contas"
+        android:layout_marginTop="22dp"
+        android:text="@string/gerenciarVendas" />
+
+    <Button
+        android:id="@+id/menu_principal_gerenciar_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_menu_principal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="@string/gerenciarCliente" 
+        android:onClick="GerenciarCliente"/>
 
     <TextView
+        android:id="@+id/textView_menu_principal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="05dp"
+        android:text="@string/menuprincipal"
+        android:textColor="@color/White"
+        android:textColorLink="@color/White"
+        android:textSize="@dimen/tamanhoDaFonte" />
+
+    <Button
+        android:id="@+id/menu_principal_gerenciar_vendedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menu_principal_gerenciar_cliente"
+        android:layout_below="@+id/menu_principal_gerenciar_cliente"
+        android:layout_marginTop="16dp"
+        android:text="@string/gerenciarVendedor" />
+
+    <Button
+        android:id="@+id/menu_principal_gerenciar_produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menu_principal_gerenciar_vendedor"
+        android:layout_below="@+id/menu_principal_gerenciar_vendedor"
+        android:layout_marginTop="16dp"
+        android:text="@string/gerenciarProduto" />
+
+    <Button
+        android:id="@+id/menu_principal_gerenciar_contas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menu_principal_gerenciar_produto"
+        android:layout_below="@+id/menu_principal_gerenciar_produto"
+        android:layout_marginTop="16dp"
+        android:text="@string/gerenciarContas" />
+
+    <Button
+        android:id="@+id/menu_principal_configuracoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/menu_principal_gerenciar_vendas"
+        android:layout_below="@+id/menu_principal_gerenciar_vendas"
+        android:layout_marginTop="16dp"
+        android:text="@string/gerenciarConfiguracoes" />
 
 </RelativeLayout>
