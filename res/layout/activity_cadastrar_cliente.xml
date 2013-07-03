@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CadastrarClienteActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <QuickContactBadge
+        android:id="@+id/quickContactBadge1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/textView1" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/quickContactBadge1"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/quickContactBadge1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/nome" />
+
+    <Spinner
+        android:id="@+id/spinnerTelefone"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignTop="@+id/editText2" />
+
+    <TextView
+        android:id="@+id/cep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerTelefone"
+        android:layout_centerVertical="true"
+        android:text="@string/cep"
+        android:textColor="@color/White"
+        android:textSize="@dimen/tamanhoDosLabels" />
+
+    <EditText
+        android:id="@+id/TextFieldCEP"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/cep"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cep"
+        android:layout_alignBottom="@+id/cep"
+        android:layout_toRightOf="@+id/TextFieldCEP"
+        android:text="@string/numeroCasa"
+        android:textColor="@color/White"
+        android:textSize="@dimen/tamanhoDosLabels" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewRG"
+        android:layout_alignBottom="@+id/textViewRG"
+        android:layout_alignLeft="@+id/TextFieldCEP"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewRG"
+        android:layout_alignRight="@+id/editText2"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewRG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cep"
+        android:layout_below="@+id/TextFieldCEP"
+        android:layout_marginTop="27dp"
+        android:text="@string/rg"
+        android:textColor="@color/White"
+        android:textSize="@dimen/tamanhoDosLabels" />
+
+    <EditText
+        android:id="@+id/EditText01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignTop="@+id/TextViewCPF"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/TextViewCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewRG"
+        android:layout_below="@+id/editText3"
+        android:layout_marginTop="30dp"
+        android:text="@string/cpf"
+        android:textColor="@color/White"
+        android:textSize="@dimen/tamanhoDosLabels" />
+
+    <Button
+        android:id="@+id/salvarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/apagarCampos"
+        android:layout_alignBottom="@+id/apagarCampos"
+        android:layout_alignRight="@+id/EditText01"
+        android:text="@string/salvar" />
+
+    <Button
+        android:id="@+id/apagarCampos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EditText01"
+        android:layout_below="@+id/EditText01"
+        android:layout_marginTop="14dp"
+        android:text="@string/apagar" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TextFieldCEP"
+        android:layout_toRightOf="@+id/spinnerTelefone"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinnerTelefone"
+        android:layout_alignLeft="@+id/quickContactBadge1"
+        android:text="@string/telefone"
+        android:textColor="@color/White"
+        android:textSize="@dimen/tamanhoDosLabels" />
+
+    <TextView
+        android:id="@+id/TextViewEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_marginBottom="20dp"
+        android:text="@string/endereco"
+        android:textColor="@color/White"
+        android:textSize="@dimen/tamanhoDosLabels" />
+
+    <EditText
+        android:id="@+id/EditTextEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextViewEndereco"
+        android:layout_alignBottom="@+id/TextViewEndereco"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/apagarCampos"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+</RelativeLayout>

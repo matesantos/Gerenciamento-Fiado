@@ -3,7 +3,7 @@
 
     <string name="app_name">Gerenciamento-Fiado</string>
     <string name="action_settings">Settings</string>
-    
+
     <!-- strings do MENUPRINCIPAL -->
     <string name="gerenciarCliente">GERENCIAR CLIENTE</string>
     <string name="gerenciarVendedor">GERENCIAR VENDEDOR</string>
@@ -13,12 +13,26 @@
     <string name="gerenciarConfiguracoes">CONFIGURAÇÕES</string>
     <string name="menuprincipal">MENU PRINCIPAL</string>
     <string name="title_activity_gerenciar_cliente">GerenciarClienteActivity</string>
-    <string name="hello_world">Hello world!</string>
+
+    <!-- strings do GERENCIARCLIENTE -->
+    <string name="cadastrarCliente">CADASTRAR CLIENTE</string>
+    <string name="atualizarCliente">ATUALIZAR CLIENTE</string>
+    <string name="buscarCliente">BUSCAR CLIENTE</string>
+    <string name="excluirCliente">EXCLUIR CLIENTE</string>
+    <string name="title_activity_cadastrar_cliente">Cadastrar Cliente</string>
     
-     <!-- strings do GERENCIARCLIENTE -->
-     <string name="cadastrarCliente">CADASTRAR CLIENTE</string>
-     <string name="atualizarCliente">ATUALIZAR CLIENTE</string>
-     <string name="buscarCliente">BUSCAR CLIENTE</string>
-     <string name="excluirCliente">EXCLUIR CLIENTE</string>
+    <!-- strings do GERENCIARCLIENTE -> CADASTRARCLIENTE -->
+    <string name="nome">NOME:</string>
+    <string name="endereco">ENDEREÇO:</string>
+    <string name="cep">CEP:</string>
+    <string name="cpf">CPF:</string>
+    <string name="rg">RG:</string>
+    <string name="telefone">TELEFONE:</string>
+    <string name="numeroCasa">NUMERO:</string>
+    <string name="title_activity_novo_cliente">NOVO CLIENTE</string>
+    
+    <!-- strings do botão SALVAR e APAGAR -->
+    <string name="salvar">SALVAR</string>
+    <string name="apagar">APAGAR</string>
 
 </resources>
