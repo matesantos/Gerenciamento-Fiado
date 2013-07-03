@@ -3,6 +3,22 @@
 
     <string name="app_name">Gerenciamento-Fiado</string>
     <string name="action_settings">Settings</string>
+    
+    <!-- strings do MENUPRINCIPAL -->
+    <string name="gerenciarCliente">GERENCIAR CLIENTE</string>
+    <string name="gerenciarVendedor">GERENCIAR VENDEDOR</string>
+    <string name="gerenciarProduto">GERENCIAR PRODUTO</string>
+    <string name="gerenciarContas">GERENCIAR CONTAS</string>
+    <string name="gerenciarVendas">GERENCIAR VENDAS</string>
+    <string name="gerenciarConfiguracoes">CONFIGURAÇÕES</string>
+    <string name="menuprincipal">MENU PRINCIPAL</string>
+    <string name="title_activity_gerenciar_cliente">GerenciarClienteActivity</string>
     <string name="hello_world">Hello world!</string>
+    
+     <!-- strings do GERENCIARCLIENTE -->
+     <string name="cadastrarCliente">CADASTRAR CLIENTE</string>
+     <string name="atualizarCliente">ATUALIZAR CLIENTE</string>
+     <string name="buscarCliente">BUSCAR CLIENTE</string>
+     <string name="excluirCliente">EXCLUIR CLIENTE</string>
 
 </resources>
