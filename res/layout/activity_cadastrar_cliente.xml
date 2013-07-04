@@ -22,7 +22,7 @@
         android:layout_alignTop="@+id/textView1" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editTextEndereco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/quickContactBadge1"
@@ -36,10 +36,10 @@
         android:id="@+id/spinnerTelefone"
         android:layout_width="25dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignBottom="@+id/editTextNumeroCasa"
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignRight="@+id/textView2"
-        android:layout_alignTop="@+id/editText2" />
+        android:layout_alignTop="@+id/editTextNumeroCasa" />
 
     <TextView
         android:id="@+id/cep"
@@ -72,7 +72,7 @@
         android:textSize="@dimen/tamanhoDosLabels" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editTextCEP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewRG"
@@ -86,7 +86,7 @@
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewRG"
-        android:layout_alignRight="@+id/editText2"
+        android:layout_alignRight="@+id/editTextNumeroCasa"
         android:ems="10"
         android:inputType="number" >
 
@@ -108,7 +108,7 @@
         android:id="@+id/EditText01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignLeft="@+id/editTextCEP"
         android:layout_alignTop="@+id/TextViewCPF"
         android:ems="10"
         android:inputType="number" />
@@ -118,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textViewRG"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/editTextCEP"
         android:layout_marginTop="30dp"
         android:text="@string/cpf"
         android:textColor="@color/White"
@@ -143,7 +143,7 @@
         android:text="@string/apagar" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextNumeroCasa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/TextFieldCEP"
