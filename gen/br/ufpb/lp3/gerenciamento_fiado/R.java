@@ -105,7 +105,7 @@ public final class R {
         public static final int nome=0x7f06000f;
         public static final int numeroCasa=0x7f060015;
         public static final int rg=0x7f060013;
-        /**  strings do botão SALVAR e APAGAR 
+        /**  strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR 
          */
         public static final int salvar=0x7f060017;
         public static final int telefone=0x7f060014;
