@@ -30,6 +30,10 @@
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.CadastrarClienteActivity"
             android:label="@string/title_activity_cadastrar_cliente" >
         </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.AtualizarClienteActivity"
+            android:label="@string/title_activity_atualizar_cliente" >
+        </activity>
     </application>
 
 </manifest>

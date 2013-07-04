@@ -9,36 +9,28 @@ import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class CadastrarClienteActivity extends Activity {
+public class AtualizarClienteActivity extends Activity {
 
-	private Spinner spinnerTelefone = null; 
+	private Spinner spinnerTelefone = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_cadastrar_cliente);
+		setContentView(R.layout.activity_atualizar_cliente);
 		
-		spinnerTelefone = (Spinner) findViewById(R.id.spinnerTelefone);
+		spinnerTelefone = (Spinner) findViewById(R.id.spinnerTelefoneAtualizarCliente);
         
         List<String> listColor = UtilsCliente.getTelefoneList();
         ArrayAdapter<String> spinnerList = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listColor);
         spinnerList.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinnerTelefone.setAdapter(spinnerList);
-    
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.cadastrar_cliente, menu);
+		getMenuInflater().inflate(R.menu.atualizar_cliente, menu);
 		return true;
 	}
-	
-//	private List<String> getTelefoneList(){
-//    	String [] list = {"Casa","Celular","Trabalho","Fax do Trabalho", "Fax de casa"};
-//    	List<String> telefoneList = Arrays.asList(list);
-//    	
-//    	return telefoneList;
-//    }
 
 }

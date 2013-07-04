@@ -34,8 +34,8 @@
         android:id="@+id/Button02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Button01"
-        android:layout_below="@+id/Button01"
+        android:layout_alignLeft="@+id/AtualizarClienteBotao"
+        android:layout_below="@+id/AtualizarClienteBotao"
         android:layout_marginTop="40dp"
         android:text="@string/buscarCliente" />
 
@@ -49,13 +49,14 @@
         android:text="@string/excluirCliente" />
 
     <Button
-        android:id="@+id/Button01"
+        android:id="@+id/AtualizarClienteBotao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/cadastrarCliente"
         android:layout_marginTop="47dp"
-        android:text="@string/atualizarCliente" />
+        android:text="@string/atualizarCliente"
+        android:onClick="atualizarCLiente" />
     
 
 </RelativeLayout>
