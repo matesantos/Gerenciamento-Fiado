@@ -32,7 +32,8 @@
 	        android:layout_alignLeft="@+id/Button02"
 	        android:layout_below="@+id/Button02"
 	        android:layout_marginTop="53dp"
-	        android:text="@string/excluirCliente" />
+	        android:text="@string/excluirCliente"
+	        android:onClick="excluirCLiente" />
 	
 	    <Button
 	        android:id="@+id/Button02"
