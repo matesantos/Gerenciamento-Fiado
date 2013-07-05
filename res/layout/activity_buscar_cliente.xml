@@ -30,7 +30,7 @@
         android:layout_toRightOf="@+id/textViewGerenciarVendedor" >
 
         <RadioButton
-            android:id="@+id/radio0"
+            android:id="@+id/radioExcluir0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
@@ -38,7 +38,7 @@
             android:textColor="@color/White" />
 
         <RadioButton
-            android:id="@+id/radio1"
+            android:id="@+id/radioExcluir1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CPF"
@@ -47,7 +47,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewVendedorAtualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textViewGerenciarVendedor"
@@ -57,11 +57,11 @@
         android:textSize="@dimen/tamanhoDosLabels" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editTextExcluir"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textViewVendedorAtualizar"
+        android:layout_below="@+id/textViewVendedorAtualizar"
         android:ems="10"
         android:inputType="textPersonName" >
 
@@ -69,19 +69,19 @@
     </EditText>
 
     <Button
-        android:id="@+id/buttonPesquisarCliente"
+        android:id="@+id/buttonExcluirCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/editText1"
+        android:layout_below="@+id/textViewVendedorAtualizar"
+        android:layout_toRightOf="@+id/editTextExcluir"
         android:text="Pesquisar" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewExcluir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/editTextExcluir"
+        android:layout_below="@+id/editTextExcluir"
         android:layout_marginTop="18dp"
         android:text="Resultado da pesquisa"
         android:textColor="@color/White"

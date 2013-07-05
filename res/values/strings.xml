@@ -20,17 +20,17 @@
     <string name="buscarCliente">BUSCAR CLIENTE</string>
     <string name="excluirCliente">EXCLUIR CLIENTE</string>
     <string name="title_activity_cadastrar_cliente">Cadastrar Cliente</string>
-    
+
     <!--
          strings comuns do GERENCIARCLIENTE -> 
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-    	 EXCLUIRCLIENTE    -->
+    	 EXCLUIRCLIENTE
+    -->
     <string name="title_activity_atualizar_cliente">AtualizarClienteActivity</string>
     <string name="title_activity_buscar_cliente">BuscarClienteActivity</string>
     <string name="title_activity_excluir_cliente">ExcluirClienteActivity</string>
-    
     <string name="nome">NOME:</string>
     <string name="endereco">ENDEREÇO:</string>
     <string name="cep">CEP:</string>
@@ -39,12 +39,31 @@
     <string name="telefone">TELEFONE:</string>
     <string name="numeroCasa">NUMERO:</string>
     <string name="title_activity_novo_cliente">NOVO CLIENTE</string>
-    
+
     <!-- strings do GERENCIARVENDEDOR -->
     <string name="cadastrarVendedor">CADASTRAR VENDEDOR</string>
     <string name="atualizarVendedor">ATUALIZAR VENDEDOR</string>
     <string name="buscarVendedor">BUSCAR VENDEDOR</string>
     <string name="excluirVendedor">EXCLUIR VENDEDOR</string>
+    
+    <!--
+         strings comuns do GERENCIARVENDEDOR -> 
+    	 CADASTRARVENDEDOR 
+    	 ATUALIZARVENDEDOR
+    	 BUSCARVENDEDOR
+    	 EXCLUIRVENDEDOR
+    -->
+    
+    <string name="title_activity_atualizar_Vendedor">Atualizar Vendedor</string>
+    <string name="title_activity_excluir_Vendedor">Excluir Vendedor</string>
+    <string name="nomeVendedor">NOME:</string>
+    <string name="enderecoVendedor">ENDEREÇO:</string>
+    <string name="cepVendedor">CEP:</string>
+    <string name="cpfVendedor">CPF:</string>
+    <string name="rgVendedor">RG:</string>
+    <string name="telefoneVendedor">TELEFONE:</string>
+    <string name="loginVendedor">LOGIN:</string>
+    <string name="senhaVendedor">SENHA:</string>
     
 
     <!-- strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR, 	CANCELAR, PESQUISAR -->
@@ -52,7 +71,11 @@
     <string name="apagar">APAGAR</string>
     <string name="alterar">ALTERAR</string>
     <string name="excluir">EXCLUIR</string>
-	<string name="cancelar">CANCELAR</string>
-	<string name="pesquisar">PESQUISAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="pesquisar">PESQUISAR</string>
+    <string name="title_activity_cadastrar_vendor">CadastrarVendorActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_atualizar_vendedor">AtualizarVendedorActivity</string>
+    <string name="title_activity_excluir_vendedor">ExcluirVendedorActivity</string>
 
 </resources>

@@ -26,42 +26,42 @@
 	        android:textSize="27sp" />
 	
 	    <Button
-	        android:id="@+id/excluirCliente"
+	        android:id="@+id/excluirVendedorBotao"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/Button02"
 	        android:layout_below="@+id/Button02"
 	        android:layout_marginTop="53dp"
-	        android:text="@string/excluirVendedor" />
+	        android:text="@string/excluirVendedor" 
+	        android:onClick="excluirVendedor"/>
 	
 	    <Button
 	        android:id="@+id/Button02"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/textViewGerenciarVendedor"
-	        android:layout_below="@+id/AtualizarClienteBotao"
+	        android:layout_below="@+id/AtualizarVendedorBotao"
 	        android:layout_marginTop="48dp"
-	        android:onClick="buscarCLiente"
 	        android:text="@string/buscarVendedor" />
 	
 	    <Button
-	        android:id="@+id/cadastrarCliente"
+	        android:id="@+id/cadastrarVendedorBotao"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/textViewGerenciarVendedor"
 	        android:layout_below="@+id/textViewGerenciarVendedor"
 	        android:layout_marginTop="32dp"
-	        android:onClick="casdastrarCLiente"
-	        android:text="@string/cadastrarVendedor" />
+	        android:text="@string/cadastrarVendedor"
+	        android:onClick="casdastrarVendedor" />
 	
 	    <Button
-	        android:id="@+id/AtualizarClienteBotao"
+	        android:id="@+id/AtualizarVendedorBotao"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/Button02"
-	        android:layout_below="@+id/cadastrarCliente"
+	        android:layout_below="@+id/cadastrarVendedorBotao"
 	        android:layout_marginTop="45dp"
-	        android:onClick="atualizarCLiente"
+	        android:onClick="atualizarVendedor"
 	        android:text="@string/atualizarVendedor" />
 	
 	</RelativeLayout>

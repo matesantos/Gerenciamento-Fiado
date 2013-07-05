@@ -2,6 +2,7 @@ package br.ufpb.lp3.gerenciamento_fiado.menu_principal;
 
 import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.GerenciarClienteActivity;
+import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.GerenciarVendedorActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -27,8 +28,8 @@ public class MenuPrincipalActivity extends Activity {
     	goToActivity(GerenciarClienteActivity.class);
     }
     
-    public void GerenciarVendedor(View v){
-    	
+    public void GerenciarVendedor (View v){
+    	goToActivity(GerenciarVendedorActivity.class);
     }
     
     public void GerenciarProduto(View v){
