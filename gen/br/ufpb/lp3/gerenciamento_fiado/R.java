@@ -39,40 +39,44 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int AtualizarVendedorBotao=0x7f090022;
-        public static final int Button02=0x7f090021;
+        public static final int AtualizarVendedorBotao=0x7f090026;
+        public static final int Button02=0x7f090025;
         public static final int EditTextTelefoneVendedorAtualizar=0x7f090002;
         public static final int TextViewCEPVendedorAtualizar=0x7f090006;
         public static final int TextViewNumeroVendedorAtualizar=0x7f090005;
-        public static final int action_settings=0x7f09002b;
-        public static final int buttonCancelarVededor=0x7f09001e;
+        public static final int action_settings=0x7f09002f;
+        public static final int button2=0x7f090021;
+        public static final int buttonCancelar=0x7f090020;
+        public static final int buttonCancelarVededor=0x7f090022;
         public static final int buttonExcluirCliente=0x7f090009;
-        public static final int cadastrarVendedorBotao=0x7f090023;
+        public static final int cadastrarVendedorBotao=0x7f090027;
         public static final int editTextCEP=0x7f09000a;
         public static final int editTextExcluir=0x7f090000;
         public static final int editTextNumeroCasa=0x7f090007;
         public static final int excluirVendedor=0x7f090008;
-        public static final int excluirVendedorBotao=0x7f090020;
+        public static final int excluirVendedorBotao=0x7f090024;
         public static final int linearLayout1=0x7f090011;
         public static final int linearLayout2=0x7f090012;
         public static final int linearLayout3=0x7f090014;
         public static final int linearLayout4=0x7f090016;
         public static final int linearLayout5=0x7f090018;
         public static final int linearLayout6=0x7f09001b;
-        public static final int menu_principal_configuracoes=0x7f09002a;
-        public static final int menu_principal_gerenciar_cliente=0x7f090026;
-        public static final int menu_principal_gerenciar_contas=0x7f090025;
-        public static final int menu_principal_gerenciar_produto=0x7f090029;
-        public static final int menu_principal_gerenciar_vendas=0x7f090024;
-        public static final int menu_principal_gerenciar_vendedor=0x7f090028;
+        public static final int menu_principal_configuracoes=0x7f09002e;
+        public static final int menu_principal_gerenciar_cliente=0x7f09002a;
+        public static final int menu_principal_gerenciar_contas=0x7f090029;
+        public static final int menu_principal_gerenciar_produto=0x7f09002d;
+        public static final int menu_principal_gerenciar_vendas=0x7f090028;
+        public static final int menu_principal_gerenciar_vendedor=0x7f09002c;
         public static final int radioExcluir0=0x7f09000d;
         public static final int radioExcluir1=0x7f09000e;
         public static final int radioGroup1=0x7f09000c;
-        public static final int scrollView1=0x7f09001f;
+        public static final int scrollView1=0x7f090023;
         public static final int scrollViewCadastrarCliente=0x7f090010;
         public static final int scrollViewECliente=0x7f09001c;
         public static final int spinnerTelefoneVendedorAtualizar=0x7f090003;
         public static final int textView1=0x7f09001d;
+        public static final int textView2=0x7f09001e;
+        public static final int textView3=0x7f09001f;
         public static final int textView4=0x7f090015;
         public static final int textView5=0x7f090017;
         public static final int textViewCEP=0x7f09001a;
@@ -82,7 +86,7 @@ public final class R {
         public static final int textViewNumeroCasa=0x7f090019;
         public static final int textViewTelefoneVendedorAtualizar=0x7f090004;
         public static final int textViewVendedorAtualizar=0x7f090001;
-        public static final int textView_menu_principal=0x7f090027;
+        public static final int textView_menu_principal=0x7f09002b;
     }
     public static final class layout {
         public static final int activity_atualizar_cliente=0x7f030000;
