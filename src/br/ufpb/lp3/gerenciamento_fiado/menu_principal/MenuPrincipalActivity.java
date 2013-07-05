@@ -17,15 +17,13 @@ public class MenuPrincipalActivity extends Activity {
         setContentView(R.layout.activity_menu_principal);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_principal, menu);
         return true;
     }
-    
-      
+     
     public void GerenciarCliente(View v){
     	goToActivity(GerenciarClienteActivity.class);
     }
