@@ -9,26 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".AtualizarClienteActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/quickContactBadge1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:text="Alterar Foto"
-        android:textColor="@color/White"
-        android:textSize="@dimen/tamanhoDosLabels" />
-
-    <QuickContactBadge
-        android:id="@+id/quickContactBadge1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="16dp" />
-
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
@@ -57,8 +37,6 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/quickContactBadge1"
-        android:layout_below="@+id/textView1"
         android:layout_marginTop="30dp"
         android:text="@string/endereco"
         android:textColor="@color/White"
@@ -74,14 +52,6 @@
         android:textColor="@color/White"
         android:textSize="@dimen/tamanhoDosLabels" />
 
-    <Spinner
-        android:id="@+id/spinnerTelefoneAtualizarCliente"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/TextView02"
-        android:layout_below="@+id/TextView01"
-        android:layout_marginTop="112dp" />
-
     <TextView
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
@@ -90,16 +60,6 @@
         android:layout_below="@+id/editText1"
         android:layout_marginTop="30dp"
         android:text="@string/numeroCasa"
-        android:textColor="@color/White"
-        android:textSize="@dimen/tamanhoDosLabels" />
-
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:text="@string/cep"
         android:textColor="@color/White"
         android:textSize="@dimen/tamanhoDosLabels" />
 
@@ -113,30 +73,51 @@
         android:ems="10"
         android:inputType="number" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonPesquisarCliente"
+        android:layout_alignBottom="@+id/buttonPesquisarCliente"
+        android:layout_alignRight="@+id/EditText01"
+        android:text="@string/salvar" />
+
+    <Spinner
+        android:id="@+id/spinnerTelefoneAtualizarCliente"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/TextView02"
+        android:layout_marginTop="24dp"
+        android:layout_toLeftOf="@+id/editText1" />
+
     <EditText
         android:id="@+id/editTextCEP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editTextNumeroCasa"
-        android:layout_alignTop="@+id/TextView02"
+        android:layout_below="@+id/editTextNumeroCasa"
+        android:layout_marginTop="17dp"
         android:ems="10"
         android:inputType="number" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="100dp"
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="@string/salvar" />
+        android:layout_alignBaseline="@+id/editTextCEP"
+        android:layout_alignBottom="@+id/editTextCEP"
+        android:layout_alignLeft="@+id/textViewTelefone"
+        android:text="@string/cep"
+        android:textColor="@color/White"
+        android:textSize="@dimen/tamanhoDosLabels" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonPesquisarCliente"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinnerTelefoneAtualizarCliente"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="33dp"
+        android:layout_below="@+id/spinnerTelefoneAtualizarCliente"
+        android:layout_marginTop="35dp"
+        android:layout_toLeftOf="@+id/editText1"
         android:text="@string/apagar" />
 
 </RelativeLayout>

@@ -1,62 +1,70 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/Black"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".GerenciarClienteActivity" >
-    
-      <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:text="@string/gerenciarCliente"
-        android:textColor="@color/White"
-        android:textSize="@dimen/tamanhoDaFonte" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp" >
 
-    <Button
-        android:id="@+id/cadastrarCliente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="@string/cadastrarCliente"
-        android:onClick="casdastrarCLiente" />
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/Black"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin" >
+	
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="20dp"
+	        android:text="@string/gerenciarCliente"
+	        android:textColor="@color/White"
+	        android:textSize="@dimen/tamanhoDaFonte" />
+	
+	    <Button
+	        android:id="@+id/excluirCliente"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/Button02"
+	        android:layout_below="@+id/Button02"
+	        android:layout_marginTop="53dp"
+	        android:text="@string/excluirCliente" />
+	
+	    <Button
+	        android:id="@+id/Button02"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textView1"
+	        android:layout_below="@+id/AtualizarClienteBotao"
+	        android:layout_marginTop="48dp"
+	        android:text="@string/buscarCliente"
+	        android:onClick="buscarCLiente" />
+	
+	    <Button
+	        android:id="@+id/cadastrarCliente"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textView1"
+	        android:layout_below="@+id/textView1"
+	        android:layout_marginTop="32dp"
+	        android:onClick="casdastrarCLiente"
+	        android:text="@string/cadastrarCliente" />
+	
+	    <Button
+	        android:id="@+id/AtualizarClienteBotao"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/Button02"
+	        android:layout_below="@+id/cadastrarCliente"
+	        android:layout_marginTop="45dp"
+	        android:onClick="atualizarCLiente"
+	        android:text="@string/atualizarCliente" />
+	
+	</RelativeLayout>
 
-    <Button
-        android:id="@+id/Button02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/AtualizarClienteBotao"
-        android:layout_below="@+id/AtualizarClienteBotao"
-        android:layout_marginTop="40dp"
-        android:text="@string/buscarCliente" />
+</ScrollView>
 
-    <Button
-        android:id="@+id/excluirCliente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Button02"
-        android:layout_below="@+id/Button02"
-        android:layout_marginTop="52dp"
-        android:text="@string/excluirCliente" />
-
-    <Button
-        android:id="@+id/AtualizarClienteBotao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/cadastrarCliente"
-        android:layout_marginTop="47dp"
-        android:text="@string/atualizarCliente"
-        android:onClick="atualizarCLiente" />
-    
-
-</RelativeLayout>

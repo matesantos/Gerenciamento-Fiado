@@ -26,7 +26,7 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-    	 EXCLUIRCLIENTE
+    	 EXCLUIRCLIENTE
     -->
     <string name="nome">NOME:</string>
     <string name="endereco">ENDEREÇO:</string>
@@ -44,5 +44,6 @@
     <string name="excluir">EXCLUIR</string>
     <string name="title_activity_atualizar_cliente">AtualizarClienteActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_buscar_cliente">BuscarClienteActivity</string>
 
 </resources>
