@@ -35,6 +35,10 @@ public class GerenciarClienteActivity extends Activity {
 		goToActivity(BuscarClienteActivity.class);
 	}
 	
+	public void excluirCLiente (View v){
+		goToActivity(ExcluirClienteActivity.class);
+	}
+	
 	//método que abrirá outras Activitys
     private void goToActivity (Class<? extends Activity> activityClass2){
     	Intent newIntent = new Intent(this,activityClass2);
