@@ -31,6 +31,7 @@
             android:label="@string/title_activity_cadastrar_cliente" >
         </activity>
         <activity
+<<<<<<< HEAD
             android:name="br.ufpb.lp3.gerenciamento_fiado.GerenciarProdutosActivity"
             android:label="@string/title_activity_gerenciar_produtos" >
         </activity>
@@ -45,6 +46,10 @@
         <activity
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_contas.GerenciarContasActivity"
             android:label="@string/title_activity_gerenciar_contas" >
+=======
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.AtualizarClienteActivity"
+            android:label="@string/title_activity_atualizar_cliente" >
+>>>>>>> bcf5ba3d42a890aaa8d1bc7ee8d9ba1e27cac8d6
         </activity>
     </application>
 

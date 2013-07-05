@@ -33,6 +33,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int Button01=0x7f0a001b;
         public static final int Button02=0x7f0a001a;
         public static final int EditText01=0x7f0a000c;
@@ -91,6 +92,57 @@ public final class R {
         public static final int gerenciar_produto=0x7f090004;
         public static final int gerenciar_produtos=0x7f090005;
         public static final int menu_principal=0x7f090006;
+=======
+        public static final int AtualizarClienteBotao=0x7f09001b;
+        public static final int Button02=0x7f09001a;
+        public static final int EditText01=0x7f090004;
+        public static final int EditTextEndereco=0x7f090018;
+        public static final int TextFieldCEP=0x7f090010;
+        public static final int TextView01=0x7f090008;
+        public static final int TextView02=0x7f090007;
+        public static final int TextViewCPF=0x7f090014;
+        public static final int TextViewEndereco=0x7f090017;
+        public static final int action_settings=0x7f090024;
+        public static final int apagarCampos=0x7f090016;
+        public static final int button1=0x7f09000c;
+        public static final int button2=0x7f09000b;
+        public static final int cadastrarCliente=0x7f090019;
+        public static final int cep=0x7f09000f;
+        public static final int editText1=0x7f090002;
+        public static final int editText4=0x7f090013;
+        public static final int editTextCEP=0x7f09000a;
+        public static final int editTextEndereco=0x7f09000d;
+        public static final int editTextNumeroCasa=0x7f090009;
+        public static final int excluirCliente=0x7f09001c;
+        public static final int menu_principal_configuracoes=0x7f090023;
+        public static final int menu_principal_gerenciar_cliente=0x7f09001f;
+        public static final int menu_principal_gerenciar_contas=0x7f09001e;
+        public static final int menu_principal_gerenciar_produto=0x7f090022;
+        public static final int menu_principal_gerenciar_vendas=0x7f09001d;
+        public static final int menu_principal_gerenciar_vendedor=0x7f090021;
+        public static final int quickContactBadge1=0x7f090001;
+        public static final int salvarCliente=0x7f090015;
+        public static final int spinnerTelefone=0x7f09000e;
+        public static final int spinnerTelefoneAtualizarCliente=0x7f090005;
+        public static final int textView1=0x7f090000;
+        public static final int textView2=0x7f090003;
+        public static final int textViewNumero=0x7f090011;
+        public static final int textViewRG=0x7f090012;
+        public static final int textViewTelefone=0x7f090006;
+        public static final int textView_menu_principal=0x7f090020;
+    }
+    public static final class layout {
+        public static final int activity_atualizar_cliente=0x7f030000;
+        public static final int activity_cadastrar_cliente=0x7f030001;
+        public static final int activity_gerenciar_cliente=0x7f030002;
+        public static final int activity_menu_principal=0x7f030003;
+    }
+    public static final class menu {
+        public static final int atualizar_cliente=0x7f080000;
+        public static final int cadastrar_cliente=0x7f080001;
+        public static final int gerenciar_cliente=0x7f080002;
+        public static final int menu_principal=0x7f080003;
+>>>>>>> bcf5ba3d42a890aaa8d1bc7ee8d9ba1e27cac8d6
     }
     public static final class string {
         public static final int action_settings=0x7f070001;
@@ -109,6 +161,7 @@ public final class R {
         public static final int excluirCliente=0x7f07000d;
         /**  strings do MENUPRINCIPAL 
          */
+<<<<<<< HEAD
         public static final int gerenciarCliente=0x7f070002;
         public static final int gerenciarConfiguracoes=0x7f070007;
         public static final int gerenciarContas=0x7f070005;
@@ -117,6 +170,16 @@ public final class R {
         public static final int gerenciarVendedor=0x7f070003;
         public static final int hello_world=0x7f07001c;
         public static final int menuprincipal=0x7f070008;
+=======
+        public static final int gerenciarCliente=0x7f060002;
+        public static final int gerenciarConfiguracoes=0x7f060007;
+        public static final int gerenciarContas=0x7f060005;
+        public static final int gerenciarProduto=0x7f060004;
+        public static final int gerenciarVendas=0x7f060006;
+        public static final int gerenciarVendedor=0x7f060003;
+        public static final int hello_world=0x7f06001c;
+        public static final int menuprincipal=0x7f060008;
+>>>>>>> bcf5ba3d42a890aaa8d1bc7ee8d9ba1e27cac8d6
         /** 
          strings do GERENCIARCLIENTE -> 
     	 CADASTRARCLIENTE 
@@ -124,6 +187,7 @@ public final class R {
     	 BUSCARCLIENTE
     	 EXCLUIRCLIENTE
 
+<<<<<<< HEAD
 
 
 
@@ -144,6 +208,21 @@ public final class R {
         public static final int title_activity_gerenciar_produto=0x7f07001d;
         public static final int title_activity_gerenciar_produtos=0x7f07001b;
         public static final int title_activity_novo_cliente=0x7f070016;
+=======
+    
+         */
+        public static final int nome=0x7f06000f;
+        public static final int numeroCasa=0x7f060015;
+        public static final int rg=0x7f060013;
+        /**  strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR 
+         */
+        public static final int salvar=0x7f060017;
+        public static final int telefone=0x7f060014;
+        public static final int title_activity_atualizar_cliente=0x7f06001b;
+        public static final int title_activity_cadastrar_cliente=0x7f06000e;
+        public static final int title_activity_gerenciar_cliente=0x7f060009;
+        public static final int title_activity_novo_cliente=0x7f060016;
+>>>>>>> bcf5ba3d42a890aaa8d1bc7ee8d9ba1e27cac8d6
     }
     public static final class style {
         /** 

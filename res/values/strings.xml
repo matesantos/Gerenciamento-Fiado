@@ -26,7 +26,11 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
+<<<<<<< HEAD
     	 EXCLUIRCLIENTE
+=======
+    	 EXCLUIRCLIENTE
+>>>>>>> bcf5ba3d42a890aaa8d1bc7ee8d9ba1e27cac8d6
     -->
     <string name="nome">NOME:</string>
     <string name="endereco">ENDEREÇO:</string>
@@ -42,11 +46,16 @@
     <string name="apagar">APAGAR</string>
     <string name="alterar">ALTERAR</string>
     <string name="excluir">EXCLUIR</string>
+<<<<<<< HEAD
     <string name="title_activity_gerenciar_produtos">GerenciarProdutosActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_gerenciar_produto">Gerenciar Produtos</string>
     <string name="tipo">Tipo do produto</string>
     <string name="title_activity_cadastrar_contas">Cadastro de Contas</string>
     <string name="title_activity_gerenciar_contas">GerenciarContasActivity</string>
+=======
+    <string name="title_activity_atualizar_cliente">AtualizarClienteActivity</string>
+    <string name="hello_world">Hello world!</string>
+>>>>>>> bcf5ba3d42a890aaa8d1bc7ee8d9ba1e27cac8d6
 
 </resources>

@@ -7,13 +7,19 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 
 public class GerenciarClienteActivity extends Activity {
 
+	
+	private Button atualizarClienteButton = null;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_gerenciar_cliente);
+		
+		
 	}
 
 	@Override
@@ -25,6 +31,10 @@ public class GerenciarClienteActivity extends Activity {
 	
 	public void casdastrarCLiente (View v){
 		goToActivity(CadastrarClienteActivity.class);
+	}
+	
+	public void atualizarCLiente (View v){
+		goToActivity(AtualizarClienteActivity.class);
 	}
 	
 	//método que abrirá outras Activitys
