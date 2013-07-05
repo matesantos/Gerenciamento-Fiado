@@ -21,9 +21,9 @@
 	        android:layout_alignParentTop="true"
 	        android:layout_centerHorizontal="true"
 	        android:layout_marginTop="20dp"
-	        android:text="@string/gerenciarCliente"
+	        android:text="@string/gerenciarVendedor"
 	        android:textColor="@color/White"
-	        android:textSize="@dimen/tamanhoDaFonte" />
+	        android:textSize="27sp" />
 	
 	    <Button
 	        android:id="@+id/excluirCliente"
@@ -32,7 +32,7 @@
 	        android:layout_alignLeft="@+id/Button02"
 	        android:layout_below="@+id/Button02"
 	        android:layout_marginTop="53dp"
-	        android:text="@string/excluirCliente" />
+	        android:text="@string/excluirVendedor" />
 	
 	    <Button
 	        android:id="@+id/Button02"
@@ -41,8 +41,8 @@
 	        android:layout_alignLeft="@+id/textViewGerenciarVendedor"
 	        android:layout_below="@+id/AtualizarClienteBotao"
 	        android:layout_marginTop="48dp"
-	        android:text="@string/buscarCliente"
-	        android:onClick="buscarCLiente" />
+	        android:onClick="buscarCLiente"
+	        android:text="@string/buscarVendedor" />
 	
 	    <Button
 	        android:id="@+id/cadastrarCliente"
@@ -52,7 +52,7 @@
 	        android:layout_below="@+id/textViewGerenciarVendedor"
 	        android:layout_marginTop="32dp"
 	        android:onClick="casdastrarCLiente"
-	        android:text="@string/cadastrarCliente" />
+	        android:text="@string/cadastrarVendedor" />
 	
 	    <Button
 	        android:id="@+id/AtualizarClienteBotao"
@@ -62,7 +62,7 @@
 	        android:layout_below="@+id/cadastrarCliente"
 	        android:layout_marginTop="45dp"
 	        android:onClick="atualizarCLiente"
-	        android:text="@string/atualizarCliente" />
+	        android:text="@string/atualizarVendedor" />
 	
 	</RelativeLayout>
 
