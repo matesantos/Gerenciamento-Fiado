@@ -30,6 +30,22 @@
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.CadastrarClienteActivity"
             android:label="@string/title_activity_cadastrar_cliente" >
         </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.GerenciarProdutosActivity"
+            android:label="@string/title_activity_gerenciar_produtos" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.GerenciarProdutoActivity"
+            android:label="@string/title_activity_gerenciar_produto" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_contas.CadastrarContasActivity"
+            android:label="@string/title_activity_cadastrar_contas" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_contas.GerenciarContasActivity"
+            android:label="@string/title_activity_gerenciar_contas" >
+        </activity>
     </application>
 
 </manifest>

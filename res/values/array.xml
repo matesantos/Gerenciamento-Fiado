@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_comboBox">
+        <item >Unidade</item>
+        <item >Kilo</item>
+        <item >Caixa</item>
+        <item >Metro</item>
+               
+    </string-array>
+</resources>

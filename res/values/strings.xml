@@ -20,12 +20,13 @@
     <string name="buscarCliente">BUSCAR CLIENTE</string>
     <string name="excluirCliente">EXCLUIR CLIENTE</string>
     <string name="title_activity_cadastrar_cliente">Cadastrar Cliente</string>
-    
-    <!-- strings do GERENCIARCLIENTE -> 
+
+    <!--
+         strings do GERENCIARCLIENTE -> 
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-    	 EXCLUIRCLIENTE
+    	 EXCLUIRCLIENTE
     -->
     <string name="nome">NOME:</string>
     <string name="endereco">ENDEREÇO:</string>
@@ -35,11 +36,17 @@
     <string name="telefone">TELEFONE:</string>
     <string name="numeroCasa">NUMERO:</string>
     <string name="title_activity_novo_cliente">NOVO CLIENTE</string>
-   
+
     <!-- strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR -->
     <string name="salvar">SALVAR</string>
     <string name="apagar">APAGAR</string>
     <string name="alterar">ALTERAR</string>
     <string name="excluir">EXCLUIR</string>
+    <string name="title_activity_gerenciar_produtos">GerenciarProdutosActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_gerenciar_produto">Gerenciar Produtos</string>
+    <string name="tipo">Tipo do produto</string>
+    <string name="title_activity_cadastrar_contas">Cadastro de Contas</string>
+    <string name="title_activity_gerenciar_contas">GerenciarContasActivity</string>
 
 </resources>
