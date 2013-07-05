@@ -1,0 +1,115 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollViewECliente"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="448dp"
+        android:background="@color/Black"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Pesquisar por: "
+            android:textColor="@color/White"
+            android:textSize="@dimen/tamanhoDosLabels" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/textView1" >
+
+            <RadioButton
+                android:id="@+id/radioExcluir0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Nome"
+                android:textColor="@color/White" />
+
+            <RadioButton
+                android:id="@+id/radioExcluir1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CPF"
+                android:textColor="@color/White" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewVendedorAtualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/radioGroup1"
+            android:text="Cliente a ser excluído:"
+            android:textColor="@color/White"
+            android:textSize="@dimen/tamanhoDosLabels" />
+
+        <EditText
+            android:id="@+id/editTextExcluir"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewVendedorAtualizar"
+            android:layout_below="@+id/textViewVendedorAtualizar"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/buttonExcluirCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewVendedorAtualizar"
+            android:layout_toRightOf="@+id/editTextExcluir"
+            android:text="@string/pesquisar" />
+
+        <TextView
+            android:id="@+id/textViewExcluir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextExcluir"
+            android:layout_below="@+id/editTextExcluir"
+            android:layout_marginTop="18dp"
+            android:text="Resultado da pesquisa"
+            android:textColor="@color/White"
+            android:textSize="@dimen/tamanhoDosLabels" />
+
+        <Button
+            android:id="@+id/buttonCancelarVededor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/excluirVendedor"
+            android:layout_alignBottom="@+id/excluirVendedor"
+            android:layout_alignLeft="@+id/textViewExcluir"
+            android:layout_marginLeft="18dp"
+            android:text="@string/cancelar" />
+
+        <Button
+            android:id="@+id/excluirVendedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/radioGroup1"
+            android:layout_below="@+id/textViewExcluir"
+            android:layout_marginTop="56dp"
+            android:text="@string/excluir" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -38,6 +38,26 @@
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.BuscarClienteActivity"
             android:label="@string/title_activity_buscar_cliente" >
         </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.ExcluirClienteActivity"
+            android:label="@string/title_activity_excluir_cliente" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lpe.gerenciamento_fiado.gerenciar_vendedor.GerenciarVendedorActivity"
+            android:label="@string/title_activity_gerenciar_cliente" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lpe.gerenciamento_fiado.gerenciar_vendedor.CadastrarVendorActivity"
+            android:label="@string/title_activity_cadastrar_vendor" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lpe.gerenciamento_fiado.gerenciar_vendedor.AtualizarVendedorActivity"
+            android:label="@string/title_activity_atualizar_vendedor" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lpe.gerenciamento_fiado.gerenciar_vendedor.ExcluirVendedorActivity"
+            android:label="@string/title_activity_excluir_vendedor" >
+        </activity>
     </application>
 
 </manifest>
