@@ -1,127 +1,121 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollViewTelaLogin"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"
+    android:id="@+id/LinearLayoutTelaLogin1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".LoginActivity" >
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
+        android:id="@+id/linearLayoutTelaLogin2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_image"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin" >
+        android:gravity="center"
+        android:orientation="horizontal" >
 
-        <LinearLayout
-            android:id="@+id/linearLayoutTelaLogin1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="80dip"
-                android:layout_height="60dip"
-                android:layout_marginLeft="-150dip"
-                android:orientation="vertical"
-                android:scaleType="fitXY"
-                android:src="@drawable/venda1" />
-
-            <TextView
-                android:id="@+id/textViewNomeAplicativoTelaLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="-150dip"
-                android:layout_marginTop="5dip"
-                android:orientation="vertical"
-                android:text="@string/nomeAplicativo"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="30sp" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="80dip"
+            android:layout_height="60dip"
+            android:layout_marginLeft="-150dip"
+            android:orientation="vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/venda1" />
 
         <TextView
-            android:id="@+id/textViewLoginTelaLogin"
+            android:id="@+id/textViewNomeAplicativoTelaLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginRight="-150dip"
+            android:layout_marginTop="5dip"
             android:orientation="vertical"
-            android:text="@string/loginTelaLogin"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <LinearLayout
-            android:id="@+id/linearLayoutTelaLogin2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <EditText
-                android:id="@+id/editTextLoginTelaLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text" >
-
-                <requestFocus />
-            </EditText>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewSenhaTelaLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            android:orientation="vertical"
-            android:text="@string/senhaTelaLogin"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <LinearLayout
-            android:id="@+id/linearLayoutTelaLogin3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <EditText
-                android:id="@+id/editTextSenhaTelaLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPassword" >
-
-                <requestFocus />
-            </EditText>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutTelaLogin4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dip"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/buttonCadastrarTelaLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cadastrarTelaLogin" />
-
-            <Button
-                android:id="@+id/buttonEntrarTelaLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/entrarTelaLogin" />
-        </LinearLayout>
+            android:text="@string/nomeAplicativo"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="30sp" />
     </LinearLayout>
 
-</ScrollView>
+    <TextView
+        android:id="@+id/textViewLoginTelaLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:text="@string/loginTelaLogin"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTelaLogin3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editTextLoginTelaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSenhaTelaLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:text="@string/senhaTelaLogin"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTelaLogin4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editTextSenhaTelaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTelaLogin5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonCadastrarTelaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="CadastrarVendedor"
+            android:text="@string/cadastrarTelaLogin" />
+
+        <Button
+            android:id="@+id/buttonEntrarTelaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="EntrarNoSistema"
+            android:text="@string/entrarTelaLogin" />
+    </LinearLayout>
+
+</LinearLayout>

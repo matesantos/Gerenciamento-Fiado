@@ -23,7 +23,7 @@ public class GerenciarVendedorActivity extends Activity {
 	}
 	
 	public void casdastrarVendedor (View v){
-		goToActivity(CadastrarVendorActivity.class);
+		goToActivity(CadastrarVendedorActivity.class);
 	}
 	
 	public void atualizarVendedor (View v){
