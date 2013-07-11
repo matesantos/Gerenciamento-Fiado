@@ -62,8 +62,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text" >
-
-            <requestFocus />
         </EditText>
     </LinearLayout>
 
@@ -90,8 +88,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword" >
-
-            <requestFocus />
         </EditText>
     </LinearLayout>
 
@@ -107,14 +103,12 @@
             android:id="@+id/buttonCadastrarTelaLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="CadastrarVendedor"
             android:text="@string/cadastrarTelaLogin" />
 
         <Button
             android:id="@+id/buttonEntrarTelaLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="EntrarNoSistema"
             android:text="@string/entrarTelaLogin" />
     </LinearLayout>
 
