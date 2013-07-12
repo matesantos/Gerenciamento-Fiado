@@ -14,8 +14,8 @@ import android.widget.Toast;
 public class LoginActivity extends Activity {
 	
 	//edit
-	private EditText loginEdit = null;
-	private EditText senhaEdit = null;
+	public EditText loginEdit = null;
+	public EditText senhaEdit = null;
 	
 	//buttons
 	private Button cadastrarButton = null;

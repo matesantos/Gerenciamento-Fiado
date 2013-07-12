@@ -37,8 +37,16 @@ public final class R {
     }
     public static final class drawable {
         public static final int background_image=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int venda1=0x7f020002;
+        public static final int cliente=0x7f020001;
+        public static final int configuracoes=0x7f020002;
+        public static final int contas=0x7f020003;
+        public static final int dinheiro=0x7f020004;
+        public static final int estoque=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int people=0x7f020007;
+        public static final int produto=0x7f020008;
+        public static final int venda1=0x7f020009;
+        public static final int vendedor=0x7f02000a;
     }
     public static final class id {
         public static final int AtualizarVendedorBotao=0x7f090026;
@@ -47,7 +55,7 @@ public final class R {
         public static final int LinearLayoutTelaLogin1=0x7f090028;
         public static final int TextViewCEPVendedorAtualizar=0x7f090006;
         public static final int TextViewNumeroVendedorAtualizar=0x7f090005;
-        public static final int action_settings=0x7f09003b;
+        public static final int action_settings=0x7f09003d;
         public static final int button2=0x7f090021;
         public static final int buttonCadastrarTelaLogin=0x7f090032;
         public static final int buttonCancelar=0x7f090020;
@@ -62,6 +70,12 @@ public final class R {
         public static final int editTextSenhaTelaLogin=0x7f090030;
         public static final int excluirVendedor=0x7f090008;
         public static final int excluirVendedorBotao=0x7f090024;
+        public static final int imageButton1=0x7f090038;
+        public static final int imageButton2=0x7f090036;
+        public static final int imageButton3=0x7f090037;
+        public static final int imageButton4=0x7f090035;
+        public static final int imageButton5=0x7f09003a;
+        public static final int imageButton6=0x7f090039;
         public static final int imageView1=0x7f09002a;
         public static final int linearLayout1=0x7f090011;
         public static final int linearLayout2=0x7f090012;
@@ -73,12 +87,6 @@ public final class R {
         public static final int linearLayoutTelaLogin3=0x7f09002c;
         public static final int linearLayoutTelaLogin4=0x7f09002f;
         public static final int linearLayoutTelaLogin5=0x7f090031;
-        public static final int menu_principal_configuracoes=0x7f09003a;
-        public static final int menu_principal_gerenciar_cliente=0x7f090036;
-        public static final int menu_principal_gerenciar_contas=0x7f090035;
-        public static final int menu_principal_gerenciar_produto=0x7f090039;
-        public static final int menu_principal_gerenciar_vendas=0x7f090034;
-        public static final int menu_principal_gerenciar_vendedor=0x7f090038;
         public static final int radioExcluir0=0x7f09000d;
         public static final int radioExcluir1=0x7f09000e;
         public static final int radioGroup1=0x7f09000c;
@@ -86,10 +94,12 @@ public final class R {
         public static final int scrollViewCadastrarCliente=0x7f090010;
         public static final int scrollViewECliente=0x7f09001c;
         public static final int spinnerTelefoneVendedorAtualizar=0x7f090003;
+        public static final int textView1=0x7f09003b;
         public static final int textView2=0x7f09001e;
         public static final int textView3=0x7f09001f;
         public static final int textView4=0x7f090015;
         public static final int textView5=0x7f090017;
+        public static final int textView6=0x7f09003c;
         public static final int textViewCEP=0x7f09001a;
         public static final int textViewEndereco=0x7f090013;
         public static final int textViewExcluir=0x7f09000f;
@@ -100,7 +110,7 @@ public final class R {
         public static final int textViewSenhaTelaLogin=0x7f09002e;
         public static final int textViewTelefoneVendedorAtualizar=0x7f090004;
         public static final int textViewVendedorAtualizar=0x7f090001;
-        public static final int textView_menu_principal=0x7f090037;
+        public static final int textView_menu_principal=0x7f090034;
     }
     public static final class layout {
         public static final int activity_atualizar_cliente=0x7f030000;

@@ -1,87 +1,124 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView1"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
 
-	<RelativeLayout
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:background="@color/Black"
-	    android:paddingBottom="@dimen/activity_vertical_margin"
-	    android:paddingLeft="@dimen/activity_horizontal_margin"
-	    android:paddingRight="@dimen/activity_horizontal_margin"
-	    android:paddingTop="@dimen/activity_vertical_margin" >
-	    
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_vendas"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_contas"
-	        android:layout_below="@+id/menu_principal_gerenciar_contas"
-	        android:layout_marginTop="22dp"
-	        android:text="@string/gerenciarVendas" />
-	
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_cliente"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/textView_menu_principal"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="19dp"
-	        android:text="@string/gerenciarCliente" 
-	        android:onClick="GerenciarCliente"/>
-	
-	    <TextView
-	        android:id="@+id/textView_menu_principal"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentTop="true"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="05dp"
-	        android:text="@string/menuprincipal"
-	        android:textColor="@color/White"
-	        android:textColorLink="@color/White"
-	        android:textSize="@dimen/tamanhoDaFonte" />
-	
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_vendedor"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_cliente"
-	        android:layout_below="@+id/menu_principal_gerenciar_cliente"
-	        android:layout_marginTop="16dp"
-	        android:text="@string/gerenciarVendedor" 
-	        android:onClick="GerenciarVendedor"/>
-	
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_produto"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_vendedor"
-	        android:layout_below="@+id/menu_principal_gerenciar_vendedor"
-	        android:layout_marginTop="16dp"
-	        android:text="@string/gerenciarProduto" />
-	
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_contas"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_produto"
-	        android:layout_below="@+id/menu_principal_gerenciar_produto"
-	        android:layout_marginTop="16dp"
-	        android:text="@string/gerenciarContas" />
-	
-	    <Button
-	        android:id="@+id/menu_principal_configuracoes"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_vendas"
-	        android:layout_below="@+id/menu_principal_gerenciar_vendas"
-	        android:layout_marginTop="16dp"
-	        android:text="@string/gerenciarConfiguracoes" />
+    <TextView
+        android:id="@+id/textView_menu_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="05dp"
+        android:text="@string/menuprincipal"
+        android:textColor="@color/Black"
+        android:textColorLink="@color/White"
+        android:textSize="@dimen/tamanhoDaFonte" />
 
-	</RelativeLayout>
-	
-</ScrollView>
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButton2"
+        android:layout_below="@+id/imageButton2"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/contas" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageButton1"
+        android:layout_alignTop="@+id/imageButton4"
+        android:src="@drawable/produto" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButton4"
+        android:layout_alignTop="@+id/imageButton5"
+        android:src="@drawable/configuracoes" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton6"
+        android:layout_alignRight="@+id/imageButton5"
+        android:text="@string/gerenciarVendas" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton3"
+        android:layout_alignRight="@+id/imageButton3"
+        android:text="@string/gerenciarProduto" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton2"
+        android:layout_alignRight="@+id/imageButton1"
+        android:text="@string/gerenciarCliente" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_menu_principal"
+        android:layout_below="@+id/textView_menu_principal"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/cliente" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView_menu_principal"
+        android:layout_alignTop="@+id/imageButton1"
+        android:src="@drawable/vendedor" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignRight="@+id/imageButton2"
+        android:text="@string/gerenciarVendedor" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/imageButton4"
+        android:text="@string/gerenciarContas" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton6"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp"
+        android:text="@string/gerenciarConfiguracoes" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButton3"
+        android:layout_below="@+id/imageButton3"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/dinheiro" />
+
+</RelativeLayout>

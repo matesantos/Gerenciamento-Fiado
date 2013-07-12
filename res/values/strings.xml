@@ -12,14 +12,14 @@
     <string name="entrarTelaLogin">ENTRAR</string>
     
     <!-- strings do MENUPRINCIPAL -->
-    <string name="gerenciarCliente">GERENCIAR CLIENTE</string>
-    <string name="gerenciarVendedor">GERENCIAR VENDEDOR</string>
-    <string name="gerenciarProduto">GERENCIAR PRODUTO</string>
-    <string name="gerenciarContas">GERENCIAR CONTAS</string>
-    <string name="gerenciarVendas">GERENCIAR VENDAS</string>
+    <string name="gerenciarCliente">CLIENTE</string>
+    <string name="gerenciarVendedor">VENDEDOR</string>
+    <string name="gerenciarProduto">PRODUTO</string>
+    <string name="gerenciarContas">CONTAS</string>
+    <string name="gerenciarVendas">VENDAS</string>
     <string name="gerenciarConfiguracoes">CONFIGURAÇÕES</string>
     <string name="menuprincipal">MENU PRINCIPAL</string>
-    <string name="title_activity_gerenciar_cliente">GerenciarClienteActivity</string>
+    <string name="title_activity_gerenciar_cliente"></string>
 
     <!-- strings do GERENCIARCLIENTE -->
     <string name="cadastrarCliente">CADASTRAR CLIENTE</string>
