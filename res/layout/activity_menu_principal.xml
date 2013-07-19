@@ -21,6 +21,7 @@
 	        android:layout_alignLeft="@+id/menu_principal_gerenciar_contas"
 	        android:layout_below="@+id/menu_principal_gerenciar_contas"
 	        android:layout_marginTop="22dp"
+	        android:onClick="GerenciarVendas"
 	        android:text="@string/gerenciarVendas" />
 	
 	    <Button
@@ -52,6 +53,7 @@
 	        android:layout_alignLeft="@+id/menu_principal_gerenciar_cliente"
 	        android:layout_below="@+id/menu_principal_gerenciar_cliente"
 	        android:layout_marginTop="16dp"
+	        
 	        android:text="@string/gerenciarVendedor" />
 	
 	    <Button
@@ -90,6 +92,7 @@
         android:layout_alignLeft="@+id/menu_principal_gerenciar_cliente"
         android:layout_below="@+id/menu_principal_gerenciar_cliente"
         android:layout_marginTop="16dp"
+        android:onClick="GerenciarVendedor"
         android:text="@string/gerenciarVendedor" />
 
     <Button
@@ -109,7 +112,8 @@
         android:layout_alignLeft="@+id/menu_principal_gerenciar_produto"
         android:layout_below="@+id/menu_principal_gerenciar_produto"
         android:layout_marginTop="16dp"
-        android:text="@string/gerenciarContas" />
+        android:text="@string/gerenciarContas" 
+        android:onClick="GerenciarContas"/>
 
     <Button
         android:id="@+id/menu_principal_configuracoes"

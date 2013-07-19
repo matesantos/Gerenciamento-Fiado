@@ -30,9 +30,9 @@ public class GerenciarProdutoActivity extends Activity {
 	}
 	
 	
-	private void goToActivity (Class<? extends Activity> activityClass2){
-    	Intent newIntent = new Intent(this,activityClass2);
-    	startActivity(newIntent);
+	private void goToActivity(Class<? extends Activity> activityClass2){
+    	Intent newIntent2 = new Intent(this,activityClass2);
+    	startActivity(newIntent2);
     }
 
 }

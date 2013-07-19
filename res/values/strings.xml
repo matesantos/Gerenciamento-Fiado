@@ -26,12 +26,12 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-    	 EXCLUIRCLIENTE    -->
+    	 EXCLUIRCLIENTE
+    -->
 
     <string name="title_activity_atualizar_cliente">AtualizarClienteActivity</string>
     <string name="title_activity_buscar_cliente">BuscarClienteActivity</string>
     <string name="title_activity_excluir_cliente">ExcluirClienteActivity</string>
-    
     <string name="nome">NOME:</string>
     <string name="endereco">ENDEREÇO:</string>
     <string name="cep">CEP:</string>
@@ -51,7 +51,11 @@
     <string name="tipo">Tipo do produto</string>
     <string name="title_activity_cadastrar_contas">Cadastro de Contas</string>
     <string name="title_activity_gerenciar_contas">GerenciarContasActivity</string>
-	<string name="cancelar">CANCELAR</string>
-	<string name="pesquisar">PESQUISAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="pesquisar">PESQUISAR</string>
+    <string name="title_activity_pesquisa_contas">PesquisaContas</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_gerenciar_vendas">GerenciarVendas</string>
+    <string name="title_activity_gerenciar_vendedor">GerenciarVendedor</string>
 
 </resources>
