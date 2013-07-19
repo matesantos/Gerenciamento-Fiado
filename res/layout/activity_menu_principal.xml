@@ -53,8 +53,13 @@
 	        android:layout_alignLeft="@+id/menu_principal_gerenciar_cliente"
 	        android:layout_below="@+id/menu_principal_gerenciar_cliente"
 	        android:layout_marginTop="16dp"
+<<<<<<< HEAD
 	        
 	        android:text="@string/gerenciarVendedor" />
+=======
+	        android:text="@string/gerenciarVendedor" 
+	        android:onClick="GerenciarVendedor"/>
+>>>>>>> 94c71f9670fb2c0fa06eb3b1624a3d1c31f7af5f
 	
 	    <Button
 	        android:id="@+id/menu_principal_gerenciar_produto"

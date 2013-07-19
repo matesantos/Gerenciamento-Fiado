@@ -17,6 +17,11 @@ public class AtualizarClienteActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_atualizar_cliente);
+
+		
+		//spinnerTelefone = (Spinner) findViewById(R.id.spinnerTelefoneVendedorAtualizar);
+        
+
         List<String> listColor = UtilsCliente.getTelefoneList();
         ArrayAdapter<String> spinnerList = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listColor);
         spinnerList.setDropDownViewResource(android.R.layout.simple_spinner_item);

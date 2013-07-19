@@ -15,7 +15,7 @@
 	    android:paddingTop="@dimen/activity_vertical_margin" >
 	
 	    <TextView
-	        android:id="@+id/textView1"
+	        android:id="@+id/textViewGerenciarVendedor"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignParentTop="true"
@@ -26,7 +26,7 @@
 	        android:textSize="@dimen/tamanhoDaFonte" />
 	
 	    <Button
-	        android:id="@+id/excluirCliente"
+	        android:id="@+id/excluirVendedorBotao"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/Button02"
@@ -39,28 +39,28 @@
 	        android:id="@+id/Button02"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/textView1"
-	        android:layout_below="@+id/AtualizarClienteBotao"
+	        android:layout_alignLeft="@+id/textViewGerenciarVendedor"
+	        android:layout_below="@+id/AtualizarVendedorBotao"
 	        android:layout_marginTop="48dp"
 	        android:text="@string/buscarCliente"
 	        android:onClick="buscarCLiente" />
 	
 	    <Button
-	        android:id="@+id/cadastrarCliente"
+	        android:id="@+id/cadastrarVendedorBotao"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/textView1"
-	        android:layout_below="@+id/textView1"
+	        android:layout_alignLeft="@+id/textViewGerenciarVendedor"
+	        android:layout_below="@+id/textViewGerenciarVendedor"
 	        android:layout_marginTop="32dp"
 	        android:onClick="casdastrarCLiente"
 	        android:text="@string/cadastrarCliente" />
 	
 	    <Button
-	        android:id="@+id/AtualizarClienteBotao"
+	        android:id="@+id/AtualizarVendedorBotao"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/Button02"
-	        android:layout_below="@+id/cadastrarCliente"
+	        android:layout_below="@+id/cadastrarVendedorBotao"
 	        android:layout_marginTop="45dp"
 	        android:onClick="atualizarCLiente"
 	        android:text="@string/atualizarCliente" />

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -39,3 +40,75 @@
         android:text="Meus Clientes" />
 
 </RelativeLayout>
+=======
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp" >
+
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/Black"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin" >
+	
+	    <TextView
+	        android:id="@+id/textViewGerenciarVendedor"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="20dp"
+	        android:text="@string/gerenciarVendedor"
+	        android:textColor="@color/White"
+	        android:textSize="27sp" />
+	
+	    <Button
+	        android:id="@+id/excluirVendedorBotao"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/Button02"
+	        android:layout_below="@+id/Button02"
+	        android:layout_marginTop="53dp"
+	        android:text="@string/excluirVendedor" 
+	        android:onClick="excluirVendedor"/>
+	
+	    <Button
+	        android:id="@+id/Button02"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textViewGerenciarVendedor"
+	        android:layout_below="@+id/AtualizarVendedorBotao"
+	        android:layout_marginTop="48dp"
+	        android:text="@string/buscarVendedor" />
+	
+	    <Button
+	        android:id="@+id/cadastrarVendedorBotao"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textViewGerenciarVendedor"
+	        android:layout_below="@+id/textViewGerenciarVendedor"
+	        android:layout_marginTop="32dp"
+	        android:text="@string/cadastrarVendedor"
+	        android:onClick="casdastrarVendedor" />
+	
+	    <Button
+	        android:id="@+id/AtualizarVendedorBotao"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/Button02"
+	        android:layout_below="@+id/cadastrarVendedorBotao"
+	        android:layout_marginTop="45dp"
+	        android:onClick="atualizarVendedor"
+	        android:text="@string/atualizarVendedor" />
+	
+	</RelativeLayout>
+
+</ScrollView>
+
+>>>>>>> 94c71f9670fb2c0fa06eb3b1624a3d1c31f7af5f
