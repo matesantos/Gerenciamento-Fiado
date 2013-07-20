@@ -20,104 +20,108 @@
         android:textSize="@dimen/tamanhoDaFonte" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/textViewExcluirVendedorGerenciarVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageButton2"
-        android:layout_below="@+id/imageButton2"
+        android:layout_alignLeft="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
+        android:layout_below="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
         android:layout_marginTop="35dp"
-        android:src="@drawable/contas" />
+        android:src="@drawable/contas" 
+        android:onClick=""/>
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/textViewBuscarVendedorGerenciarVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/imageButton1"
-        android:layout_alignTop="@+id/imageButton4"
-        android:src="@drawable/produto" />
+        android:layout_alignRight="@+id/imageButtonCadastrarVendedorTelaGerenciarCliente"
+        android:layout_alignTop="@+id/textViewExcluirVendedorGerenciarVendedor"
+        android:src="@drawable/produto"
+        android:onClick="" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/imageButtonConfiguracoesTelaMenuPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageButton4"
-        android:layout_alignTop="@+id/imageButton5"
+        android:layout_alignLeft="@+id/textViewExcluirVendedorGerenciarVendedor"
+        android:layout_alignTop="@+id/imageButtonVendasTelaMenuPrincipal"
         android:src="@drawable/configuracoes" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButton6"
-        android:layout_alignRight="@+id/imageButton5"
+        android:layout_above="@+id/imageButtonConfiguracoesTelaMenuPrincipal"
+        android:layout_alignRight="@+id/imageButtonVendasTelaMenuPrincipal"
         android:text="@string/gerenciarVendas" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewBuscarClienteGerenciarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButton3"
-        android:layout_alignRight="@+id/imageButton3"
+        android:layout_above="@+id/textViewBuscarVendedorGerenciarVendedor"
+        android:layout_alignRight="@+id/textViewBuscarVendedorGerenciarVendedor"
         android:text="@string/gerenciarProduto" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewNovoVendedorGerenciarVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButton2"
-        android:layout_alignRight="@+id/imageButton1"
+        android:layout_above="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
+        android:layout_alignRight="@+id/imageButtonCadastrarVendedorTelaGerenciarCliente"
         android:text="@string/gerenciarCliente" />
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/imageButtonCadastrarVendedorTelaGerenciarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView_menu_principal"
         android:layout_below="@+id/textView_menu_principal"
         android:layout_marginTop="30dp"
-        android:src="@drawable/cliente" />
+        android:src="@drawable/cliente" 
+        android:onClick="GerenciarCliente"/>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textView_menu_principal"
-        android:layout_alignTop="@+id/imageButton1"
-        android:src="@drawable/vendedor" />
+        android:layout_alignTop="@+id/imageButtonCadastrarVendedorTelaGerenciarCliente"
+        android:src="@drawable/vendedor" 
+        android:onClick="GerenciarVendedor"/>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textViewAtualizarClienteGerenciarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView5"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_alignRight="@+id/imageButton2"
+        android:layout_alignBaseline="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_alignBottom="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_alignRight="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
         android:text="@string/gerenciarVendedor" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewExcluirClienteGerenciarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignLeft="@+id/imageButton4"
+        android:layout_alignBaseline="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_alignBottom="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_alignLeft="@+id/textViewExcluirVendedorGerenciarVendedor"
         android:text="@string/gerenciarContas" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButton6"
+        android:layout_above="@+id/imageButtonConfiguracoesTelaMenuPrincipal"
         android:layout_alignParentRight="true"
         android:layout_marginRight="38dp"
         android:text="@string/gerenciarConfiguracoes" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imageButtonVendasTelaMenuPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageButton3"
-        android:layout_below="@+id/imageButton3"
+        android:layout_alignLeft="@+id/textViewBuscarVendedorGerenciarVendedor"
+        android:layout_below="@+id/textViewBuscarVendedorGerenciarVendedor"
         android:layout_marginTop="36dp"
         android:src="@drawable/dinheiro" />
 

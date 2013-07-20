@@ -69,7 +69,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textViewExcluirClienteGerenciarCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cpf"
@@ -92,7 +92,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textViewNovoVendedorGerenciarVendedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/telefone"
