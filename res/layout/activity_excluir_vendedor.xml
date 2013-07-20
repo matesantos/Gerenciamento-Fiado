@@ -51,12 +51,12 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewVendedorAtualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textViewNomeAplicativoTelaLogin"
             android:layout_below="@+id/radioGroup1"
-            android:text="Cliente a ser excluído:"
+            android:text="Vendedor a ser excluído:"
             android:textColor="@color/White"
             android:textSize="@dimen/tamanhoDosLabels" />
 
@@ -64,8 +64,8 @@
             android:id="@+id/editTextExcluir"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textViewVendedorAtualizar"
+            android:layout_below="@+id/textViewVendedorAtualizar"
             android:ems="10"
             android:inputType="textPersonName" >
 
@@ -76,12 +76,12 @@
             android:id="@+id/buttonExcluirCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
+            android:layout_below="@+id/textViewVendedorAtualizar"
             android:layout_toRightOf="@+id/editTextExcluir"
             android:text="@string/pesquisar" />
 
         <TextView
-            android:id="@+id/textViewBuscarClienteGerenciarCliente"
+            android:id="@+id/textViewExcluir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/editTextExcluir"
@@ -92,21 +92,21 @@
             android:textSize="@dimen/tamanhoDosLabels" />
 
         <Button
-            android:id="@+id/buttonCancelar"
+            android:id="@+id/buttonCancelarVededor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button2"
-            android:layout_alignBottom="@+id/button2"
-            android:layout_alignLeft="@+id/textViewBuscarClienteGerenciarCliente"
+            android:layout_alignBaseline="@+id/excluirVendedor"
+            android:layout_alignBottom="@+id/excluirVendedor"
+            android:layout_alignLeft="@+id/textViewExcluir"
             android:layout_marginLeft="18dp"
             android:text="@string/cancelar" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/excluirVendedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignRight="@+id/radioGroup1"
-            android:layout_below="@+id/textViewBuscarClienteGerenciarCliente"
+            android:layout_below="@+id/textViewExcluir"
             android:layout_marginTop="56dp"
             android:text="@string/excluir" />
 

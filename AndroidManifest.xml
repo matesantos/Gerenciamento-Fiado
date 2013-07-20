@@ -60,7 +60,31 @@
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.ExcluirClienteActivity"
             android:label="@string/title_activity_excluir_cliente" >
         </activity>
-    
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.GerenciarVendedorActivity"
+            android:label="@string/title_activity_gerenciar_cliente" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.CadastrarVendedorActivity"
+            android:label="@string/title_activity_cadastrar_vendor" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.AtualizarVendedorActivity"
+            android:label="@string/title_activity_atualizar_vendedor" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.ExcluirVendedorActivity"
+            android:label="@string/title_activity_excluir_vendedor" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.tela_login.LoginActivity"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

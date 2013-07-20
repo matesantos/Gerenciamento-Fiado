@@ -4,15 +4,22 @@
     <string name="app_name">Gerenciamento-Fiado</string>
     <string name="action_settings">Settings</string>
 
+    <!-- strings da TELALOGIN -->
+    <string name="nomeAplicativo">FIADO SYSTEM</string>
+    <string name="loginTelaLogin">LOGIN</string>
+    <string name="senhaTelaLogin">SENHA</string>
+    <string name="cadastrarTelaLogin">CADASTRE-SE</string>
+    <string name="entrarTelaLogin">ENTRAR</string>
+    
     <!-- strings do MENUPRINCIPAL -->
-    <string name="gerenciarCliente">GERENCIAR CLIENTE</string>
-    <string name="gerenciarVendedor">GERENCIAR VENDEDOR</string>
-    <string name="gerenciarProduto">GERENCIAR PRODUTO</string>
-    <string name="gerenciarContas">GERENCIAR CONTAS</string>
-    <string name="gerenciarVendas">GERENCIAR VENDAS</string>
+    <string name="gerenciarCliente">CLIENTE</string>
+    <string name="gerenciarVendedor">VENDEDOR</string>
+    <string name="gerenciarProduto">PRODUTO</string>
+    <string name="gerenciarContas">CONTAS</string>
+    <string name="gerenciarVendas">VENDAS</string>
     <string name="gerenciarConfiguracoes">CONFIGURAÇÕES</string>
     <string name="menuprincipal">MENU PRINCIPAL</string>
-    <string name="title_activity_gerenciar_cliente">GerenciarClienteActivity</string>
+    <string name="title_activity_gerenciar_cliente"></string>
 
     <!-- strings do GERENCIARCLIENTE -->
     <string name="cadastrarCliente">CADASTRAR CLIENTE</string>
@@ -22,7 +29,7 @@
     <string name="title_activity_cadastrar_cliente">Cadastrar Cliente</string>
 
     <!--
-         strings do GERENCIARCLIENTE -> 
+         strings comuns do GERENCIARCLIENTE -> 
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
@@ -31,7 +38,6 @@
     <string name="title_activity_atualizar_cliente">AtualizarClienteActivity</string>
     <string name="title_activity_buscar_cliente">BuscarClienteActivity</string>
     <string name="title_activity_excluir_cliente">ExcluirClienteActivity</string>
-    
     <string name="nome">NOME:</string>
     <string name="endereco">ENDEREÇO:</string>
     <string name="cep">CEP:</string>
@@ -40,6 +46,31 @@
     <string name="telefone">TELEFONE:</string>
     <string name="numeroCasa">NUMERO:</string>
     <string name="title_activity_novo_cliente">NOVO CLIENTE</string>
+
+    <!-- strings do GERENCIARVENDEDOR -->
+    <string name="cadastrarVendedor">CADASTRAR VENDEDOR</string>
+    <string name="atualizarVendedor">ATUALIZAR VENDEDOR</string>
+    <string name="buscarVendedor">BUSCAR VENDEDOR</string>
+    <string name="excluirVendedor">EXCLUIR VENDEDOR</string>
+
+    <!--
+         strings comuns do GERENCIARVENDEDOR -> 
+    	 CADASTRARVENDEDOR 
+    	 ATUALIZARVENDEDOR
+    	 BUSCARVENDEDOR
+    	 EXCLUIRVENDEDOR
+    -->
+
+    <string name="title_activity_atualizar_Vendedor">Atualizar Vendedor</string>
+    <string name="title_activity_excluir_Vendedor">Excluir Vendedor</string>
+    <string name="nomeVendedor">NOME:</string>
+    <string name="enderecoVendedor">ENDEREÇO:</string>
+    <string name="cepVendedor">CEP:</string>
+    <string name="cpfVendedor">CPF:</string>
+    <string name="rgVendedor">RG:</string>
+    <string name="telefoneVendedor">TELEFONE:</string>
+    <string name="loginVendedor">LOGIN:</string>
+    <string name="senhaVendedor">SENHA:</string>
 
     <!-- strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR, 	CANCELAR, PESQUISAR -->
     <string name="salvar">SALVAR</string>
@@ -51,7 +82,12 @@
     <string name="tipo">Tipo do produto</string>
     <string name="title_activity_cadastrar_contas">Cadastro de Contas</string>
     <string name="title_activity_gerenciar_contas">GerenciarContasActivity</string>
-	<string name="cancelar">CANCELAR</string>
-	<string name="pesquisar">PESQUISAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="pesquisar">PESQUISAR</string>
+    <string name="title_activity_cadastrar_vendor">CadastrarVendorActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_atualizar_vendedor">AtualizarVendedorActivity</string>
+    <string name="title_activity_excluir_vendedor">ExcluirVendedorActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 </resources>

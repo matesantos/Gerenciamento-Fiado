@@ -16,7 +16,7 @@
             android:id="@+id/textViewGerenciarVendedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Digite os dados do cliente para efetuar o cadastro"
+            android:text="Digite os dados do vendedor para efetuar o cadastro"
             android:textColor="@color/White"
             android:textSize="@dimen/tamanhoDosLabels" />
 
@@ -24,7 +24,7 @@
             android:id="@+id/textViewVendedorAtualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nome"
+            android:text="@string/nomeVendedor"
             android:textColor="@color/White"
             android:textSize="@dimen/tamanhoDosLabels" />
 
@@ -50,7 +50,7 @@
             android:id="@+id/textViewEndereco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/endereco"
+            android:text="@string/rgVendedor"
             android:textColor="@color/White"
             android:textSize="@dimen/tamanhoDosLabels" />
 
@@ -95,7 +95,7 @@
             android:id="@+id/textViewNovoVendedorGerenciarVendedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/telefone"
+            android:text="@string/telefoneVendedor"
             android:textColor="@color/White"
             android:textColorHint="@color/White"
             android:textSize="@dimen/tamanhoDosLabels" />
@@ -119,7 +119,7 @@
             android:id="@+id/textViewNumeroCasa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/numeroCasa"
+            android:text="@string/loginVendedor"
             android:textColor="@color/White"
             android:textColorHint="@color/White"
             android:textSize="@dimen/tamanhoDosLabels" />
@@ -132,9 +132,10 @@
             android:orientation="vertical" >
              
              <EditText
-                android:id="@+cadastro/edNumeroCasa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                 android:id="@+cadastro/edNumeroCasa"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:inputType="text" />
             
         </LinearLayout>
         
@@ -142,7 +143,7 @@
             android:id="@+id/textViewCEP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cep"
+            android:text="@string/senhaVendedor"
             android:textColor="@color/White"
             android:textColorHint="@color/White"
             android:textSize="@dimen/tamanhoDosLabels" />
@@ -155,9 +156,10 @@
             android:orientation="vertical" >
              
              <EditText
-                android:id="@+cadastro/edNumeroCasa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                 android:id="@+cadastro/edNumeroCasa"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:inputType="textPassword" />
             
         </LinearLayout>
         

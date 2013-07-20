@@ -1,8 +1,6 @@
 package br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto;
 
 import br.ufpb.lp3.gerenciamento_fiado.R;
-import br.ufpb.lp3.gerenciamento_fiado.R.layout;
-import br.ufpb.lp3.gerenciamento_fiado.R.menu;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;

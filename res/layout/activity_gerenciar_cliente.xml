@@ -1,71 +1,93 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="16dp" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
 
-	<RelativeLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:background="@color/Black"
-	    android:paddingBottom="@dimen/activity_vertical_margin"
-	    android:paddingLeft="@dimen/activity_horizontal_margin"
-	    android:paddingRight="@dimen/activity_horizontal_margin"
-	    android:paddingTop="@dimen/activity_vertical_margin" >
-	
-	    <TextView
-	        android:id="@+id/textView1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentTop="true"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="20dp"
-	        android:text="@string/gerenciarCliente"
-	        android:textColor="@color/White"
-	        android:textSize="@dimen/tamanhoDaFonte" />
-	
-	    <Button
-	        android:id="@+id/excluirCliente"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/Button02"
-	        android:layout_below="@+id/Button02"
-	        android:layout_marginTop="53dp"
-	        android:text="@string/excluirCliente"
-	        android:onClick="excluirCLiente" />
-	
-	    <Button
-	        android:id="@+id/Button02"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/textView1"
-	        android:layout_below="@+id/AtualizarClienteBotao"
-	        android:layout_marginTop="48dp"
-	        android:text="@string/buscarCliente"
-	        android:onClick="buscarCLiente" />
-	
-	    <Button
-	        android:id="@+id/cadastrarCliente"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/textView1"
-	        android:layout_below="@+id/textView1"
-	        android:layout_marginTop="32dp"
-	        android:onClick="casdastrarCLiente"
-	        android:text="@string/cadastrarCliente" />
-	
-	    <Button
-	        android:id="@+id/AtualizarClienteBotao"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/Button02"
-	        android:layout_below="@+id/cadastrarCliente"
-	        android:layout_marginTop="45dp"
-	        android:onClick="atualizarCLiente"
-	        android:text="@string/atualizarCliente" />
-	
-	</RelativeLayout>
+    <TextView
+        android:id="@+id/textViewGerenciarVendedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/gerenciarCliente"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/tamanhoDaFonte" />
 
-</ScrollView>
+    <TextView
+        android:id="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
+        android:layout_alignParentLeft="true"
+        android:text="@string/cadastrarCliente"/>
 
+    <TextView
+        android:id="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonGerenciarProdutoTelaMenuPrincipal"
+        android:layout_alignLeft="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:text="@string/buscarCliente" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGerenciarProdutoTelaMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
+        android:layout_alignTop="@+id/imageButtonGerenciarContasTelaMenuPrincipal"
+        android:src="@drawable/buscar_pessoa" 
+        android:onClick="buscarCLiente"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonGerenciarContasTelaMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewAtualizarClienteGerenciarCliente"
+        android:layout_below="@+id/imageButtonGerenciarVendedorTelaMenuPrincipal"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/remover_pessoa" 
+        android:onClick="excluirCLiente"/>
+
+    <TextView
+        android:id="@+id/textViewExcluirClienteGerenciarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_alignBottom="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_alignRight="@+id/textViewAtualizarClienteGerenciarCliente"
+        android:text="@string/excluirCliente" />
+
+    <TextView
+        android:id="@+id/textViewAtualizarClienteGerenciarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
+        android:layout_alignParentRight="true"
+        android:text="@string/atualizarCliente" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGerenciarVendedorTelaMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButtonGerenciarContasTelaMenuPrincipal"
+        android:layout_below="@+id/textViewGerenciarVendedor"
+        android:layout_marginTop="42dp"
+        android:onClick="atualizarCLiente"
+        android:src="@drawable/atualizar_pessoa" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageButtonGerenciarVendedorTelaMenuPrincipal"
+        android:layout_toLeftOf="@+id/textViewGerenciarVendedor"
+        android:onClick="casdastrarCLiente"
+        android:src="@drawable/novo_cliente" />
+
+</RelativeLayout>
