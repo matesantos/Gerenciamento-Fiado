@@ -1,87 +1,128 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView1"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
 
-	<RelativeLayout
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:background="@color/Black"
-	    android:paddingBottom="@dimen/activity_vertical_margin"
-	    android:paddingLeft="@dimen/activity_horizontal_margin"
-	    android:paddingRight="@dimen/activity_horizontal_margin"
-	    android:paddingTop="@dimen/activity_vertical_margin" >
-	    
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_vendas"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_contas"
-	        android:layout_below="@+id/menu_principal_gerenciar_contas"
-	        android:layout_marginTop="22dp"
-	        android:text="@string/gerenciarVendas" />
-	
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_cliente"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/textView_menu_principal"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="19dp"
-	        android:text="@string/gerenciarCliente" 
-	        android:onClick="GerenciarCliente"/>
-	
-	    <TextView
-	        android:id="@+id/textView_menu_principal"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentTop="true"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginTop="05dp"
-	        android:text="@string/menuprincipal"
-	        android:textColor="@color/White"
-	        android:textColorLink="@color/White"
-	        android:textSize="@dimen/tamanhoDaFonte" />
-	
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_vendedor"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_cliente"
-	        android:layout_below="@+id/menu_principal_gerenciar_cliente"
-	        android:layout_marginTop="16dp"
-	        android:text="@string/gerenciarVendedor" 
-	        android:onClick="GerenciarVendedor"/>
-	
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_produto"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_vendedor"
-	        android:layout_below="@+id/menu_principal_gerenciar_vendedor"
-	        android:layout_marginTop="16dp"
-	        android:text="@string/gerenciarProduto" />
-	
-	    <Button
-	        android:id="@+id/menu_principal_gerenciar_contas"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_produto"
-	        android:layout_below="@+id/menu_principal_gerenciar_produto"
-	        android:layout_marginTop="16dp"
-	        android:text="@string/gerenciarContas" />
-	
-	    <Button
-	        android:id="@+id/menu_principal_configuracoes"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/menu_principal_gerenciar_vendas"
-	        android:layout_below="@+id/menu_principal_gerenciar_vendas"
-	        android:layout_marginTop="16dp"
-	        android:text="@string/gerenciarConfiguracoes" />
+    <TextView
+        android:id="@+id/textView_menu_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="05dp"
+        android:text="@string/menuprincipal"
+        android:textColor="@color/Black"
+        android:textColorLink="@color/White"
+        android:textSize="@dimen/tamanhoDaFonte" />
 
-	</RelativeLayout>
-	
-</ScrollView>
+    <ImageButton
+        android:id="@+id/textViewExcluirVendedorGerenciarVendedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
+        android:layout_below="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/contas" 
+        android:onClick=""/>
+
+    <ImageButton
+        android:id="@+id/textViewBuscarVendedorGerenciarVendedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageButtonCadastrarVendedorTelaGerenciarCliente"
+        android:layout_alignTop="@+id/textViewExcluirVendedorGerenciarVendedor"
+        android:src="@drawable/produto"
+        android:onClick="" />
+
+    <ImageButton
+        android:id="@+id/imageButtonConfiguracoesTelaMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewExcluirVendedorGerenciarVendedor"
+        android:layout_alignTop="@+id/imageButtonVendasTelaMenuPrincipal"
+        android:src="@drawable/configuracoes" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonConfiguracoesTelaMenuPrincipal"
+        android:layout_alignRight="@+id/imageButtonVendasTelaMenuPrincipal"
+        android:text="@string/gerenciarVendas" />
+
+    <TextView
+        android:id="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewBuscarVendedorGerenciarVendedor"
+        android:layout_alignRight="@+id/textViewBuscarVendedorGerenciarVendedor"
+        android:text="@string/gerenciarProduto" />
+
+    <TextView
+        android:id="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
+        android:layout_alignRight="@+id/imageButtonCadastrarVendedorTelaGerenciarCliente"
+        android:text="@string/gerenciarCliente" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCadastrarVendedorTelaGerenciarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_menu_principal"
+        android:layout_below="@+id/textView_menu_principal"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/cliente" 
+        android:onClick="GerenciarCliente"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView_menu_principal"
+        android:layout_alignTop="@+id/imageButtonCadastrarVendedorTelaGerenciarCliente"
+        android:src="@drawable/vendedor" 
+        android:onClick="GerenciarVendedor"/>
+
+    <TextView
+        android:id="@+id/textViewAtualizarClienteGerenciarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_alignBottom="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_alignRight="@+id/imageButtonAtualizarVendedorTelaGerenciarVendedor"
+        android:text="@string/gerenciarVendedor" />
+
+    <TextView
+        android:id="@+id/textViewExcluirClienteGerenciarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_alignBottom="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_alignLeft="@+id/textViewExcluirVendedorGerenciarVendedor"
+        android:text="@string/gerenciarContas" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonConfiguracoesTelaMenuPrincipal"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp"
+        android:text="@string/gerenciarConfiguracoes" />
+
+    <ImageButton
+        android:id="@+id/imageButtonVendasTelaMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewBuscarVendedorGerenciarVendedor"
+        android:layout_below="@+id/textViewBuscarVendedorGerenciarVendedor"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/dinheiro" />
+
+</RelativeLayout>

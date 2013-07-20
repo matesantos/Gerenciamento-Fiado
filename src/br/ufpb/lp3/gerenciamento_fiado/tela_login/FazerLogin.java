@@ -43,13 +43,14 @@ public class FazerLogin implements OnClickListener{
 	
 	
 	//método para fazer o login
-	private void fazerLogin(){
+	private void fazerLogin(String login, String senha){
 		if (login.isEmpty()){
 			String error = Mensagens.campoLoginSenhaVazio;
 			loginActivity.mostrarError(error);
 			
 		}else{
 			loginActivity.EntrarNoSistema();
+			
 		}
 		
 	}
@@ -62,8 +63,12 @@ public class FazerLogin implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
+		
+		this.login = loginActivity.loginEdit.getText().toString();
+		this.senha = loginActivity.senhaEdit.getText().toString();
+		
 		if(botao.equalsIgnoreCase("entrar")){
-			fazerLogin();
+			fazerLogin(login,senha);
 		}else if (botao.equalsIgnoreCase("cadastrar")){
 			cadastrar();
 		}
