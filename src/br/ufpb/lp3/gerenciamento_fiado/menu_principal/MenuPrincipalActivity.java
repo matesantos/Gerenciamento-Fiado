@@ -1,17 +1,14 @@
 package br.ufpb.lp3.gerenciamento_fiado.menu_principal;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.GerenciarClienteActivity;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_contas.GerenciarContasActivity;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.GerenciarProdutoActivity;
-import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendas.GerenciarVendas;
-import br.ufpb.lp3.gerenciamento_fiado.gerencia_vendedor.GerenciarVendedor;
-import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.GerenciarVendedorActivity;
-import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
-import android.view.Menu;
-import android.view.View;
 
 public class MenuPrincipalActivity extends Activity {
 
@@ -32,9 +29,7 @@ public class MenuPrincipalActivity extends Activity {
     	goToActivity(GerenciarClienteActivity.class);
     }
     
-    public void GerenciarVendedor (View v){
-    	goToActivity(GerenciarVendedorActivity.class);
-    }
+    
     
     public void GerenciarProduto(View v){
     	goToActivity(GerenciarProdutoActivity.class);
@@ -45,9 +40,7 @@ public class MenuPrincipalActivity extends Activity {
     }    	
 
     
-    public void GerenciarVendas(View v){
-    	goToActivity(GerenciarVendas.class);
-    }
+   
     
     public void Configuracoes(View v){
     	

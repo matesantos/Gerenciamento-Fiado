@@ -12,14 +12,14 @@
     <string name="entrarTelaLogin">ENTRAR</string>
     
     <!-- strings do MENUPRINCIPAL -->
-    <string name="gerenciarCliente">GERENCIAR CLIENTE</string>
-    <string name="gerenciarVendedor">GERENCIAR VENDEDOR</string>
-    <string name="gerenciarProduto">GERENCIAR PRODUTO</string>
-    <string name="gerenciarContas">GERENCIAR CONTAS</string>
-    <string name="gerenciarVendas">GERENCIAR VENDAS</string>
+    <string name="gerenciarCliente">CLIENTE</string>
+    <string name="gerenciarVendedor">VENDEDOR</string>
+    <string name="gerenciarProduto">PRODUTO</string>
+    <string name="gerenciarContas">CONTAS</string>
+    <string name="gerenciarVendas">VENDAS</string>
     <string name="gerenciarConfiguracoes">CONFIGURAÇÕES</string>
     <string name="menuprincipal">MENU PRINCIPAL</string>
-    <string name="title_activity_gerenciar_cliente">GerenciarClienteActivity</string>
+    <string name="title_activity_gerenciar_cliente"></string>
 
     <!-- strings do GERENCIARCLIENTE -->
     <string name="cadastrarCliente">CADASTRAR CLIENTE</string>
@@ -78,19 +78,14 @@
     <string name="apagar">APAGAR</string>
     <string name="alterar">ALTERAR</string>
     <string name="excluir">EXCLUIR</string>
-<<<<<<< HEAD
     <string name="title_activity_gerenciar_produtos">GerenciarProdutosActivity</string>
     <string name="title_activity_gerenciar_produto">Gerenciar Produtos</string>
     <string name="tipo">Tipo do produto</string>
     <string name="title_activity_cadastrar_contas">Cadastro de Contas</string>
     <string name="title_activity_gerenciar_contas">GerenciarContasActivity</string>
-    <string name="cancelar">CANCELAR</string>
-    <string name="pesquisar">PESQUISAR</string>
     <string name="title_activity_pesquisa_contas">PesquisaContas</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_gerenciar_vendas">GerenciarVendas</string>
     <string name="title_activity_gerenciar_vendedor">GerenciarVendedor</string>
-=======
     <string name="cancelar">CANCELAR</string>
     <string name="pesquisar">PESQUISAR</string>
     <string name="title_activity_cadastrar_vendor">CadastrarVendorActivity</string>
@@ -98,6 +93,5 @@
     <string name="title_activity_atualizar_vendedor">AtualizarVendedorActivity</string>
     <string name="title_activity_excluir_vendedor">ExcluirVendedorActivity</string>
     <string name="title_activity_login">LoginActivity</string>
->>>>>>> 94c71f9670fb2c0fa06eb3b1624a3d1c31f7af5f
 
 </resources>

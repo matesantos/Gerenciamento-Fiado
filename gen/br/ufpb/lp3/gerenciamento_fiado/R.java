@@ -8,302 +8,288 @@
 package br.ufpb.lp3.gerenciamento_fiado;
 
 public final class R {
-	public static final class array {
-		public static final int array_comboBox = 0x7f040000;
-	}
+    public static final class array {
+        public static final int array_comboBox=0x7f040000;
+    }
+    public static final class attr {
+    }
+    public static final class cadastro {
+        public static final int btcancelar=0x7f0b0006;
+        public static final int btconfirma=0x7f0b0005;
+        public static final int edNumeroCasa=0x7f0b0004;
+        public static final int edcidade=0x7f0b0002;
+        public static final int edendereco=0x7f0b0001;
+        public static final int ednome=0x7f0b0000;
+        public static final int edtelefone=0x7f0b0003;
+    }
+    public static final class color {
+        public static final int Black=0x7f050000;
+        public static final int White=0x7f050001;
+    }
+    public static final class dimen {
+        /**  Default screen margins, per the Android Design guidelines. 
 
-	public static final class attr {
-	}
-
-	public static final class cadastro {
-		public static final int btcancelar = 0x7f0b0006;
-		public static final int btconfirma = 0x7f0b0005;
-		public static final int edNumeroCasa = 0x7f0b0004;
-		public static final int edcidade = 0x7f0b0002;
-		public static final int edendereco = 0x7f0b0001;
-		public static final int ednome = 0x7f0b0000;
-		public static final int edtelefone = 0x7f0b0003;
-	}
-
-	public static final class color {
-		public static final int Black = 0x7f050000;
-		public static final int White = 0x7f050001;
-	}
-
-	public static final class dimen {
-		/**
-		 * Default screen margins, per the Android Design guidelines.
-		 * 
-		 * Customize dimensions originally defined in res/values/dimens.xml
-		 * (such as screen margins) for sw720dp devices (e.g. 10" tablets) in
-		 * landscape here.
-		 */
-		public static final int activity_horizontal_margin = 0x7f060000;
-		public static final int activity_vertical_margin = 0x7f060001;
-		public static final int tamanhoDaFonte = 0x7f060002;
-		public static final int tamanhoDosLabels = 0x7f060003;
-		public static final int texto_size_12 = 0x7f060004;
-		public static final int texto_size_18 = 0x7f060005;
-		public static final int texto_size_24 = 0x7f060006;
-	}
-
-	public static final class drawable {
-		public static final int background_image = 0x7f020000;
-		public static final int ic_launcher = 0x7f020001;
-		public static final int venda1 = 0x7f020002;
-	}
-
-	public static final class id {
-
-		public static final int AtualizarVendedorBotao=0x7f090026;
-        public static final int EditTextTelefoneVendedorAtualizar=0x7f090002;
-        public static final int LinearLayoutTelaLogin1=0x7f090028;
-        public static final int TextViewCEPVendedorAtualizar=0x7f090006;
-        public static final int TextViewNumeroVendedorAtualizar=0x7f090005;
-        public static final int buttonCadastrarTelaLogin=0x7f090032;
-        public static final int buttonCancelarVededor=0x7f090022;
-        public static final int buttonEntrarTelaLogin=0x7f090033;
-        public static final int buttonExcluirCliente=0x7f090009;
-        public static final int cadastrarVendedorBotao=0x7f090027;
-        public static final int editTextExcluir=0x7f090000;
-        public static final int editTextLoginTelaLogin=0x7f09002d;
-        public static final int editTextSenhaTelaLogin=0x7f090030;
-        public static final int excluirVendedor=0x7f090008;
-        public static final int excluirVendedorBotao=0x7f090024;
-        public static final int imageView1=0x7f09002a;
-        public static final int linearLayoutTelaLogin2=0x7f090029;
-        public static final int linearLayoutTelaLogin3=0x7f09002c;
-        public static final int linearLayoutTelaLogin4=0x7f09002f;
-        public static final int linearLayoutTelaLogin5=0x7f090031;
-        public static final int radioExcluir0=0x7f09000d;
-        public static final int radioExcluir1=0x7f09000e;
-        public static final int spinnerTelefoneVendedorAtualizar=0x7f090003;
-        public static final int textViewExcluir=0x7f09000f;
-        public static final int textViewGerenciarVendedor=0x7f09000b;
-        public static final int textViewLoginTelaLogin=0x7f09002b;
-        public static final int textViewNomeAplicativoTelaLogin=0x7f09001d;
-        public static final int textViewSenhaTelaLogin=0x7f09002e;
-        public static final int textViewTelefoneVendedorAtualizar=0x7f090004;
-        public static final int textViewVendedorAtualizar=0x7f090001;
-		public static final int AtualizarClienteBotao = 0x7f0a0027;
-		public static final int Button02 = 0x7f0a0026;
-		public static final int EditText01 = 0x7f0a0002;
-		public static final int TextView01 = 0x7f0a0005;
-		public static final int TextView02 = 0x7f0a0006;
-		public static final int action_settings = 0x7f0a0038;
-		public static final int button1 = 0x7f0a0021;
-		public static final int button2 = 0x7f0a0008;
-		public static final int button3 = 0x7f0a0029;
-		public static final int button4 = 0x7f0a002a;
-		public static final int button5 = 0x7f0a002b;
-		public static final int buttonCancelar = 0x7f0a0023;
-		public static final int buttonPesquisarCliente = 0x7f0a0009;
-		public static final int cadastrarCliente = 0x7f0a0028;
-		public static final int editText1 = 0x7f0a0000;
-		public static final int editText2 = 0x7f0a001c;
-		public static final int editText3 = 0x7f0a001d;
-		public static final int editText4 = 0x7f0a001e;
-		public static final int editText5 = 0x7f0a0020;
-		public static final int editTextCEP = 0x7f0a000a;
-		public static final int editTextNumeroCasa = 0x7f0a0007;
-		public static final int excluirCliente = 0x7f0a0025;
-		public static final int linearLayout1 = 0x7f0a0011;
-		public static final int linearLayout2 = 0x7f0a0012;
-		public static final int linearLayout3 = 0x7f0a0014;
-		public static final int linearLayout4 = 0x7f0a0016;
-		public static final int linearLayout5 = 0x7f0a0018;
-		public static final int linearLayout6 = 0x7f0a001b;
-		public static final int menu_principal_configuracoes = 0x7f0a0032;
-		public static final int menu_principal_gerenciar_cliente = 0x7f0a002e;
-		public static final int menu_principal_gerenciar_contas = 0x7f0a002d;
-		public static final int menu_principal_gerenciar_produto = 0x7f0a0031;
-		public static final int menu_principal_gerenciar_vendas = 0x7f0a002c;
-		public static final int menu_principal_gerenciar_vendedor = 0x7f0a0030;
-		public static final int radio0 = 0x7f0a000d;
-		public static final int radio1 = 0x7f0a000e;
-		public static final int radioGroup1 = 0x7f0a000c;
-		public static final int scrollView1 = 0x7f0a0024;
-		public static final int scrollViewCadastrarCliente = 0x7f0a0010;
-		public static final int scrollViewECliente = 0x7f0a0022;
-		public static final int spinner1 = 0x7f0a0033;
-		public static final int spinnerTelefoneAtualizarCliente = 0x7f0a0003;
-		public static final int tableRow1 = 0x7f0a0034;
-		public static final int tableRow2 = 0x7f0a0035;
-		public static final int tableRow3 = 0x7f0a0036;
-		public static final int tableRow4 = 0x7f0a0037;
-		public static final int textView1 = 0x7f0a000b;
-		public static final int textView2 = 0x7f0a0001;
-		public static final int textView3 = 0x7f0a000f;
-		public static final int textView4 = 0x7f0a0015;
-		public static final int textView5 = 0x7f0a0017;
-		public static final int textView6 = 0x7f0a001f;
-		public static final int textViewCEP = 0x7f0a001a;
-		public static final int textViewEndereco = 0x7f0a0013;
-		public static final int textViewNumeroCasa = 0x7f0a0019;
-		public static final int textViewTelefone = 0x7f0a0004;
-		public static final int textView_menu_principal = 0x7f0a002f;
-	}
-
-	public static final class layout {
-		public static final int activity_cadastrar_contas = 0x7f030003;
-		public static final int activity_cadastrar_produto = 0x7f030004;
-		public static final int activity_gerenciar_contas = 0x7f030007;
-		public static final int activity_gerenciar_produto = 0x7f030008;
-		public static final int activity_gerenciar_vendas = 0x7f030009;
-		public static final int activity_pesquisa_contas = 0x7f03000c;
-		public static final int activity_atualizar_cliente=0x7f030000;
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+         */
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
+        public static final int tamanhoDaFonte=0x7f060002;
+        public static final int tamanhoDosLabels=0x7f060003;
+        public static final int texto_size_12=0x7f060004;
+        public static final int texto_size_18=0x7f060005;
+        public static final int texto_size_24=0x7f060006;
+    }
+    public static final class drawable {
+        public static final int atualizar_pessoa=0x7f020000;
+        public static final int background_image=0x7f020001;
+        public static final int buscar_pessoa=0x7f020002;
+        public static final int cliente=0x7f020003;
+        public static final int configuracoes=0x7f020004;
+        public static final int contas=0x7f020005;
+        public static final int dinheiro=0x7f020006;
+        public static final int estoque=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int novo_cliente=0x7f020009;
+        public static final int people=0x7f02000a;
+        public static final int produto=0x7f02000b;
+        public static final int remover_pessoa=0x7f02000c;
+        public static final int venda1=0x7f02000d;
+        public static final int vendedor=0x7f02000e;
+    }
+    public static final class id {
+        public static final int EditTextTelefoneVendedorAtualizar=0x7f0a0002;
+        public static final int LinearLayoutTelaLogin1=0x7f0a0036;
+        public static final int TextViewCEPVendedorAtualizar=0x7f0a0006;
+        public static final int TextViewNumeroVendedorAtualizar=0x7f0a0005;
+        public static final int action_settings=0x7f0a004f;
+        public static final int button1=0x7f0a0027;
+        public static final int button2=0x7f0a0028;
+        public static final int button3=0x7f0a0033;
+        public static final int button4=0x7f0a0034;
+        public static final int button5=0x7f0a0035;
+        public static final int buttonCadastrarTelaLogin=0x7f0a0040;
+        public static final int buttonCancelar=0x7f0a002c;
+        public static final int buttonCancelarVededor=0x7f0a002d;
+        public static final int buttonEntrarTelaLogin=0x7f0a0041;
+        public static final int buttonExcluirCliente=0x7f0a0009;
+        public static final int editText1=0x7f0a001c;
+        public static final int editText2=0x7f0a001f;
+        public static final int editText3=0x7f0a0021;
+        public static final int editText4=0x7f0a0023;
+        public static final int editText5=0x7f0a0025;
+        public static final int editTextCEP=0x7f0a000a;
+        public static final int editTextExcluir=0x7f0a0000;
+        public static final int editTextLoginTelaLogin=0x7f0a003b;
+        public static final int editTextNumeroCasa=0x7f0a0007;
+        public static final int editTextSenhaTelaLogin=0x7f0a003e;
+        public static final int excluirVendedor=0x7f0a0008;
+        public static final int imageButtonConfiguracoesTelaMenuPrincipal=0x7f0a0048;
+        public static final int imageButtonGerenciarClienteTelaMenuPrincipal=0x7f0a002e;
+        public static final int imageButtonGerenciarContasTelaMenuPrincipal=0x7f0a0030;
+        public static final int imageButtonGerenciarProdutoTelaMenuPrincipal=0x7f0a002f;
+        public static final int imageButtonGerenciarVendedorTelaMenuPrincipal=0x7f0a0032;
+        public static final int imageButtonVendasTelaMenuPrincipal=0x7f0a0049;
+        public static final int imageView1=0x7f0a0038;
+        public static final int linearLayout1=0x7f0a0011;
+        public static final int linearLayout2=0x7f0a0012;
+        public static final int linearLayout3=0x7f0a0014;
+        public static final int linearLayout4=0x7f0a0016;
+        public static final int linearLayout5=0x7f0a0018;
+        public static final int linearLayout6=0x7f0a001b;
+        public static final int linearLayoutTelaLogin2=0x7f0a0037;
+        public static final int linearLayoutTelaLogin3=0x7f0a003a;
+        public static final int linearLayoutTelaLogin4=0x7f0a003d;
+        public static final int linearLayoutTelaLogin5=0x7f0a003f;
+        public static final int menu_principal_gerenciar_cliente=0x7f0a0045;
+        public static final int menu_principal_gerenciar_contas=0x7f0a0044;
+        public static final int menu_principal_gerenciar_produto=0x7f0a0047;
+        public static final int menu_principal_gerenciar_vendas=0x7f0a0043;
+        public static final int menu_principal_gerenciar_vendedor=0x7f0a0046;
+        public static final int radioExcluir0=0x7f0a000d;
+        public static final int radioExcluir1=0x7f0a000e;
+        public static final int radioGroup1=0x7f0a000c;
+        public static final int scrollViewCadastrarCliente=0x7f0a0010;
+        public static final int scrollViewECliente=0x7f0a0029;
+        public static final int spinner1=0x7f0a004a;
+        public static final int spinnerTelefoneVendedorAtualizar=0x7f0a0003;
+        public static final int tableRow1=0x7f0a004b;
+        public static final int tableRow2=0x7f0a004c;
+        public static final int tableRow3=0x7f0a004d;
+        public static final int tableRow4=0x7f0a004e;
+        public static final int textView1=0x7f0a001d;
+        public static final int textView2=0x7f0a0026;
+        public static final int textView3=0x7f0a001e;
+        public static final int textView4=0x7f0a0020;
+        public static final int textView5=0x7f0a0022;
+        public static final int textView6=0x7f0a0024;
+        public static final int textViewAtualizarClienteGerenciarCliente=0x7f0a0031;
+        public static final int textViewBuscarClienteGerenciarCliente=0x7f0a002b;
+        public static final int textViewCEP=0x7f0a001a;
+        public static final int textViewEndereco=0x7f0a0013;
+        public static final int textViewExcluir=0x7f0a000f;
+        public static final int textViewExcluirClienteGerenciarCliente=0x7f0a0015;
+        public static final int textViewGerenciarVendedor=0x7f0a000b;
+        public static final int textViewLoginTelaLogin=0x7f0a0039;
+        public static final int textViewNomeAplicativoTelaLogin=0x7f0a002a;
+        public static final int textViewNovoVendedorGerenciarVendedor=0x7f0a0017;
+        public static final int textViewNumeroCasa=0x7f0a0019;
+        public static final int textViewSenhaTelaLogin=0x7f0a003c;
+        public static final int textViewTelefoneVendedorAtualizar=0x7f0a0004;
+        public static final int textViewVendedorAtualizar=0x7f0a0001;
+        public static final int textView_menu_principal=0x7f0a0042;
+    }
+    public static final class layout {
+        public static final int activity_atualizar_cliente=0x7f030000;
         public static final int activity_atualizar_vendedor=0x7f030001;
         public static final int activity_buscar_cliente=0x7f030002;
         public static final int activity_cadastrar_cliente=0x7f030003;
-        public static final int activity_cadastrar_vendedor=0x7f030004;
-        public static final int activity_excluir_cliente=0x7f030005;
-        public static final int activity_excluir_vendedor=0x7f030006;
-        public static final int activity_gerenciar_cliente=0x7f030007;
-        public static final int activity_gerenciar_vendedor=0x7f030008;
-        public static final int activity_login=0x7f030009;
-        public static final int activity_menu_principal=0x7f03000a;
-	}
+        public static final int activity_cadastrar_contas=0x7f030004;
+        public static final int activity_cadastrar_produto=0x7f030005;
+        public static final int activity_cadastrar_vendedor=0x7f030006;
+        public static final int activity_excluir_cliente=0x7f030007;
+        public static final int activity_excluir_vendedor=0x7f030008;
+        public static final int activity_gerenciar_cliente=0x7f030009;
+        public static final int activity_gerenciar_contas=0x7f03000a;
+        public static final int activity_gerenciar_produto=0x7f03000b;
+        public static final int activity_gerenciar_vendas=0x7f03000c;
+        public static final int activity_gerenciar_vendedor=0x7f03000d;
+        public static final int activity_login=0x7f03000e;
+        public static final int activity_menu_principal=0x7f03000f;
+        public static final int activity_pesquisa_contas=0x7f030010;
+    }
+    public static final class menu {
+        public static final int atualizar_cliente=0x7f090000;
+        public static final int atualizar_vendedor=0x7f090001;
+        public static final int buscar_cliente=0x7f090002;
+        public static final int cadastrar_cliente=0x7f090003;
+        public static final int cadastrar_contas=0x7f090004;
+        public static final int cadastrar_produto=0x7f090005;
+        public static final int cadastrar_vendor=0x7f090006;
+        public static final int excluir_cliente=0x7f090007;
+        public static final int excluir_vendedor=0x7f090008;
+        public static final int gerenciar_cliente=0x7f090009;
+        public static final int gerenciar_contas=0x7f09000a;
+        public static final int gerenciar_produto=0x7f09000b;
+        public static final int gerenciar_produtos=0x7f09000c;
+        public static final int gerenciar_vendas=0x7f09000d;
+        public static final int gerenciar_vendedor=0x7f09000e;
+        public static final int gerenicar_vendedor=0x7f09000f;
+        public static final int login=0x7f090010;
+        public static final int menu_principal=0x7f090011;
+        public static final int pesquisa_contas=0x7f090012;
+    }
+    public static final class string {
+        public static final int action_settings=0x7f070001;
+        public static final int alterar=0x7f07002f;
+        public static final int apagar=0x7f07002e;
+        public static final int app_name=0x7f070000;
+        public static final int atualizarCliente=0x7f070010;
+        public static final int atualizarVendedor=0x7f070020;
+        public static final int buscarCliente=0x7f070011;
+        public static final int buscarVendedor=0x7f070021;
+        /**  strings do GERENCIARCLIENTE 
+         */
+        public static final int cadastrarCliente=0x7f07000f;
+        public static final int cadastrarTelaLogin=0x7f070005;
+        /**  strings do GERENCIARVENDEDOR 
+         */
+        public static final int cadastrarVendedor=0x7f07001f;
+        public static final int cancelar=0x7f070039;
+        public static final int cep=0x7f070019;
+        public static final int cepVendedor=0x7f070027;
+        public static final int cpf=0x7f07001a;
+        public static final int cpfVendedor=0x7f070028;
+        public static final int endereco=0x7f070018;
+        public static final int enderecoVendedor=0x7f070026;
+        public static final int entrarTelaLogin=0x7f070006;
+        public static final int excluir=0x7f070030;
+        public static final int excluirCliente=0x7f070012;
+        public static final int excluirVendedor=0x7f070022;
+        /**  strings do MENUPRINCIPAL 
+         */
+        public static final int gerenciarCliente=0x7f070007;
+        public static final int gerenciarConfiguracoes=0x7f07000c;
+        public static final int gerenciarContas=0x7f07000a;
+        public static final int gerenciarProduto=0x7f070009;
+        public static final int gerenciarVendas=0x7f07000b;
+        public static final int gerenciarVendedor=0x7f070008;
+        public static final int hello_world=0x7f07003c;
+        public static final int loginTelaLogin=0x7f070003;
+        public static final int loginVendedor=0x7f07002b;
+        public static final int menuprincipal=0x7f07000d;
+        public static final int nome=0x7f070017;
+        /**  strings da TELALOGIN 
+         */
+        public static final int nomeAplicativo=0x7f070002;
+        public static final int nomeVendedor=0x7f070025;
+        public static final int numeroCasa=0x7f07001d;
+        public static final int pesquisar=0x7f07003a;
+        public static final int rg=0x7f07001b;
+        public static final int rgVendedor=0x7f070029;
+        /**  strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR, 	CANCELAR, PESQUISAR 
+         */
+        public static final int salvar=0x7f07002d;
+        public static final int senhaTelaLogin=0x7f070004;
+        public static final int senhaVendedor=0x7f07002c;
+        public static final int telefone=0x7f07001c;
+        public static final int telefoneVendedor=0x7f07002a;
+        public static final int tipo=0x7f070033;
+        /** 
+         strings comuns do GERENCIARVENDEDOR -> 
+    	 CADASTRARVENDEDOR 
+    	 ATUALIZARVENDEDOR
+    	 BUSCARVENDEDOR
+    	 EXCLUIRVENDEDOR
 
-	public static final class menu {
-		public static final int atualizar_vendedor = 0x7f080001;
-		public static final int cadastrar_vendor = 0x7f080004;
-		public static final int excluir_vendedor = 0x7f080006;
-		public static final int gerenicar_vendedor = 0x7f080008;
-		public static final int login = 0x7f080009;
-		public static final int atualizar_cliente = 0x7f090000;
-		public static final int buscar_cliente = 0x7f090001;
-		public static final int cadastrar_cliente = 0x7f090002;
-		public static final int cadastrar_contas = 0x7f090003;
-		public static final int cadastrar_produto = 0x7f090004;
-		public static final int excluir_cliente = 0x7f090005;
-		public static final int gerenciar_cliente = 0x7f090006;
-		public static final int gerenciar_contas = 0x7f090007;
-		public static final int gerenciar_produto = 0x7f090008;
-		public static final int gerenciar_produtos = 0x7f090009;
-		public static final int gerenciar_vendas = 0x7f09000a;
-		public static final int gerenciar_vendedor = 0x7f09000b;
-		public static final int menu_principal = 0x7f09000c;
-		public static final int pesquisa_contas = 0x7f09000d;
-	}
+    
+         */
+        public static final int title_activity_atualizar_Vendedor=0x7f070023;
+        /** 
+         strings comuns do GERENCIARCLIENTE -> 
+    	 CADASTRARCLIENTE 
+    	 ATUALIZARCLINTE
+    	 BUSCARCLIENTE
+    	 EXCLUIRCLIENTE
 
-	public static final class string {
 
-		public static final int alterar = 0x7f07001c;
-		public static final int apagar = 0x7f07001b;
-		public static final int app_name = 0x7f070000;
-		public static final int atualizarCliente = 0x7f07000b;
-		public static final int buscarCliente = 0x7f07000c;
-		/**
-		 * strings do GERENCIARCLIENTE
-		 */
-		public static final int cadastrarCliente = 0x7f07000a;
-		public static final int cancelar = 0x7f070023;
-		public static final int cep = 0x7f070014;
-		public static final int cpf = 0x7f070015;
-		public static final int endereco = 0x7f070013;
-		public static final int excluir = 0x7f07001d;
-		public static final int excluirCliente = 0x7f07000d;
-		/**
-		 * strings do MENUPRINCIPAL
-		 */
-		public static final int gerenciarCliente = 0x7f070002;
-		public static final int gerenciarConfiguracoes = 0x7f070007;
-		public static final int gerenciarContas = 0x7f070005;
-		public static final int gerenciarProduto = 0x7f070004;
-		public static final int gerenciarVendas = 0x7f070006;
-		public static final int gerenciarVendedor = 0x7f070003;
-		public static final int hello_world = 0x7f070026;
-		public static final int menuprincipal = 0x7f070008;
-		public static final int nome = 0x7f070012;
-		public static final int numeroCasa = 0x7f070018;
-		public static final int pesquisar = 0x7f070024;
-		public static final int rg = 0x7f070016;
-		/**
-		 * strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR, CANCELAR,
-		 * PESQUISAR
-		 */
-		public static final int salvar = 0x7f07001a;
-		public static final int telefone = 0x7f070017;
-		public static final int tipo = 0x7f070020;
+    
+         */
+        public static final int title_activity_atualizar_cliente=0x7f070014;
+        public static final int title_activity_atualizar_vendedor=0x7f07003d;
+        public static final int title_activity_buscar_cliente=0x7f070015;
+        public static final int title_activity_cadastrar_cliente=0x7f070013;
+        public static final int title_activity_cadastrar_contas=0x7f070034;
+        public static final int title_activity_cadastrar_vendor=0x7f07003b;
+        public static final int title_activity_excluir_Vendedor=0x7f070024;
+        public static final int title_activity_excluir_cliente=0x7f070016;
+        public static final int title_activity_excluir_vendedor=0x7f07003e;
+        public static final int title_activity_gerenciar_cliente=0x7f07000e;
+        public static final int title_activity_gerenciar_contas=0x7f070035;
+        public static final int title_activity_gerenciar_produto=0x7f070032;
+        public static final int title_activity_gerenciar_produtos=0x7f070031;
+        public static final int title_activity_gerenciar_vendas=0x7f070037;
+        public static final int title_activity_gerenciar_vendedor=0x7f070038;
+        public static final int title_activity_login=0x7f07003f;
+        public static final int title_activity_novo_cliente=0x7f07001e;
+        public static final int title_activity_pesquisa_contas=0x7f070036;
+    }
+    public static final class style {
+        /** 
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
 
-		public static final int AtualizarVendedorBotao = 0x7f090026;
-		public static final int Button02 = 0x7f090025;
-		public static final int EditTextTelefoneVendedorAtualizar = 0x7f090002;
-		public static final int LinearLayoutTelaLogin1 = 0x7f090028;
-		public static final int TextViewCEPVendedorAtualizar = 0x7f090006;
-		public static final int TextViewNumeroVendedorAtualizar = 0x7f090005;
-		public static final int action_settings = 0x7f09003b;
-		public static final int button2 = 0x7f090021;
-		public static final int buttonCadastrarTelaLogin = 0x7f090032;
-		public static final int buttonCancelar = 0x7f090020;
-		public static final int buttonCancelarVededor = 0x7f090022;
-		public static final int buttonEntrarTelaLogin = 0x7f090033;
-		public static final int buttonExcluirCliente = 0x7f090009;
-		public static final int cadastrarVendedorBotao = 0x7f090027;
-		public static final int editTextCEP = 0x7f09000a;
-		public static final int editTextExcluir = 0x7f090000;
-		public static final int editTextLoginTelaLogin = 0x7f09002d;
-		public static final int editTextNumeroCasa = 0x7f090007;
-		public static final int editTextSenhaTelaLogin = 0x7f090030;
-		public static final int excluirVendedor = 0x7f090008;
-		public static final int excluirVendedorBotao = 0x7f090024;
-		public static final int imageView1 = 0x7f09002a;
-		public static final int linearLayout1 = 0x7f090011;
-		public static final int linearLayout2 = 0x7f090012;
-		public static final int linearLayout3 = 0x7f090014;
-		public static final int linearLayout4 = 0x7f090016;
-		public static final int linearLayout5 = 0x7f090018;
-		public static final int linearLayout6 = 0x7f09001b;
-		public static final int linearLayoutTelaLogin2 = 0x7f090029;
-		public static final int linearLayoutTelaLogin3 = 0x7f09002c;
-		public static final int linearLayoutTelaLogin4 = 0x7f09002f;
-		public static final int linearLayoutTelaLogin5 = 0x7f090031;
-		public static final int menu_principal_configuracoes = 0x7f09003a;
-		public static final int menu_principal_gerenciar_cliente = 0x7f090036;
-		public static final int menu_principal_gerenciar_contas = 0x7f090035;
-		public static final int menu_principal_gerenciar_produto = 0x7f090039;
-		public static final int menu_principal_gerenciar_vendas = 0x7f090034;
-		public static final int menu_principal_gerenciar_vendedor = 0x7f090038;
-		public static final int radioExcluir0 = 0x7f09000d;
-		public static final int radioExcluir1 = 0x7f09000e;
-		public static final int radioGroup1 = 0x7f09000c;
-		public static final int scrollView1 = 0x7f090023;
-		public static final int scrollViewCadastrarCliente = 0x7f090010;
-		public static final int scrollViewECliente = 0x7f09001c;
-		public static final int spinnerTelefoneVendedorAtualizar = 0x7f090003;
-		public static final int textView2 = 0x7f09001e;
-		public static final int textView3 = 0x7f09001f;
-		public static final int textView4 = 0x7f090015;
-		public static final int textView5 = 0x7f090017;
-		public static final int textViewCEP = 0x7f09001a;
-		public static final int textViewEndereco = 0x7f090013;
-		public static final int textViewExcluir = 0x7f09000f;
-		public static final int textViewGerenciarVendedor = 0x7f09000b;
-		public static final int textViewLoginTelaLogin = 0x7f09002b;
-		public static final int textViewNomeAplicativoTelaLogin = 0x7f09001d;
-		public static final int textViewNumeroCasa = 0x7f090019;
-		public static final int textViewSenhaTelaLogin = 0x7f09002e;
-		public static final int textViewTelefoneVendedorAtualizar = 0x7f090004;
-		public static final int textViewVendedorAtualizar = 0x7f090001;
-		public static final int textView_menu_principal = 0x7f090037;
-	}
-
-	public static final class style {
-		/**
-		 * Base application theme, dependent on API level. This theme is
-		 * replaced by AppBaseTheme from res/values-vXX/styles.xml on newer
-		 * devices.
-		 * 
-		 * 
-		 * Theme customizations available in newer API levels can go in
-		 * res/values-vXX/styles.xml, while customizations related to
-		 * backward-compatibility can go here.
-		 */
-		public static final int AppBaseTheme = 0x7f080000;
-		/**
-		 * Application theme. All customizations that are NOT specific to a
-		 * particular API-level can go here.
-		 */
-		public static final int AppTheme = 0x7f080001;
-	}
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+         */
+        public static final int AppBaseTheme=0x7f080000;
+        /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+         */
+        public static final int AppTheme=0x7f080001;
+    }
 }
