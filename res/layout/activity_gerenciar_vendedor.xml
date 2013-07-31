@@ -30,56 +30,56 @@
         android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/textViewAtualizarClienteGerenciarCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="20dp"
-        android:text="@string/atualizarVendedor"
-        android:textColor="@color/Black"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/textViewNovoVendedorGerenciarVendedor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewAtualizarClienteGerenciarCliente"
-        android:layout_alignBottom="@+id/textViewAtualizarClienteGerenciarCliente"
-        android:layout_alignParentLeft="true"
-        android:text="@string/cadastrarVendedor"
-        android:textColor="@color/Black"
-        android:textSize="12sp" />
-
-    <TextView
         android:id="@+id/textViewBuscarClienteGerenciarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButtonGerenciarProdutoTelaMenuPrincipal"
-        android:layout_alignRight="@+id/textViewNovoVendedorGerenciarVendedor"
-        android:layout_marginBottom="14dp"
+        android:layout_alignLeft="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_below="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
         android:text="@string/buscarVendedor"
         android:textColor="@color/Black"
         android:textSize="12sp" />
 
     <ImageButton
-        android:id="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewBuscarClienteGerenciarCliente"
-        android:layout_alignTop="@+id/imageButtonGerenciarVendedorTelaMenuPrincipal"
-        android:layout_marginLeft="14dp"
-        android:onClick="casdastrarVendedor"
-        android:src="@drawable/novo_cliente" />
-
-    <ImageButton
         android:id="@+id/imageButtonGerenciarProdutoTelaMenuPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
-        android:layout_alignTop="@+id/imageButtonGerenciarContasTelaMenuPrincipal"
+        android:layout_alignLeft="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_below="@+id/textViewBuscarClienteGerenciarCliente"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
         android:onClick="buscarCLiente"
         android:src="@drawable/buscar_pessoa" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGerenciarContasTelaMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewExcluirClienteGerenciarCliente"
+        android:layout_alignTop="@+id/imageButtonGerenciarProdutoTelaMenuPrincipal"
+        android:onClick="excluirVendedor"
+        android:src="@drawable/remover_pessoa" />
+
+    <TextView
+        android:id="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:text="@string/cadastrarVendedor"
+        android:textColor="@color/Black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textViewAtualizarClienteGerenciarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_alignBottom="@+id/textViewNovoVendedorGerenciarVendedor"
+        android:layout_alignParentRight="true"
+        android:text="@string/atualizarVendedor"
+        android:textColor="@color/Black"
+        android:textSize="12sp" />
 
     <ImageButton
         android:id="@+id/imageButtonGerenciarVendedorTelaMenuPrincipal"
@@ -87,18 +87,17 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textViewExcluirClienteGerenciarCliente"
         android:layout_below="@+id/textViewGerenciarVendedor"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="70dp"
         android:onClick="atualizarVendedor"
         android:src="@drawable/atualizar_pessoa" />
 
     <ImageButton
-        android:id="@+id/imageButtonGerenciarContasTelaMenuPrincipal"
+        android:id="@+id/imageButtonGerenciarClienteTelaMenuPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewExcluirClienteGerenciarCliente"
-        android:layout_below="@+id/imageButtonGerenciarVendedorTelaMenuPrincipal"
-        android:layout_marginTop="57dp"
-        android:onClick="excluirVendedor"
-        android:src="@drawable/remover_pessoa" />
+        android:layout_alignLeft="@+id/imageButtonGerenciarProdutoTelaMenuPrincipal"
+        android:layout_alignTop="@+id/imageButtonGerenciarVendedorTelaMenuPrincipal"
+        android:onClick="casdastrarVendedor"
+        android:src="@drawable/novo_cliente" />
 
 </RelativeLayout>

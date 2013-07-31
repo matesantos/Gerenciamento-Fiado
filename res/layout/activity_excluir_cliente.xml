@@ -51,7 +51,7 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewConfiguracoesMenuPrincipal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textViewNomeAplicativoTelaLogin"
@@ -64,8 +64,8 @@
             android:id="@+id/editTextExcluir"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textViewConfiguracoesMenuPrincipal"
+            android:layout_below="@+id/textViewConfiguracoesMenuPrincipal"
             android:ems="10"
             android:inputType="textPersonName" >
 
@@ -76,7 +76,7 @@
             android:id="@+id/buttonExcluirCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
+            android:layout_below="@+id/textViewConfiguracoesMenuPrincipal"
             android:layout_toRightOf="@+id/editTextExcluir"
             android:text="@string/pesquisar" />
 
