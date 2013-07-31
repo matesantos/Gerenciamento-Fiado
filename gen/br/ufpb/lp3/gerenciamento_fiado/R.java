@@ -105,8 +105,6 @@ public final class R {
         public static final int scrollViewCadastrarCliente=0x7f0a0010;
         public static final int scrollViewECliente=0x7f0a0029;
         public static final int spinnerTelefoneVendedorAtualizar=0x7f0a0003;
-        public static final int textView1=0x7f0a001d;
-        public static final int textView2=0x7f0a0026;
         public static final int textView3=0x7f0a001e;
         public static final int textView4=0x7f0a0020;
         public static final int textView5=0x7f0a0022;
@@ -114,9 +112,11 @@ public final class R {
         public static final int textViewAtualizarClienteGerenciarCliente=0x7f0a0031;
         public static final int textViewBuscarClienteGerenciarCliente=0x7f0a002b;
         public static final int textViewCEP=0x7f0a001a;
+        public static final int textViewConfiguracoesMenuPrincipal=0x7f0a0026;
         public static final int textViewEndereco=0x7f0a0013;
         public static final int textViewExcluir=0x7f0a000f;
         public static final int textViewExcluirClienteGerenciarCliente=0x7f0a0015;
+        public static final int textViewGerenciarVendasMenuPrincipal=0x7f0a001d;
         public static final int textViewGerenciarVendedor=0x7f0a000b;
         public static final int textViewLoginTelaLogin=0x7f0a0039;
         public static final int textViewNomeAplicativoTelaLogin=0x7f0a002a;
@@ -163,8 +163,8 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f070001;
-        public static final int alterar=0x7f07002f;
-        public static final int apagar=0x7f07002e;
+        public static final int alterar=0x7f070030;
+        public static final int apagar=0x7f07002f;
         public static final int app_name=0x7f070000;
         public static final int atualizarCliente=0x7f070010;
         public static final int atualizarVendedor=0x7f070020;
@@ -177,15 +177,15 @@ public final class R {
         /**  strings do GERENCIARVENDEDOR 
          */
         public static final int cadastrarVendedor=0x7f07001f;
-        public static final int cancelar=0x7f070036;
+        public static final int cancelar=0x7f070032;
         public static final int cep=0x7f070019;
-        public static final int cepVendedor=0x7f070027;
+        public static final int cepVendedor=0x7f070028;
         public static final int cpf=0x7f07001a;
-        public static final int cpfVendedor=0x7f070028;
+        public static final int cpfVendedor=0x7f070029;
         public static final int endereco=0x7f070018;
-        public static final int enderecoVendedor=0x7f070026;
+        public static final int enderecoVendedor=0x7f070027;
         public static final int entrarTelaLogin=0x7f070006;
-        public static final int excluir=0x7f070030;
+        public static final int excluir=0x7f070031;
         public static final int excluirCliente=0x7f070012;
         public static final int excluirVendedor=0x7f070022;
         /**  strings do MENUPRINCIPAL 
@@ -196,37 +196,26 @@ public final class R {
         public static final int gerenciarProduto=0x7f070009;
         public static final int gerenciarVendas=0x7f07000b;
         public static final int gerenciarVendedor=0x7f070008;
-        public static final int hello_world=0x7f070039;
         public static final int loginTelaLogin=0x7f070003;
-        public static final int loginVendedor=0x7f07002b;
+        public static final int loginVendedor=0x7f07002c;
         public static final int menuprincipal=0x7f07000d;
         public static final int nome=0x7f070017;
         /**  strings da TELALOGIN 
          */
         public static final int nomeAplicativo=0x7f070002;
-        public static final int nomeVendedor=0x7f070025;
+        public static final int nomeVendedor=0x7f070026;
         public static final int numeroCasa=0x7f07001d;
-        public static final int pesquisar=0x7f070037;
+        public static final int pesquisar=0x7f070033;
         public static final int rg=0x7f07001b;
-        public static final int rgVendedor=0x7f070029;
+        public static final int rgVendedor=0x7f07002a;
         /**  strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR, 	CANCELAR, PESQUISAR 
          */
-        public static final int salvar=0x7f07002d;
+        public static final int salvar=0x7f07002e;
         public static final int senhaTelaLogin=0x7f070004;
-        public static final int senhaVendedor=0x7f07002c;
+        public static final int senhaVendedor=0x7f07002d;
         public static final int telefone=0x7f07001c;
-        public static final int telefoneVendedor=0x7f07002a;
-        public static final int tipo=0x7f070033;
-        /** 
-         strings comuns do GERENCIARVENDEDOR -> 
-    	 CADASTRARVENDEDOR 
-    	 ATUALIZARVENDEDOR
-    	 BUSCARVENDEDOR
-    	 EXCLUIRVENDEDOR
-
-    
-         */
-        public static final int title_activity_atualizar_Vendedor=0x7f070023;
+        public static final int telefoneVendedor=0x7f07002b;
+        public static final int tipo=0x7f070036;
         /** 
          strings comuns do GERENCIARCLIENTE -> 
     	 CADASTRARCLIENTE 
@@ -236,19 +225,29 @@ public final class R {
     
          */
         public static final int title_activity_atualizar_cliente=0x7f070014;
-        public static final int title_activity_atualizar_vendedor=0x7f07003a;
+        public static final int title_activity_atualizar_vendedor=0x7f070024;
         public static final int title_activity_buscar_cliente=0x7f070015;
         public static final int title_activity_cadastrar_cliente=0x7f070013;
-        public static final int title_activity_cadastrar_contas=0x7f070034;
-        public static final int title_activity_cadastrar_vendor=0x7f070038;
-        public static final int title_activity_excluir_Vendedor=0x7f070024;
+        public static final int title_activity_cadastrar_contas=0x7f070037;
+        /** 
+         strings comuns do GERENCIARVENDEDOR -> 
+    	 CADASTRARVENDEDOR 
+    	 ATUALIZARVENDEDOR
+    	 BUSCARVENDEDOR
+    	 EXCLUIRVENDEDOR
+
+    
+         */
+        public static final int title_activity_cadastrar_vendedor=0x7f070023;
         public static final int title_activity_excluir_cliente=0x7f070016;
-        public static final int title_activity_excluir_vendedor=0x7f07003b;
+        public static final int title_activity_excluir_vendedor=0x7f070025;
         public static final int title_activity_gerenciar_cliente=0x7f07000e;
-        public static final int title_activity_gerenciar_contas=0x7f070035;
-        public static final int title_activity_gerenciar_produto=0x7f070032;
-        public static final int title_activity_gerenciar_produtos=0x7f070031;
-        public static final int title_activity_login=0x7f07003c;
+        public static final int title_activity_gerenciar_contas=0x7f070038;
+        public static final int title_activity_gerenciar_produto=0x7f070035;
+        /**  Strings   
+         */
+        public static final int title_activity_gerenciar_produtos=0x7f070034;
+        public static final int title_activity_login=0x7f070039;
         public static final int title_activity_novo_cliente=0x7f07001e;
     }
     public static final class style {
