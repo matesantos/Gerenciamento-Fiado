@@ -15,7 +15,7 @@
         android:paddingTop="@dimen/activity_vertical_margin" >
 
         <TextView
-            android:id="@+id/textViewNomeAplicativoTelaLogin"
+            android:id="@+id/textViewDadosPessoaisVendedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/textViewNomeAplicativoTelaLogin" >
+            android:layout_toRightOf="@+id/textViewDadosPessoaisVendedor" >
 
             <RadioButton
                 android:id="@+id/radioExcluir0"
@@ -54,7 +54,7 @@
             android:id="@+id/textViewConfiguracoesMenuPrincipal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textViewNomeAplicativoTelaLogin"
+            android:layout_alignLeft="@+id/textViewDadosPessoaisVendedor"
             android:layout_below="@+id/radioGroup1"
             android:text="Cliente a ser excluído:"
             android:textColor="@color/White"

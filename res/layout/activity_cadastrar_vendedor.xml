@@ -1,188 +1,402 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollViewCadastrarCliente"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="16dp" >
-
+    android:layout_marginTop="16dp"
+    tools:context=".CadastrarVendedorActivity"    
+    >
+    
     <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="fill_parent"
+        android:id="@+id/LinearLayoutTelaCadastrarVendedor1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Black"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/textViewGerenciarVendedor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Digite os dados do vendedor para efetuar o cadastro"
-            android:textColor="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
-
-        <TextView
-            android:id="@+id/textViewVendedorAtualizar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nomeVendedor"
-            android:textColor="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
+        android:background="@drawable/background_image"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/linearLayoutCadastrarVendedor2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
-            <EditText
-                android:id="@+cadastro/ednome"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/textViewDadosPessoaisVendedor"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="textPersonName" >
+                android:layout_marginRight="55dip"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical"
+                android:text="@string/dadosPessoaisVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Red"
+                android:textSize="15sp" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarVendedor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewNomeTelaCadastrarVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/nomeVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextNomeVendedorTelaCadastrarVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
                 <requestFocus />
             </EditText>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textViewEndereco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rgVendedor"
-            android:textColor="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
-
         <LinearLayout
-            android:id="@+id/linearLayout3"
+            android:id="@+id/linearLayoutCadastrarVendedor3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
-            <EditText
-                android:id="@+cadastro/edendereco"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/textViewRGVendedor"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/rgVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextRGVendedorTelaCadastrarVendedor"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textViewCPFVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cpfVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextCPFVendedorTelaCadastrarVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textViewExcluirClienteGerenciarCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cpf"
-            android:textColor="@color/White"
-            android:textColorHint="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
-
         <LinearLayout
-            android:id="@+id/linearLayout4"
+            android:id="@+id/linearLayoutCadastrarVendedor4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
-            <EditText
-                android:id="@+cadastro/edcidade"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/textViewTelefoneVendedorTelaCadastrarVendedor"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewNovoVendedorGerenciarVendedor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/telefoneVendedor"
-            android:textColor="@color/White"
-            android:textColorHint="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center" >
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/telefoneVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
             <EditText
-                android:id="@+cadastro/edtelefone"
-                android:layout_width="0dp"
+                android:id="@+id/editTextTelefoneVendedorTelaCadastrarVendedor"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0.20"
+                android:ems="10"
+                android:inputType="phone|text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarVendedor5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewLoginVendedor"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="phone" />
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/loginVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
+            <EditText
+                android:id="@+id/editTextLoginVendedorTelaCadastrarVendedor"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textViewSenhaVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/senhaVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextSenhaVendedorTelaCadastrarVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text|textPassword" >
+
+            </EditText>
         </LinearLayout>
-        
-        <TextView
-            android:id="@+id/textViewNumeroCasa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/loginVendedor"
-            android:textColor="@color/White"
-            android:textColorHint="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
-        
+
+        <!-- Parte 2 do layout -->
 
         <LinearLayout
+            android:id="@+id/linearLayoutCadastrarVendedor6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical" >
-             
-             <EditText
-                 android:id="@+cadastro/edNumeroCasa"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:inputType="text" />
-            
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewDadosEnderecoVendedorTelaCadastrarVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dip"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical"
+                android:text="@string/dadosEnderecoVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Red"
+                android:textSize="15sp" />
+
         </LinearLayout>
-        
-        <TextView
-            android:id="@+id/textViewCEP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/senhaVendedor"
-            android:textColor="@color/White"
-            android:textColorHint="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
-        
 
         <LinearLayout
+            android:id="@+id/linearLayoutCadastrarVendedor7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical" >
-             
-             <EditText
-                 android:id="@+cadastro/edNumeroCasa"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:inputType="textPassword" />
-            
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewEnderecoTelaCadastrarVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/enderecoVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextEnderecoVendedorTelaCadastrarVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
         </LinearLayout>
-        
 
         <LinearLayout
-            android:id="@+id/linearLayout6"
+            android:id="@+id/linearLayoutCadastrarVendedor8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewNumeroVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/numeroCasaVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextNumeroVendedorTelaCadastrarVendedor"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textViewCEPVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cepVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextCEPVendedorTelaCadastrarVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarVendedor9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewUFVendedorTelaCadastrarVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/ufVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/spinnerUFTelaCadastrarVendedor"
+                android:layout_width="0dip"
+                android:layout_height="38dp"
+                android:layout_weight="0.15" />
+
+            <TextView
+                android:id="@+id/textViewCidaddeTelaCadastrarVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cidadeVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextCidadeVendedorTelaCadastrarVendedor"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarVendedor10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewBairroTelaCadastrarVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/bairroVendedor"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextBairroVendedorTelaCadastrarVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <!-- Parte 3 do layout -->
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTelaLogin5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+cadastro/btconfirma"
+                android:id="@+id/buttonApagarTelaCadastrarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/apagar" />
 
             <Button
-                android:id="@+cadastro/btcancelar"
+                android:id="@+id/buttonCadastrarTelaCadastrarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/salvar" />
-
+                android:text="@string/cadastrarVendedor" />
         </LinearLayout>
     </LinearLayout>
 

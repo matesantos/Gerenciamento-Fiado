@@ -1,123 +1,361 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/Black"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".AtualizarClienteActivity" >
-
-    <EditText
-        android:id="@+id/editTextExcluir"
-        android:layout_width="wrap_content"
+    android:id="@+id/scrollViewCadastrarCliente"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp"
+    tools:context=".CadastrarClienteActivity"    
+    >
+    
+    <LinearLayout
+        android:id="@+id/LinearLayoutTelaCadastrarCliente1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewVendedorAtualizar"
-        android:layout_alignBottom="@+id/textViewVendedorAtualizar"
-        android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@+id/textViewVendedorAtualizar"
-        android:ems="10"
-        android:inputType="textPersonName" >
-    </EditText>
+        android:background="@drawable/background_image"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
 
-    <EditText
-        android:id="@+id/EditTextTelefoneVendedorAtualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/spinnerTelefoneVendedorAtualizar"
-        android:layout_alignLeft="@+id/editTextExcluir"
-        android:ems="10"
-        android:inputType="textPersonName" >
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-        <requestFocus />
-    </EditText>
+            <TextView
+                android:id="@+id/textViewDadosPessoaisCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="55dip"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical"
+                android:text="@string/dadosPessoaisCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Red"
+                android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/textViewVendedorAtualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/endereco"
-        android:textColor="@color/White"
-        android:textSize="@dimen/tamanhoDosLabels" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewTelefoneVendedorAtualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/EditTextTelefoneVendedorAtualizar"
-        android:layout_alignLeft="@+id/spinnerTelefoneVendedorAtualizar"
-        android:text="@string/telefone"
-        android:textColor="@color/White"
-        android:textSize="@dimen/tamanhoDosLabels" />
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/TextViewNumeroVendedorAtualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/TextViewCEPVendedorAtualizar"
-        android:layout_below="@+id/editTextExcluir"
-        android:layout_marginTop="30dp"
-        android:text="@string/numeroCasa"
-        android:textColor="@color/White"
-        android:textSize="@dimen/tamanhoDosLabels" />
+            <TextView
+                android:id="@+id/textViewNomeTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/nomeCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
-    <EditText
-        android:id="@+id/editTextNumeroCasa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextViewNumeroVendedorAtualizar"
-        android:layout_alignBottom="@+id/TextViewNumeroVendedorAtualizar"
-        android:layout_alignLeft="@+id/editTextExcluir"
-        android:ems="10"
-        android:inputType="number" />
+            <EditText
+                android:id="@+id/editTextNomeClienteTelaCadastrarCliente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/excluirVendedor"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/buttonExcluirCliente"
-        android:layout_alignBottom="@+id/buttonExcluirCliente"
-        android:layout_alignRight="@+id/EditTextTelefoneVendedorAtualizar"
-        android:text="@string/salvar" />
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-    <Spinner
-        android:id="@+id/spinnerTelefoneVendedorAtualizar"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/TextViewCEPVendedorAtualizar"
-        android:layout_marginTop="24dp"
-        android:layout_toLeftOf="@+id/editTextExcluir" />
+            <TextView
+                android:id="@+id/textViewRGCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/rgCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
-    <EditText
-        android:id="@+id/editTextCEP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextNumeroCasa"
-        android:layout_below="@+id/editTextNumeroCasa"
-        android:layout_marginTop="17dp"
-        android:ems="10"
-        android:inputType="number" />
+            <EditText
+                android:id="@+id/editTextRGClienteTelaCadastrarCliente"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
 
-    <TextView
-        android:id="@+id/TextViewCEPVendedorAtualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editTextCEP"
-        android:layout_alignBottom="@+id/editTextCEP"
-        android:layout_alignLeft="@+id/textViewTelefoneVendedorAtualizar"
-        android:text="@string/cep"
-        android:textColor="@color/White"
-        android:textSize="@dimen/tamanhoDosLabels" />
+            </EditText>
 
-    <Button
-        android:id="@+id/buttonExcluirCliente"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerTelefoneVendedorAtualizar"
-        android:layout_marginTop="35dp"
-        android:layout_toLeftOf="@+id/editTextExcluir"
-        android:text="@string/apagar" />
+            <TextView
+                android:id="@+id/textViewCPFCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cpfCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
-</RelativeLayout>
+            <EditText
+                android:id="@+id/editTextCPFClienteTelaCadastrarCliente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewTelefoneClienteTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/telefoneCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextTelefoneClienteTelaCadastrarCliente"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0.20"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <!-- Parte 2 do layout -->
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewDadosEnderecoClienteTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dip"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical"
+                android:text="@string/dadosEnderecoCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Red"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewEnderecoTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/enderecoCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextEnderecoClienteTelaCadastrarCliente"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewNumeroCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/numeroCasaCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextNumeroClienteTelaCadastrarCliente"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textViewCEPCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cepCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextCEPClienteTelaCadastrarCliente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewUFClienteTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/ufCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/spinnerUFTelaCadastrarCliente"
+                android:layout_width="0dip"
+                android:layout_height="38dp"
+                android:layout_weight="0.15" />
+
+            <TextView
+                android:id="@+id/textViewCidaddeTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cidadeCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextCidadeClienteTelaCadastrarCliente"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCadastrarCliente10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewBairroTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/bairroCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextBairroClienteTelaCadastrarCliente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" >
+
+            </EditText>
+        </LinearLayout>
+
+        <!-- Parte 3 do layout -->
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTelaLogin5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/buttonApagarTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apagar" />
+
+            <Button
+                android:id="@+id/buttonCadastrarTelaCadastrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cadastrarCliente" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
