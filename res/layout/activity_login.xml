@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayoutTelaLogin1"
+    android:id="@+id/LinearLayoutTelaCadastrarVendedor1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
@@ -12,7 +12,7 @@
     tools:context=".LoginActivity" >
 
     <LinearLayout
-        android:id="@+id/linearLayoutTelaLogin2"
+        android:id="@+id/linearLayoutCadastrarVendedor2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -28,7 +28,7 @@
             android:src="@drawable/venda1" />
 
         <TextView
-            android:id="@+id/textViewNomeAplicativoTelaLogin"
+            android:id="@+id/textViewDadosPessoaisVendedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="-150dip"
@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textViewLoginTelaLogin"
+        android:id="@+id/textViewEnderecoTelaCadastrarVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -50,14 +50,14 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <LinearLayout
-        android:id="@+id/linearLayoutTelaLogin3"
+        android:id="@+id/linearLayoutCadastrarVendedor1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal" >
 
         <EditText
-            android:id="@+id/editTextLoginTelaLogin"
+            android:id="@+id/editTextNomeVendedorTelaCadastrarVendedor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"

@@ -3,9 +3,9 @@ package br.ufpb.lp3.gerenciamento_fiado.tela_login;
 import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.CadastrarVendedorActivity;
 import br.ufpb.lp3.gerenciamento_fiado.menu_principal.MenuPrincipalActivity;
+import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,14 +27,14 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.activity_login);
 		
 		//edit's fields  
-		loginEdit = (EditText)findViewById(R.id.editTextLoginTelaLogin);
+		loginEdit = (EditText)findViewById(R.id.editTextNomeVendedorTelaCadastrarVendedor);
 		senhaEdit = (EditText)findViewById(R.id.editTextSenhaTelaLogin);
 		
 		//button's fields 
 		cadastrarButton = (Button)findViewById(R.id.buttonCadastrarTelaLogin);
 		entrarButton = (Button)findViewById(R.id.buttonEntrarTelaLogin);
 		
-		cadastrarButton.setOnClickListener(new FazerLogin(this, "cadastrar"));
+		cadastrarButton.setOnClickListener(new FazerLogin(this, "salvarDados"));
 		entrarButton.setOnClickListener(new FazerLogin("mateus","123", this, "entrar"));
 
 //		entrarButton.setOnClickListener(new FazerLogin(loginEdit.getText().toString().trim(),
@@ -51,7 +51,7 @@ public class LoginActivity extends Activity {
 	}
 	
 	public void EntrarNoSistema(){
-	   	goToActivity(MenuPrincipalActivity.class);
+	   	Utils.goToActivity(this, MenuPrincipalActivity.class);
 	}
 	
 	public void mostrarError(String error){
@@ -60,13 +60,7 @@ public class LoginActivity extends Activity {
 	}
 	    
 	public void CadastrarVendedor (){
-	  	goToActivity(CadastrarVendedorActivity.class);
+	  	Utils.goToActivity(this, CadastrarVendedorActivity.class);
 	}
 	
-	//método que abrirá outras Activitys
-    private void goToActivity (Class<? extends Activity> activityClass2){
-    	Intent newIntent = new Intent(this,activityClass2);
-    	startActivity(newIntent);
-    }
-
 }

@@ -38,13 +38,18 @@
     <string name="title_activity_atualizar_cliente">Atualizar Cliente</string>
     <string name="title_activity_buscar_cliente">Buscar Cliente</string>
     <string name="title_activity_excluir_cliente">Excluir Cliente</string>
-    <string name="nome">NOME:</string>
-    <string name="endereco">ENDEREÇO:</string>
-    <string name="cep">CEP:</string>
-    <string name="cpf">CPF:</string>
-    <string name="rg">RG:</string>
-    <string name="telefone">TELEFONE:</string>
-    <string name="numeroCasa">NUMERO:</string>
+     <string name="nomeCliente">NOME:</string>
+    <string name="enderecoCliente">ENDEREÇO:</string>
+    <string name="cepCliente">CEP:</string>
+    <string name="cpfCliente">CPF:</string>
+    <string name="rgCliente">RG:</string>
+    <string name="telefoneCliente">TELEFONE:</string>
+    <string name="cidadeCliente">CIDADE:</string>
+    <string name="bairroCliente">BAIRRO:</string>
+    <string name="ufCliente">ESTADO:</string>
+    <string name="numeroCasaCliente">NUMERO:</string>
+    <string name="dadosPessoaisCliente">DADOS PESSOAIS DO CLIENTE:</string>
+    <string name="dadosEnderecoCliente">ENDEREÇO DO CLIENTE:</string>
     <string name="title_activity_novo_cliente">NOVO CLIENTE</string>
 
     <!-- strings do GERENCIARVENDEDOR -->
@@ -70,9 +75,15 @@
     <string name="cpfVendedor">CPF:</string>
     <string name="rgVendedor">RG:</string>
     <string name="telefoneVendedor">TELEFONE:</string>
+    <string name="cidadeVendedor">CIDADE:</string>
+    <string name="bairroVendedor">BAIRRO:</string>
+    <string name="ufVendedor">ESTADO:</string>
     <string name="loginVendedor">LOGIN:</string>
     <string name="senhaVendedor">SENHA:</string>
-
+    <string name="numeroCasaVendedor">NUMERO:</string>
+    <string name="dadosPessoaisVendedor">DADOS PESSOAIS DO VENDEDOR:</string>
+    <string name="dadosEnderecoVendedor">ENDEREÇO DO VENDEDOR:</string>
+    
     <!-- strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR, 	CANCELAR, PESQUISAR -->
     <string name="salvar">SALVAR</string>
     <string name="apagar">APAGAR</string>
