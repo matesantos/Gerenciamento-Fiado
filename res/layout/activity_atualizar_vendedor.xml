@@ -1,15 +1,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollViewCadastrarCliente"
+    android:id="@+id/scrollViewAtualizarCliente"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="16dp"
-    tools:context=".CadastrarVendedorActivity"    
+    tools:context=".AtualizarVendedorActivity"    
     >
     
     <LinearLayout
-        android:id="@+id/LinearLayoutTelaCadastrarVendedor1"
+        android:id="@+id/LinearLayoutTelaAtualizarVendedor1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_image"
@@ -20,7 +20,7 @@
         android:paddingTop="@dimen/activity_vertical_margin" >
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor2"
+            android:id="@+id/linearLayoutAtualizarVendedor2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -41,14 +41,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor1"
+            android:id="@+id/linearLayoutAtualizarVendedor1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewNomeTelaCadastrarVendedor"
+                android:id="@+id/textViewNomeTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -59,7 +59,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextNomeVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextNomeVendedorTelaAtualizarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -70,7 +70,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor3"
+            android:id="@+id/linearLayoutAtualizarVendedor3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -88,7 +88,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextRGVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextRGVendedorTelaAtualizarVendedor"
                 android:layout_width="83dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -109,7 +109,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextCPFVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextCPFVendedorTelaAtualizarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -120,14 +120,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor4"
+            android:id="@+id/linearLayoutAtualizarVendedor4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewTelefoneVendedorTelaCadastrarVendedor"
+                android:id="@+id/textViewTelefoneVendedorTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -138,7 +138,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextTelefoneVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextTelefoneVendedorTelaAtualizarVendedor"
                 android:layout_width="0dip"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -150,7 +150,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor5"
+            android:id="@+id/linearLayoutAtualizarVendedor5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -168,7 +168,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextLoginVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextLoginVendedorTelaAtualizarVendedor"
                 android:layout_width="83dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -189,7 +189,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextSenhaVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextSenhaVendedorTelaAtualizarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -202,14 +202,14 @@
         <!-- Parte 2 do layout -->
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor6"
+            android:id="@+id/linearLayoutAtualizarVendedor6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewDadosEnderecoVendedorTelaCadastrarVendedor"
+                android:id="@+id/textViewDadosEnderecoVendedorTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="100dip"
@@ -223,14 +223,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor7"
+            android:id="@+id/linearLayoutAtualizarVendedor7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewEnderecoTelaCadastrarVendedor"
+                android:id="@+id/textViewEnderecoTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -241,7 +241,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextEnderecoVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextEnderecoVendedorTelaAtualizarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -252,7 +252,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor8"
+            android:id="@+id/linearLayoutAtualizarVendedor8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -270,7 +270,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextNumeroVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextNumeroVendedorTelaAtualizarVendedor"
                 android:layout_width="83dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -291,7 +291,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextCEPVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextCEPVendedorTelaAtualizarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -302,14 +302,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor9"
+            android:id="@+id/linearLayoutAtualizarVendedor9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewUFVendedorTelaCadastrarVendedor"
+                android:id="@+id/textViewUFVendedorTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -320,13 +320,13 @@
                 android:textSize="15sp" />
 
             <Spinner
-                android:id="@+id/spinnerUFTelaCadastrarVendedor"
+                android:id="@+id/spinnerUFTelaAtualizarVendedor"
                 android:layout_width="0dip"
                 android:layout_height="38dp"
                 android:layout_weight="0.15" />
 
             <TextView
-                android:id="@+id/textViewCidaddeTelaCadastrarVendedor"
+                android:id="@+id/textViewCidaddeTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -337,7 +337,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextCidadeVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextCidadeVendedorTelaAtualizarVendedor"
                 android:layout_width="83dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -348,14 +348,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarVendedor10"
+            android:id="@+id/linearLayoutAtualizarVendedor10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewBairroTelaCadastrarVendedor"
+                android:id="@+id/textViewBairroTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -366,7 +366,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextBairroVendedorTelaCadastrarVendedor"
+                android:id="@+id/editTextBairroVendedorTelaAtualizarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -387,16 +387,16 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/buttonApagarTelaCadastrarVendedor"
+                android:id="@+id/buttonApagarTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/apagar" />
 
             <Button
-                android:id="@+id/buttonCadastrarTelaCadastrarVendedor"
+                android:id="@+id/buttonAtualizarTelaAtualizarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cadastrarVendedor" />
+                android:text="@string/atualizarVendedor" />
         </LinearLayout>
     </LinearLayout>
 

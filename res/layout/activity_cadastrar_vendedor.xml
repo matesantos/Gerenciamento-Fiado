@@ -93,7 +93,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" >
+                android:inputType="number|text" >
 
             </EditText>
 
@@ -108,15 +108,15 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/editTextCPFVendedorTelaCadastrarVendedor"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="3dp"
-                android:ems="10"
-                android:inputType="text" >
+            <br.ufpb.lp3.gerenciamento_fiado.utils.CpfMaskEditText
+              android:id="@+id/editTextCPFVendedorTelaCadastrarVendedor"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:layout_marginTop="3dp"
+              android:ems="10"
+              android:inputType="number" />
 
-            </EditText>
+            
         </LinearLayout>
 
         <LinearLayout
@@ -275,7 +275,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" >
+                android:inputType="numberSigned|text" >
 
             </EditText>
 
@@ -290,15 +290,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="15sp" />
 
-            <EditText
+            <br.ufpb.lp3.gerenciamento_fiado.utils.CepMaskEditText
                 android:id="@+id/editTextCEPVendedorTelaCadastrarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" >
+                android:inputType="text" />
 
-            </EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -396,7 +395,7 @@
                 android:id="@+id/buttonCadastrarTelaCadastrarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cadastrarVendedor" />
+                android:text="@string/atualizarVendedor" />
         </LinearLayout>
     </LinearLayout>
 

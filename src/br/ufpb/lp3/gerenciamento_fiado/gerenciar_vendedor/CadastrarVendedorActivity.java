@@ -1,12 +1,9 @@
 package br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor;
 
-import java.io.IOException;
 import java.util.List;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -18,13 +15,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import br.ufpb.gerenciamento_fiado.URL.HttpUtils;
 import br.ufpb.lp3.gerenciamento_fiado.R;
-import br.ufpb.lp3.gerenciamento_fiado.BancoDados.OperacaoCrudInterface;
 import br.ufpb.lp3.gerenciamento_fiado.mesagens.Mensagens;
 import br.ufpb.lp3.gerenciamento_fiado.models.Endereco;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
-import br.ufpb.lp3.gerenciamento_fiado.operacao_crud.OperacaoCrud;
+import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorBDFactory;
+import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorDAO;
 import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 
 public class CadastrarVendedorActivity extends Activity {
@@ -66,9 +62,9 @@ public class CadastrarVendedorActivity extends Activity {
 
 		spinnerUF = (Spinner) findViewById(R.id.spinnerUFTelaCadastrarVendedor);
 
-		List<String> listColor = Utils.getUFList();
+		List<String> listUF = Utils.getUFList();
 		ArrayAdapter<String> spinnerList = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_item, listColor);
+				android.R.layout.simple_spinner_item, listUF);
 		spinnerList
 				.setDropDownViewResource(android.R.layout.simple_spinner_item);
 		spinnerUF.setAdapter(spinnerList);
@@ -102,7 +98,7 @@ public class CadastrarVendedorActivity extends Activity {
 			if(cadastrarVendedor(1l,nomeVendedor.getText().toString(),telefoneVendedor.getText().toString(),rgVendedor.getText().toString(),
 							  cpfVendedor.getText().toString(),end,loginVendedor.getText().toString(),senhaVendedor.getText().toString())){
 				
-				Utils.mostrarError(CadastrarVendedorActivity.this, "Vendedor cadastrado com Sucesso");
+				Utils.mostrarMensagens(CadastrarVendedorActivity.this, "Vendedor cadastrado com Sucesso");
 				
 			}
 		}
@@ -124,7 +120,7 @@ public class CadastrarVendedorActivity extends Activity {
 					int cidade = (int) spinnerUF.getSelectedItemId(); 
 					switch (cidade) {
 					case 0:
-						cidadeEdit.setText("JOÃO PESSOA");
+						
 					break;
 					
 					case 1:
@@ -138,9 +134,13 @@ public class CadastrarVendedorActivity extends Activity {
 					case 3:
 						
 					break;
+					
+					case 14:
+						cidadeEdit.setText("JOAO PESSOA");
+					break;
 
 					default:
-						cidadeEdit.setText("JOÃO PESSOA");
+						
 					}
 				}			
 				
@@ -151,7 +151,8 @@ public class CadastrarVendedorActivity extends Activity {
 		@Override
 		public void onNothingSelected(AdapterView<?> arg0) {
 			
-		}}
+		}
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -172,6 +173,42 @@ public class CadastrarVendedorActivity extends Activity {
 		
 	}
 	
+	
+	private boolean cadastrarVendedor(Long id,String nome, String telefone, String rg, String cpf,
+			Endereco endereco,String login, String senha){
+		
+		if(validarCampos(id, nome, telefone, rg, cpf, endereco, login, senha) == false){;
+			return false;
+		}
+		
+		Vendedor vendedor = new Vendedor(id, nome, telefone, rg, cpf, endereco, login, senha);
+		
+		try {
+			
+			VendedorDAO cadastrarVendedor = VendedorBDFactory.getVendedorBD(this);
+
+			//primeiro, vamos checar se não existe um outro login e senha igual na hora do cadastro
+			Cursor curso = cadastrarVendedor.buscarVendedorPorLoginSenha(vendedor.getLogin(), vendedor.getSenha());
+			if(curso.getCount() != 0){
+				Utils.mostrarMensagens(this, Mensagens.loginSenhaExistentes);
+				return false;
+			}
+			
+			if(cadastrarVendedor.salvar(vendedor)){
+				return true;
+			}
+			
+		}catch (Exception e) {
+			Log.e("Exception1", e.getMessage());
+			Log.e("Exception2",Log.getStackTraceString(e.fillInStackTrace()));
+		}
+		
+		return false;
+	}
+
+	
+	
+/*	
 	private boolean cadastrarVendedor(Long id,String nome, String telefone, String rg, String cpf,
 			Endereco endereco,String login, String senha){
 		
@@ -212,16 +249,37 @@ public class CadastrarVendedorActivity extends Activity {
 		return true;
 	}
 	
+*/
+	
 	private boolean validarCampos(Long id,String nome, String telefone, String rg, String cpf,
 			Endereco endereco,String login, String senha){
 		
 		if(nome.isEmpty()){
-			Log.i("vendedorNome", nome);
-			Utils.mostrarError(this, Mensagens.campoNomeVendedorVazio);
+			Utils.mostrarMensagens(this, Mensagens.campoNomeVendedorVazio);
 			return false;
 		}else if(rg.isEmpty()){
-			Log.i("vendedorRG", rg);
-			Utils.mostrarError(this, Mensagens.campoRGVendedorVazio);
+			Utils.mostrarMensagens(this, Mensagens.campoRGVendedorVazio);
+			return false;
+		}else if(cpf.isEmpty()){
+			Utils.mostrarMensagens(this, Mensagens.campoCPFVendedorVazio);
+			return false;
+		}else if(telefone.isEmpty()){
+			Utils.mostrarMensagens(this, Mensagens.campoTelefoneVendedorVazio);
+			return false;
+		}else if(login.isEmpty()){
+			Utils.mostrarMensagens(this, Mensagens.campoLoginVendedorVazio);
+			return false;
+		}else if(senha.isEmpty()){
+			Utils.mostrarMensagens(this, Mensagens.campoSenhaVendedorVazio);
+			return false;
+		}else if(endereco.getRua().isEmpty()){
+			Utils.mostrarMensagens(this, Mensagens.campoRuaVendedorVazio);
+			return false;
+		}else if(endereco.getNumero().isEmpty()){
+			Utils.mostrarMensagens(this, Mensagens.campoNumeroVendedorVazio);
+			return false;
+		}else if(endereco.getCep().isEmpty()){
+			Utils.mostrarMensagens(this, Mensagens.campoCEPVendedorVazio);
 			return false;
 		}else{
 			return true;
