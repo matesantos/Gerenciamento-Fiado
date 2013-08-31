@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class BancoDadosFiado extends SQLiteOpenHelper{
 	
-	public static final String DATABASE_NAME = "GerenciamentoFiado";
+	public static final String DATABASE_NAME = "GerenciamentoFiado.db";
 	public static final int DATABASE_VERSION = 1;
 
 	public BancoDadosFiado(Context context, String name, CursorFactory factory,	int version) {

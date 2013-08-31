@@ -1,15 +1,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollViewCadastrarCliente"
+    android:id="@+id/scrollViewAtualizarCliente"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="16dp"
-    tools:context=".CadastrarClienteActivity"    
+    tools:context=".AtualizarClienteActivity"    
     >
     
     <LinearLayout
-        android:id="@+id/LinearLayoutTelaCadastrarCliente1"
+        android:id="@+id/LinearLayoutTelaAtualizarCliente1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_image"
@@ -20,7 +20,7 @@
         android:paddingTop="@dimen/activity_vertical_margin" >
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente2"
+            android:id="@+id/linearLayoutAtualizarCliente2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -41,14 +41,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente1"
+            android:id="@+id/linearLayoutAtualizarCliente1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewNomeTelaCadastrarCliente"
+                android:id="@+id/textViewNomeTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -59,7 +59,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextNomeClienteTelaCadastrarCliente"
+                android:id="@+id/editTextNomeClienteTelaAtualizarCliente"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -70,7 +70,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente3"
+            android:id="@+id/linearLayoutAtualizarCliente3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -88,7 +88,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextRGClienteTelaCadastrarCliente"
+                android:id="@+id/editTextRGClienteTelaAtualizarCliente"
                 android:layout_width="83dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -109,7 +109,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextCPFClienteTelaCadastrarCliente"
+                android:id="@+id/editTextCPFClienteTelaAtualizarCliente"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -120,14 +120,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente4"
+            android:id="@+id/linearLayoutAtualizarCliente4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewTelefoneClienteTelaCadastrarCliente"
+                android:id="@+id/textViewTelefoneClienteTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -138,7 +138,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextTelefoneClienteTelaCadastrarCliente"
+                android:id="@+id/editTextTelefoneClienteTelaAtualizarCliente"
                 android:layout_width="0dip"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -150,7 +150,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente5"
+            android:id="@+id/linearLayoutAtualizarCliente5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -160,14 +160,14 @@
         <!-- Parte 2 do layout -->
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente6"
+            android:id="@+id/linearLayoutAtualizarCliente6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewDadosEnderecoClienteTelaCadastrarCliente"
+                android:id="@+id/textViewDadosEnderecoClienteTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="100dip"
@@ -181,14 +181,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente7"
+            android:id="@+id/linearLayoutAtualizarCliente7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewEnderecoTelaCadastrarCliente"
+                android:id="@+id/textViewEnderecoTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -199,7 +199,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextEnderecoClienteTelaCadastrarCliente"
+                android:id="@+id/editTextEnderecoClienteTelaAtualizarCliente"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:layout_marginTop="3dp"
@@ -210,7 +210,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente8"
+            android:id="@+id/linearLayoutAtualizarCliente8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -228,7 +228,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextNumeroClienteTelaCadastrarCliente"
+                android:id="@+id/editTextNumeroClienteTelaAtualizarCliente"
                 android:layout_width="83dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -249,7 +249,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextCEPClienteTelaCadastrarCliente"
+                android:id="@+id/editTextCEPClienteTelaAtualizarCliente"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -260,14 +260,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente9"
+            android:id="@+id/linearLayoutAtualizarCliente9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewUFClienteTelaCadastrarCliente"
+                android:id="@+id/textViewUFClienteTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -278,13 +278,13 @@
                 android:textSize="15sp" />
 
             <Spinner
-                android:id="@+id/spinnerUFTelaCadastrarCliente"
+                android:id="@+id/spinnerUFTelaAtualizarCliente"
                 android:layout_width="0dip"
                 android:layout_height="38dp"
                 android:layout_weight="0.15" />
 
             <TextView
-                android:id="@+id/textViewCidaddeTelaCadastrarCliente"
+                android:id="@+id/textViewCidaddeTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -295,7 +295,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextCidadeClienteTelaCadastrarCliente"
+                android:id="@+id/editTextCidadeClienteTelaAtualizarCliente"
                 android:layout_width="83dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -306,14 +306,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCadastrarCliente10"
+            android:id="@+id/linearLayoutAtualizarCliente10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewBairroTelaCadastrarCliente"
+                android:id="@+id/textViewBairroTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -324,7 +324,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextBairroClienteTelaCadastrarCliente"
+                android:id="@+id/editTextBairroClienteTelaAtualizarCliente"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -345,16 +345,16 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/buttonApagarTelaCadastrarCliente"
+                android:id="@+id/buttonApagarTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/apagar" />
 
             <Button
-                android:id="@+id/buttonCadastrarTelaCadastrarCliente"
+                android:id="@+id/buttonAtualizarTelaAtualizarCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cadastrarCliente" />
+                android:text="@string/atualizarCliente" />
         </LinearLayout>
     </LinearLayout>
 

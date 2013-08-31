@@ -1,6 +1,8 @@
 package br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor;
 
 import br.ufpb.lp3.gerenciamento_fiado.R;
+import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
+import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -8,11 +10,17 @@ import android.view.Menu;
 import android.view.View;
 
 public class GerenciarVendedorActivity extends Activity {
+	
+	Vendedor vendedor = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_gerenciar_vendedor);
+		
+		Bundle dados = getIntent().getExtras();
+		
+		vendedor = (Vendedor) dados.getSerializable("vendedor");
 	}
 
 	@Override
@@ -27,7 +35,7 @@ public class GerenciarVendedorActivity extends Activity {
 	}
 	
 	public void atualizarVendedor (View v){
-		goToActivity(AtualizarVendedorActivity.class);
+		Utils.goToActivityVendedor(this, AtualizarVendedorActivity.class, vendedor);
 	}
 	
 	public void excluirVendedor (View v){

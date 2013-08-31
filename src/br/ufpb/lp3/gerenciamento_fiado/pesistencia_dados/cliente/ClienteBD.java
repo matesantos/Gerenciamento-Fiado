@@ -3,10 +3,13 @@ package br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente;
 import java.util.List;
 
 import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 
@@ -31,6 +34,83 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 
 	@Override
 	public boolean salvar(Cliente cliente) {
+		ContentValues valores = new ContentValues();
+
+		valores.put("nome", cliente.getNome());
+		valores.put("telefone", cliente.getTelefone());
+		valores.put("rg", cliente.getRg());
+		valores.put("cpf", cliente.getCpf());
+		valores.put("rua", cliente.getEndereco().getRua());
+		valores.put("numero", cliente.getEndereco().getNumero());
+		valores.put("cep", cliente.getEndereco().getCep());
+		valores.put("bairro", cliente.getEndereco().getBairro());
+		valores.put("cidade", cliente.getEndereco().getCidade());
+		valores.put("estado", cliente.getEndereco().getEstado());
+
+		try {
+
+			getWritableDatabase().insert(ClienteDAO.tabelaCliente, null,valores);
+			return true;
+
+		} catch (android.database.SQLException sql) {
+			Log.e("Cadastrar Cliente", sql.getMessage());
+			Log.e("Cadastrar Cliente",
+					Log.getStackTraceString(sql.fillInStackTrace()));
+		} catch (Exception e) {
+			Log.e("Cadastrar Cliente", e.getMessage());
+			Log.e("Cadastrar Cliente", Log.getStackTraceString(e.fillInStackTrace()));
+		}
+
+		return false;
+	}
+	
+	@Override
+	public boolean atualizar(Cliente cliente) {
+		
+		/*
+		Cursor cursor = buscarVendedorPorLoginSenha(vendedor.getLogin(), vendedor.getSenha());
+		
+		if(cursor.isBeforeFirst()){
+			cursor.moveToFirst();
+		}
+		
+		
+		if(cursor.getCount() != 0){
+			if(getID(cursor) != vendedor.getId()){
+				return false;
+			}
+		}
+		
+		*/
+
+		ContentValues valores = new ContentValues();
+
+		valores.put("nome", cliente.getNome());
+		valores.put("telefone", cliente.getTelefone());
+		valores.put("rg", cliente.getRg());
+		valores.put("cpf", cliente.getCpf());
+		valores.put("rua", cliente.getEndereco().getRua());
+		valores.put("numero", cliente.getEndereco().getNumero());
+		valores.put("cep", cliente.getEndereco().getCep());
+		valores.put("bairro", cliente.getEndereco().getBairro());
+		valores.put("cidade", cliente.getEndereco().getCidade());
+		valores.put("estado", cliente.getEndereco().getEstado());
+		
+		String [] whereArgs = new String[]{Long.toString(cliente.getId())};
+
+		try {
+
+			getWritableDatabase().update(ClienteDAO.tabelaCliente, valores, "_id=?", whereArgs);
+			return true;
+
+		} catch (android.database.SQLException sql) {
+			Log.e("Atualizar Vendedor", sql.getMessage());
+			Log.e("Atualizar Vendedor",	Log.getStackTraceString(sql.fillInStackTrace()));
+		} catch (Exception e) {
+			Log.e("Atualizar Vendedor", e.getMessage());
+			Log.e("Atualizar Vendedor", Log.getStackTraceString(e.fillInStackTrace()));
+		}
+
 		return false;
 	}
 
@@ -52,6 +132,78 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 
 	@Override
 	public Cliente buscarClientePorNome(String nome) {
+		return null;
+	}
+
+	@Override
+	public Cursor buscarTodosOsClientes(Cliente cliente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Long getID(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getNome(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getTelefone(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getRG(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getCPF(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getRua(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getNumero(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getCEP(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getEstado(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getCidade(Cursor c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getBairro(Cursor c) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

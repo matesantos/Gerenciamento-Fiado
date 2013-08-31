@@ -3,6 +3,7 @@ package br.ufpb.lp3.gerenciamento_fiado.tela_login;
 import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.CadastrarVendedorActivity;
 import br.ufpb.lp3.gerenciamento_fiado.menu_principal.MenuPrincipalActivity;
+import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
 import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
 import android.app.Activity;
@@ -50,8 +51,10 @@ public class LoginActivity extends Activity {
 		return true;
 	}
 	
-	public void EntrarNoSistema(){
-	   	Utils.goToActivity(this, MenuPrincipalActivity.class);
+	public void EntrarNoSistema(Vendedor vendedor){
+		
+		Utils.goToActivityVendedor(this, MenuPrincipalActivity.class, vendedor);
+		
 	}
 	
 	public void mostrarError(String error){

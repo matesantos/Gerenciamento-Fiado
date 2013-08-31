@@ -1,12 +1,11 @@
 package br.ufpb.lp3.gerenciamento_fiado.tela_login;
 
-import java.io.IOException;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import br.ufpb.gerenciamento_fiado.URL.HttpUtils;
 import br.ufpb.lp3.gerenciamento_fiado.mesagens.Mensagens;
+import br.ufpb.lp3.gerenciamento_fiado.models.Endereco;
+import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
+import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorBDFactory;
+import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorDAO;
+import android.database.Cursor;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -52,38 +51,51 @@ public class FazerLogin implements OnClickListener {
 
 	// método para fazer o login
 	private void fazerLogin(String login, String senha) {
-		
-//		String baseURL = "http://192.168.0.166:8080/ServerGerenciamentoFiadoV1/server";
-		String baseURL = "http://192.168.0.166:8080/ServerGerenciamentoFiadoV1/server";
-
 		try {
 			if (login.isEmpty()) {
 				String error = Mensagens.campoLoginSenhaVazio;
 				loginActivity.mostrarError(error);
 			} else {
-				LoginInput loginInput = new LoginInput(login, "123");
-				JSONObject inputString = new JSONObject(loginInput.getInputMap());
+				VendedorDAO cadastrarVendedor = VendedorBDFactory.getVendedorBD(loginActivity);
 				
-//				String jsonString = HttpUtils.urlContentPost(baseURL, "login",inputString.toString());
+				Cursor cursor = cadastrarVendedor.buscarVendedorPorLoginSenha(login, senha);
 				
-				String jsonString = HttpUtils.urlContentPost(baseURL, "login",inputString.toString());
+				if(cursor.isBeforeFirst()){
+					cursor.moveToFirst();
+				}
 				
-				JSONObject jsonResult = new JSONObject(jsonString);
-				
-				loginActivity.EntrarNoSistema();
-
+				if(cursor.getCount() != 0){
+					
+					cursor.moveToFirst();
+					
+					long id = cadastrarVendedor.getID(cursor);
+		            String nome = cadastrarVendedor.getNome(cursor);
+		            String telefone = cadastrarVendedor.getTelefone(cursor);
+		            String rg = cadastrarVendedor.getRG(cursor);
+		            String cpf = cadastrarVendedor.getCPF(cursor);
+		            String rua = cadastrarVendedor.getRua(cursor);
+		            String numero = cadastrarVendedor.getNumero(cursor);
+		            String cep = cadastrarVendedor.getCEP(cursor);
+		            String estado = cadastrarVendedor.getEstado(cursor);
+		            String cidade = cadastrarVendedor.getCidade(cursor);
+		            String bairro = cadastrarVendedor.getBairro(cursor);
+		            
+		            Endereco endereco = new Endereco(rua, numero, cep, bairro, cidade, estado);
+		            
+		            Vendedor vend = new Vendedor(id, nome, telefone, rg, cpf, endereco, login, senha);
+		         
+		            cursor.close();
+		            
+					loginActivity.EntrarNoSistema(vend);
+				}else{
+					loginActivity.mostrarError("Vendedor não encontrado. Certifique-se se a senha e o login estão corretos");
+					return;
+				}
 			}
-		}
-		catch (IOException exe){
-			Log.e("IOException1", exe.getMessage());
-			Log.e("IOException3", login);
-			Log.e("IOException4",Log.getStackTraceString(exe.getCause()));
-			loginActivity.mostrarError("error");
 		}catch (Exception e) {
-			Log.e("IOException", e.getMessage());
-			loginActivity.mostrarError("error");
+			Log.e("Exception",Log.getStackTraceString(e.fillInStackTrace()));
 		}
-
+	
 	}
 
 	private void cadastrar() {

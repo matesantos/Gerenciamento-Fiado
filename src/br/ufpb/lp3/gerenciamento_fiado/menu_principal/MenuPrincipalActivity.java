@@ -5,6 +5,8 @@ import br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.GerenciarClienteActivit
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_contas.GerenciarContasActivity;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.GerenciarProdutoActivity;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.GerenciarVendedorActivity;
+import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
+import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -12,11 +14,17 @@ import android.view.Menu;
 import android.view.View;
 
 public class MenuPrincipalActivity extends Activity {
-
+	Vendedor vendedor = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
+        
+        Bundle dados = getIntent().getExtras();
+        vendedor = (Vendedor)dados.getSerializable("vendedor");
+        
+        Utils.mostrarMensagens(this, String.valueOf("Bem vindo "+vendedor.getNome()));
+        
     }
 
     @Override
@@ -31,7 +39,7 @@ public class MenuPrincipalActivity extends Activity {
     }
     
     public void GerenciarVendedor (View v){
-    	goToActivity(GerenciarVendedorActivity.class);
+    	Utils.goToActivityVendedor(this, GerenciarVendedorActivity.class, vendedor);
     }
     
     public void GerenciarProduto(View v){
