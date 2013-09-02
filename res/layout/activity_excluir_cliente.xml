@@ -1,115 +1,371 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollViewECliente"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewExcluirCliente"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="16dp" >
-
-    <RelativeLayout
+    android:layout_marginTop="16dp"
+    tools:context=".ExcluirClienteActivity"    
+    >
+    
+    <LinearLayout
+        android:id="@+id/LinearLayoutTelaExcluirCliente1"
         android:layout_width="match_parent"
-        android:layout_height="448dp"
-        android:background="@color/Black"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_image"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin" >
 
-        <TextView
-            android:id="@+id/textViewDadosPessoaisVendedor"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Pesquisar por: "
-            android:textColor="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-        <RadioGroup
-            android:id="@+id/radioGroup1"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textViewDadosPessoaisCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="55dip"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical"
+                android:text="@string/dadosPessoaisCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Red"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/textViewDadosPessoaisVendedor" >
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-            <RadioButton
-                android:id="@+id/radioExcluir0"
+            <TextView
+                android:id="@+id/textViewNomeTelaExcluirCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="Nome"
-                android:textColor="@color/White" />
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/nomeCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
-            <RadioButton
-                android:id="@+id/radioExcluir1"
+            <EditText
+                android:id="@+id/editTextNomeClienteTelaExcluirCliente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" 
+                android:enabled="false">
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewRGCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CPF"
-                android:textColor="@color/White" />
-        </RadioGroup>
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/rgCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/textViewConfiguracoesMenuPrincipal"
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/editTextRGClienteTelaExcluirCliente"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" 
+                android:enabled="false">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textViewCPFCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cpfCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextCPFClienteTelaExcluirCliente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text"
+                android:enabled="false" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textViewDadosPessoaisVendedor"
-            android:layout_below="@+id/radioGroup1"
-            android:text="Cliente a ser excluído:"
-            android:textColor="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-        <EditText
-            android:id="@+id/editTextExcluir"
-            android:layout_width="170dp"
+            <TextView
+                android:id="@+id/textViewTelefoneClienteTelaExcluirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/telefoneCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextTelefoneClienteTelaExcluirCliente"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0.20"
+                android:ems="10"
+                android:inputType="text"
+                android:enabled="false" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textViewConfiguracoesMenuPrincipal"
-            android:layout_below="@+id/textViewConfiguracoesMenuPrincipal"
-            android:ems="10"
-            android:inputType="textPersonName" >
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
 
-            <requestFocus />
-        </EditText>
+        <!-- Parte 2 do layout -->
 
-        <Button
-            android:id="@+id/buttonExcluirCliente"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente6"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewConfiguracoesMenuPrincipal"
-            android:layout_toRightOf="@+id/editTextExcluir"
-            android:text="@string/pesquisar" />
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-        <TextView
-            android:id="@+id/textViewBuscarClienteGerenciarCliente"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textViewDadosEnderecoClienteTelaExcluirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dip"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical"
+                android:text="@string/dadosEnderecoCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Red"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente7"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editTextExcluir"
-            android:layout_below="@+id/editTextExcluir"
-            android:layout_marginTop="18dp"
-            android:text="Resultado da pesquisa"
-            android:textColor="@color/White"
-            android:textSize="@dimen/tamanhoDosLabels" />
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-        <Button
-            android:id="@+id/buttonCancelar"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textViewEnderecoTelaExcluirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/enderecoCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextEnderecoClienteTelaExcluirCliente"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" 
+                android:enabled="false">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente8"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button2"
-            android:layout_alignBottom="@+id/button2"
-            android:layout_alignLeft="@+id/textViewBuscarClienteGerenciarCliente"
-            android:layout_marginLeft="18dp"
-            android:text="@string/cancelar" />
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textViewNumeroCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/numeroCasaCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextNumeroClienteTelaExcluirCliente"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text"
+                android:enabled="false" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textViewCEPCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cepCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextCEPClienteTelaExcluirCliente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text"
+                android:enabled="false" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente9"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/radioGroup1"
-            android:layout_below="@+id/textViewBuscarClienteGerenciarCliente"
-            android:layout_marginTop="56dp"
-            android:text="@string/excluir" />
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/textViewUFClienteTelaExcluirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/ufCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/spinnerUFTelaExcluirCliente"
+                android:layout_width="0dip"
+                android:layout_height="38dp"
+                android:layout_weight="0.15" 
+                android:enabled="false"/>
+
+            <TextView
+                android:id="@+id/textViewCidaddeTelaExcluirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/cidadeCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextCidadeClienteTelaExcluirCliente"
+                android:layout_width="83dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text"
+                android:enabled="false" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewBairroTelaExcluirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:text="@string/bairroCliente"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextBairroClienteTelaExcluirCliente"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:inputType="text" 
+                android:enabled="false">
+
+            </EditText>
+        </LinearLayout>
+
+        <!-- Parte 3 do layout -->
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTelaLogin5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/buttonApagarTelaExcluirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apagar" />
+
+            <Button
+                android:id="@+id/buttonExcluirTelaExcluirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/excluirCliente" />
+        </LinearLayout>
+    </LinearLayout>
 
 </ScrollView>

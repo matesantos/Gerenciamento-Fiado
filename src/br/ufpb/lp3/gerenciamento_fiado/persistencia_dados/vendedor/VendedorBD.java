@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
+import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteDAO;
 
 public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
 
@@ -29,6 +30,18 @@ public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
 				+ VendedorDAO.bairro + " TEXT," + VendedorDAO.cidade + " TEXT,"
 				+ VendedorDAO.estado + " TEXT," + VendedorDAO.login + " TEXT,"
 				+ VendedorDAO.senha + " TEXT );");
+		
+		//quando a aplicação começar rodar, ele só cria uma únoca vez todas as tabelas do sistema, como o DAO do vendedor
+		//é a primeira a ser chamda na aplicação, crio aqui, todas as tabelas do sistema.
+		createCliente(db);
+		
+	}
+	
+	private void createCliente(SQLiteDatabase db){
+		db.execSQL("CREATE TABLE " + ClienteDAO.tabelaCliente +"(_"+ClienteDAO.id+" INTEGER PRIMARY KEY AUTOINCREMENT," +
+				ClienteDAO.nome +" TEXT," + ClienteDAO.telefone +" TEXT,"+ClienteDAO.rg+" TEXT," +
+				ClienteDAO.cpf+	" TEXT, "+ClienteDAO.rua+" TEXT," + ClienteDAO.numero +" INTERGER,"+ ClienteDAO.cep +" TEXT,"+
+				ClienteDAO.bairro + " TEXT,"+ ClienteDAO.cidade +" TEXT,"+ ClienteDAO.estado +" TEXT );");
 		
 	}
 

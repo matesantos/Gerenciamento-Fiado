@@ -4,5 +4,15 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/atualizar"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:showAsAction="ifRoom"
+        android:title="@string/atualizarMenuPopup"/>
+    <item
+        android:id="@+id/excluir"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:showAsAction="ifRoom"
+        android:title="@string/excluirMenuPopup"/>
 
 </menu>

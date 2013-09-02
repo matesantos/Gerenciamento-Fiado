@@ -3,6 +3,7 @@ package br.ufpb.lp3.gerenciamento_fiado.utils;
 import java.util.Arrays;
 import java.util.List;
 
+import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
 
 import android.app.Activity;
@@ -29,6 +30,13 @@ public class Utils {
 		newActivity.putExtra("vendedor", vendedor);
 		currentActivity.startActivity(newActivity);
 	}
+	
+	public static void goToActivityCliente(Context currentActivity, Class<? extends Activity> newClass, Cliente cliente) {
+		Intent newActivity = new Intent(currentActivity, newClass);
+		newActivity.putExtra("cliente", cliente);
+		currentActivity.startActivity(newActivity);
+	}
+
 
 	public static List<String> getUFList() {
 		String[] list = { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO",
