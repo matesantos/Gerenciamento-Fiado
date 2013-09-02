@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
+import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.produtos.ProdutoDAO;
 import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteDAO;
 
 public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
@@ -31,9 +32,10 @@ public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
 				+ VendedorDAO.estado + " TEXT," + VendedorDAO.login + " TEXT,"
 				+ VendedorDAO.senha + " TEXT );");
 		
-		//quando a aplicação começar rodar, ele só cria uma únoca vez todas as tabelas do sistema, como o DAO do vendedor
-		//é a primeira a ser chamda na aplicação, crio aqui, todas as tabelas do sistema.
+		//quando a aplicação começar a ser executada, ele só cria uma única vez todas as tabelas do sistema, como o DAO do vendedor
+		//é a primeira a ser chamada pela aplicação, crio aqui todas as tabelas do sistema.
 		createCliente(db);
+		createProduto(db);
 		
 	}
 	
@@ -42,6 +44,12 @@ public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
 				ClienteDAO.nome +" TEXT," + ClienteDAO.telefone +" TEXT,"+ClienteDAO.rg+" TEXT," +
 				ClienteDAO.cpf+	" TEXT, "+ClienteDAO.rua+" TEXT," + ClienteDAO.numero +" INTERGER,"+ ClienteDAO.cep +" TEXT,"+
 				ClienteDAO.bairro + " TEXT,"+ ClienteDAO.cidade +" TEXT,"+ ClienteDAO.estado +" TEXT );");
+		
+	}
+	
+	private void createProduto(SQLiteDatabase db){
+		db.execSQL("CREATE TABLE " + ProdutoDAO.tabelaProduto+"(_"+ProdutoDAO.codigo+" INTEGER PRIMARY KEY AUTOINCREMENT," +
+				ProdutoDAO.nome +" TEXT," + ProdutoDAO.preco +" TEXT);");
 		
 	}
 
@@ -93,7 +101,6 @@ public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
 		
 		if(cursor.isBeforeFirst()){
 			cursor.moveToFirst();
-			Log.i("cursor", "isbefore");
 		}
 		
 		if(cursor.getCount() != 0){

@@ -33,7 +33,7 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-    	 EXCLUIRCLIENTE
+    	 EXCLUIRCLIENTE
     -->
 
     <string name="title_activity_atualizar_cliente">Atualizar Cliente</string>
@@ -64,9 +64,7 @@
     	 CADASTRARVENDEDOR 
     	 ATUALIZARVENDEDOR
     	 BUSCARVENDEDOR
-    	 EXCLUIRVENDEDOR
-
-
+    	 EXCLUIRVENDEDOR
     -->
 
     <string name="title_activity_cadastrar_vendedor">Cadastrar Vendedor</string>
@@ -94,6 +92,32 @@
     <string name="excluir">EXCLUIR</string>
     <string name="cancelar">CANCELAR</string>
     <string name="pesquisar">PESQUISAR</string>
+    
+    <!--  -->
+    
+       <!-- strings do GERENCIARPRODUTO -->
+    <string name="cadastrarProduto">CADASTRAR PRODUTO</string>
+    <string name="atualizarProduto">ATUALIZAR PRODUTO</string>
+    <string name="buscarProduto">BUSCAR PTODUTO</string>
+    <string name="excluirProduto">EXCLUIR PRODUTO</string>
+    <string name="title_activity_cadastrar_produto">Cadastrar Produto</string>
+    <string name="title_activity_atualizar_produto">Atualizar Produto</string>
+    <string name="title_activity_buscar_produto">Buscar Produto</string>
+    <string name="title_activity_excluir_produto">Excluir Produto</string>
+
+    <!--
+         strings comuns do GERENCIARProduto -> 
+    	 CADASTRARPRODUTO 
+    	 ATUALIZARPRODUTO
+    	 BUSCARPRODUTO
+    	 EXCLUIRPRODUTO
+
+    -->
+    
+    <string name="nomeProduto">DESCRIÇÃO:</string>
+    <string name="precoProduto">PREÇO:</string>
+    <string name="dadosProduto">DADOS DO PRODUTO:</string>
+    
 
     <!-- Strings -->
     <string name="title_activity_gerenciar_produtos">GerenciarProdutos</string>
@@ -110,5 +134,6 @@
     <string name="excluirMenuPopup">EXCLUIR</string>
     <string name="title_activity_buscar_tela_excluir_cliente">BuscarTelaExcluirCliente</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_buscar_cliente_excluir">BuscarClienteExcluir</string>
 
 </resources>

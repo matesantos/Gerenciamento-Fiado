@@ -108,15 +108,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="15sp" />
 
-            <EditText
+            <br.ufpb.lp3.gerenciamento_fiado.utils.CpfMaskEditText
                 android:id="@+id/editTextCPFVendedorTelaAtualizarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" >
+                android:inputType="text" />
 
-            </EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -290,15 +289,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="15sp" />
 
-            <EditText
+            <br.ufpb.lp3.gerenciamento_fiado.utils.CepMaskEditText
                 android:id="@+id/editTextCEPVendedorTelaAtualizarVendedor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" >
+                android:inputType="text" />
 
-            </EditText>
         </LinearLayout>
 
         <LinearLayout

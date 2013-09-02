@@ -28,6 +28,10 @@ public interface Mensagens {
 	public final static String campoNumeroClienteVazio = "O campo Número não pode estar vazio!";
 	public final static String campoCEPClienteVazio = "O campo CEP não pode estar vazio!";
 	
+	//mensagens para a tela de Cadastro/Atualização/Exclusão de Cliente
+	public final static String campoNomeProdutoVazio = "O campo Descrição não pode estar vazio!";
+	public final static String campoPrecoProdutoVazio = "O campo Preço não pode estar vazio!";
+	
 	//mensagens relacionadas ao Banco de Dados
 	public final static String loginSenhaExistentes  = "Esse login ou senha já existe, escolhe outro login.";
 

@@ -6,6 +6,7 @@ import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -116,6 +117,21 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 
 	@Override
 	public boolean deletar(Cliente cliente) {
+		try{
+			
+			String [] whereArgs = new String[]{Long.toString(cliente.getId())};
+
+			getReadableDatabase().delete(ClienteDAO.tabelaCliente, "_id=?", whereArgs);
+			return true;
+		}catch (SQLException sql) {
+			Log.e("Atualizar Cliente", sql.getMessage());
+			Log.e("Atualizar Cliente",	Log.getStackTraceString(sql.fillInStackTrace()));
+		} catch (Exception e) {
+			Log.e("Atualizar Cliente", e.getMessage());
+			Log.e("Atualizar Cliente", Log.getStackTraceString(e.fillInStackTrace()));
+		}
+
+		
 		return false;
 	}
 

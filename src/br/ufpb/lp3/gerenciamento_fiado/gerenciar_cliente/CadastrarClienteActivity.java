@@ -144,7 +144,7 @@ public class CadastrarClienteActivity extends Activity {
 	
 	private boolean cadastrarCliente(String nome, String telefone, String rg, String cpf,Endereco endereco){
 		
-		if(validarCampos(nome, telefone, rg, cpf, endereco) == false){;
+		if(validarCampos(nome, telefone, rg, cpf, endereco) == false){
 			return false;
 		}
 		

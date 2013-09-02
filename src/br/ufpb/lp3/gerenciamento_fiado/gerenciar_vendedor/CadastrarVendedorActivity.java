@@ -98,12 +98,14 @@ public class CadastrarVendedorActivity extends Activity {
 			if(cadastrarVendedor(1l,nomeVendedor.getText().toString(),telefoneVendedor.getText().toString(),rgVendedor.getText().toString(),
 							  cpfVendedor.getText().toString(),end,loginVendedor.getText().toString(),senhaVendedor.getText().toString())){
 				
-				Utils.mostrarMensagens(CadastrarVendedorActivity.this, "Vendedor cadastrado com Sucesso");
+				Utils.mostrarMensagens(CadastrarVendedorActivity.this, "Vendedor cadastrado com Sucesso. Faça o seu login agora.");
 				
 			}
 		}
 		
 	}
+	
+	
 	
     private class SpinnerUFInfo implements OnItemSelectedListener{
     	private boolean isFirst = true;

@@ -2,13 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_image"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/Black"
-    tools:context=".GerenciarProdutoActivity" 
-    >
+    tools:context=".GerenciarProdutoActivity" >
 
     <Button
         android:id="@+id/button2"
@@ -18,7 +17,8 @@
         android:layout_alignRight="@+id/button1"
         android:layout_below="@+id/button1"
         android:layout_marginTop="18dp"
-        android:text="Atualizar Produtos" />
+        android:onClick="AtualizarProduto"
+        android:text="@string/atualizarProduto" />
 
     <Button
         android:id="@+id/button1"
@@ -27,8 +27,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:text="Cadastrar Produtos"
-        android:onClick="CadastrarProduto" />
+        android:onClick="CadastrarProduto"
+        android:text="@string/cadastrarProduto" />
 
     <Button
         android:id="@+id/button4"

@@ -7,8 +7,8 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="10" />
-    
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -41,6 +41,10 @@
             android:label="@string/title_activity_gerenciar_produto" >
         </activity>
         <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.CadastrarProdutoActivity"
+            android:label="@string/title_activity_cadastrar_produto" >
+        </activity>
+        <activity
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_contas.CadastrarContasActivity"
             android:label="@string/title_activity_cadastrar_contas" >
         </activity>
@@ -52,12 +56,10 @@
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.AtualizarClienteActivity"
             android:label="@string/title_activity_atualizar_cliente" >
         </activity>
-        
         <activity
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.BuscarClienteActivity"
             android:label="@string/title_activity_buscar_cliente" >
         </activity>
-        
         <activity
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.ExcluirClienteActivity"
             android:label="@string/title_activity_excluir_cliente" >
@@ -86,6 +88,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.BuscarClienteExcluir"
+            android:label="@string/title_activity_buscar_cliente_excluir" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.AtualizarProdutoActivity"
+            android:label="@string/title_activity_atualizar_produto" >
         </activity>
     </application>
 

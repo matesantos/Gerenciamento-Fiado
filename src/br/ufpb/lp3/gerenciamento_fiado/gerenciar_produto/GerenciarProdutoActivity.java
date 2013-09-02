@@ -1,9 +1,9 @@
 package br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto;
 
 import br.ufpb.lp3.gerenciamento_fiado.R;
+import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 
@@ -24,13 +24,23 @@ public class GerenciarProdutoActivity extends Activity {
 	
 	public void CadastrarProduto(View v)
 	{
-		goToActivity(CadastrarProdutoActivity.class);
+		Utils.goToActivity(this, CadastrarProdutoActivity.class);
 	}
 	
+	public void AtualizarProduto(View v)
+	{
+		Utils.mostrarMensagens(this, "Você só poderá atualizar produto " +
+				"selecionando primeiro o produto na tela Buscar Produto.");	
+	}
 	
-	private void goToActivity (Class<? extends Activity> activityClass2){
-    	Intent newIntent = new Intent(this,activityClass2);
-    	startActivity(newIntent);
-    }
-
+	public void BuscarProduto(View v)
+	{
+		Utils.goToActivity(this, AtualizarProdutoActivity.class);
+	}
+	
+	public void ExcluirProduto(View v)
+	{
+		Utils.goToActivity(this, AtualizarProdutoActivity.class);
+	}
+	
 }

@@ -1,103 +1,157 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/Black"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayoutTelaAtualizarCliente1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_image"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-     >
+    tools:context=".CadastrarProdutoActivity" >
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayoutAtualizarCliente2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/editText3"
-        android:layout_marginTop="32dp"
-        android:text="Fornecedor:"
-        android:textColor="@color/White" />
+        android:gravity="center"
+        android:orientation="horizontal" >
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textViewDadosPessoaisCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="55dip"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical"
+            android:text="@string/dadosProduto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Red"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAtualizarCliente1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_toRightOf="@+id/textView3"
-        android:ems="10" />
+        android:gravity="center"
+        android:orientation="horizontal" >
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textViewProdutoTelaCadastrarProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            android:text="@string/nomeProduto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editTextNomeProdutoTelaCadastratarProduto"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:ems="10"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAtualizarCliente3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignLeft="@+id/editText4"
-        android:ems="10"
-        android:inputType="number" />
+        android:gravity="center"
+        android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textViewPrecoTelaCadastrarProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            android:text="@string/precoProduto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editTextPrecoProdutoTelaCadastratProduto"
+            android:layout_width="147dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:ems="10"
+            android:inputType="numberDecimal|text" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCadastrarProduto4"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
-        android:text="Cadastrar Produto" />
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayoutCadastrarProduto5"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textViewGerenciarVendasMenuPrincipal"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignRight="@+id/editText2"
-        android:ems="10"
-        android:textSize="@dimen/activity_horizontal_margin" />
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewGerenciarVendasMenuPrincipal"
-        android:layout_width="wrap_content"
+    <!-- Parte 2 do layout -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCadastrarProduto6"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewConfiguracoesMenuPrincipal"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
-        android:text="Descricao:"
-        android:textColor="@color/White" />
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayoutCadastrarProduto7"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="30dp"
-        android:text="Quantidade:"
-        android:textColor="@color/White" />
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewConfiguracoesMenuPrincipal"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayoutCadastrarProduto8"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textViewGerenciarVendasMenuPrincipal"
-        android:layout_marginTop="22dp"
-        android:text="Preco:"
-        android:textColor="@color/White" />
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
+    <!-- Parte 3 do layout -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCadastrarProduto9"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewConfiguracoesMenuPrincipal"
-        android:layout_alignBottom="@+id/textViewConfiguracoesMenuPrincipal"
-        android:layout_alignLeft="@+id/editText3"
-        android:ems="10"
-        android:inputType="numberDecimal" >
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
 
-        <requestFocus />
-    </EditText>
+        <Button
+            android:id="@+id/buttonApagarTelaAtualizarCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apagar" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/buttonCadastrarTelaCadastrarProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastrarProduto" />
+    </LinearLayout>
+
+</LinearLayout>
