@@ -395,7 +395,7 @@
                 android:id="@+id/buttonCadastrarTelaCadastrarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/atualizarVendedor" />
+                android:text="@string/cadastrarVendedor" />
         </LinearLayout>
     </LinearLayout>
 

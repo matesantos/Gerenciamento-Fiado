@@ -104,11 +104,11 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 			return true;
 
 		} catch (android.database.SQLException sql) {
-			Log.e("Atualizar Vendedor", sql.getMessage());
-			Log.e("Atualizar Vendedor",	Log.getStackTraceString(sql.fillInStackTrace()));
+			Log.e("Atualizar Cliente", sql.getMessage());
+			Log.e("Atualizar Cliente",	Log.getStackTraceString(sql.fillInStackTrace()));
 		} catch (Exception e) {
-			Log.e("Atualizar Vendedor", e.getMessage());
-			Log.e("Atualizar Vendedor", Log.getStackTraceString(e.fillInStackTrace()));
+			Log.e("Atualizar Cliente", e.getMessage());
+			Log.e("Atualizar Cliente", Log.getStackTraceString(e.fillInStackTrace()));
 		}
 
 		return false;
@@ -136,75 +136,65 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 	}
 
 	@Override
-	public Cursor buscarTodosOsClientes(Cliente cliente) {
-		// TODO Auto-generated method stub
-		return null;
+	public Cursor buscarTodosOsClientes() {
+		String query = "SELECT * FROM " + ClienteDAO.tabelaCliente + ";";
+		return getReadableDatabase().rawQuery(query, null);
 	}
 
 	@Override
 	public Long getID(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getLong(0);
 	}
 
 	@Override
 	public String getNome(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(1);
 	}
 
 	@Override
 	public String getTelefone(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(2);
 	}
 
 	@Override
 	public String getRG(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(3);
 	}
 
 	@Override
 	public String getCPF(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(4);
 	}
 
 	@Override
 	public String getRua(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(5);
 	}
 
 	@Override
 	public String getNumero(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(6);
 	}
 
 	@Override
 	public String getCEP(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(7);
 	}
 
 	@Override
 	public String getEstado(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(8);
 	}
 
 	@Override
 	public String getCidade(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(9);
 	}
 
 	@Override
 	public String getBairro(Cursor c) {
-		// TODO Auto-generated method stub
-		return null;
+		return c.getString(10);
 	}
+
 
 }

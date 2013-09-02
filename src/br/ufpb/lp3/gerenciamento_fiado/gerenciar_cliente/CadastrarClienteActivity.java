@@ -6,18 +6,15 @@ import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.mesagens.Mensagens;
 import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
 import br.ufpb.lp3.gerenciamento_fiado.models.Endereco;
-import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
-import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorBDFactory;
-import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorDAO;
 import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteBDFactory;
 import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteDAO;
 import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
 import android.app.Activity;
-import android.database.Cursor;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -58,7 +55,7 @@ public class CadastrarClienteActivity extends Activity {
 		bairroCliente 		= (EditText) findViewById(R.id.editTextBairroClienteTelaCadastrarCliente);
 		
 		
-		spinnerUF = (Spinner) findViewById(R.id.spinnerUFTelaCadastrarVendedor);
+		spinnerUF = (Spinner) findViewById(R.id.spinnerUFTelaCadastrarCliente);
 
 		List<String> listUF = Utils.getUFList();
 		ArrayAdapter<String> spinnerList = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, listUF);
@@ -68,7 +65,7 @@ public class CadastrarClienteActivity extends Activity {
 		
 		//button
 		cadastrarCliente 	= (Button) findViewById(R.id.buttonCadastrarTelaCadastrarCliente);
-		
+		cadastrarCliente.setOnClickListener(new CadastrarButton());
 
 	}
 
@@ -79,6 +76,24 @@ public class CadastrarClienteActivity extends Activity {
 		return true;
 	}
 	
+	private class CadastrarButton implements OnClickListener{
+
+		@Override
+		public void onClick(View v) {
+			
+			Endereco end = new Endereco(enderecoCliente.getText().toString(),numeroCliente.getText().toString(),cepCliente.getText().toString(),
+					spinnerUF.getSelectedItem().toString(),cidadeEdit.getText().toString(), bairroCliente.getText().toString());
+			
+			if(cadastrarCliente(nomeCliente.getText().toString(),telefoneCliente.getText().toString(),rgCliente.getText().toString(),
+							  cpfCliente.getText().toString(),end)){
+				
+				Utils.mostrarMensagens(CadastrarClienteActivity.this, "Cliente cadastrado com sucesso");
+				
+			}
+		}
+		
+	}
+	
 	private class SpinnerUFInfo implements OnItemSelectedListener{
     	private boolean isFirst = true;
 		@Override
@@ -87,7 +102,7 @@ public class CadastrarClienteActivity extends Activity {
 			if(isFirst){
 				isFirst = false;
 			}else{
-				cidadeEdit = (EditText) findViewById(R.id.editTextCidadeVendedorTelaCadastrarVendedor);
+				cidadeEdit = (EditText) findViewById(R.id.editTextCidadeClienteTelaCadastrarCliente);
 				if(isFirst){
 					isFirst = false;
 				}else{
@@ -127,38 +142,31 @@ public class CadastrarClienteActivity extends Activity {
 		
 	}
 	
-	private boolean cadastrarCliente(Long id,String nome, String telefone, String rg, String cpf,Endereco endereco){
+	private boolean cadastrarCliente(String nome, String telefone, String rg, String cpf,Endereco endereco){
 		
-		if(validarCampos(id, nome, telefone, rg, cpf, endereco) == false){;
+		if(validarCampos(nome, telefone, rg, cpf, endereco) == false){;
 			return false;
 		}
 		
-		Cliente cliente = new Cliente(id, nome, telefone, rg, cpf, endereco);
+		Cliente cliente = new Cliente(nome, telefone, rg, cpf, endereco);
 		
 		try {
 			
-			ClienteDAO cadastrarVendedor = ClienteBDFactory.getClienteBD(this);
+			ClienteDAO cadastrarCliente = ClienteBDFactory.getClienteBD(this);
 
-			//primeiro, vamos checar se não existe um outro login e senha igual na hora do cadastro
-//			Cursor curso = cadastrarVendedor.buscarVendedorPorLoginSenha(vendedor.getLogin(), vendedor.getSenha());
-//			if(curso.getCount() != 0){
-//				Utils.mostrarMensagens(this, Mensagens.loginSenhaExistentes);
-//				return false;
-//			}
-//			
-//			if(cadastrarVendedor.salvar(vendedor)){
-//				return true;
-//			}
+			if(cadastrarCliente.salvar(cliente)){
+				return true;
+			}
 			
 		}catch (Exception e) {
-			Log.e("Exception1", e.getMessage());
-			Log.e("Exception2",Log.getStackTraceString(e.fillInStackTrace()));
+			Log.e("Cadastrar Cliente", e.getMessage());
+			Log.e("Cadastrar Cliente2",Log.getStackTraceString(e.fillInStackTrace()));
 		}
 		
 		return false;
 	}
 	
-	private boolean validarCampos(Long id,String nome, String telefone, String rg, String cpf,
+	private boolean validarCampos(String nome, String telefone, String rg, String cpf,
 			Endereco endereco){
 		
 		if(nome.isEmpty()){
