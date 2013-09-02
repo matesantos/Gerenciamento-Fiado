@@ -36,11 +36,11 @@ public class LoginActivity extends Activity {
 		entrarButton = (Button)findViewById(R.id.buttonEntrarTelaLogin);
 		
 		cadastrarButton.setOnClickListener(new FazerLogin(this, "salvarDados"));
-		entrarButton.setOnClickListener(new FazerLogin("mateus","123", this, "entrar"));
+//		entrarButton.setOnClickListener(new FazerLogin("mateus","123", this, "entrar"));
 
-//		entrarButton.setOnClickListener(new FazerLogin(loginEdit.getText().toString().trim(),
-//				   senhaEdit.getText().toString(),
-//				   this, "entrar"));
+		entrarButton.setOnClickListener(new FazerLogin(loginEdit.getText().toString().trim(),
+				   senhaEdit.getText().toString(),
+				   this, "entrar"));
 		
 	}
 
