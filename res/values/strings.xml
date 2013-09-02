@@ -10,7 +10,7 @@
     <string name="senhaTelaLogin">SENHA</string>
     <string name="cadastrarTelaLogin">CADASTRE-SE</string>
     <string name="entrarTelaLogin">ENTRAR</string>
-    
+
     <!-- strings do MENUPRINCIPAL -->
     <string name="gerenciarCliente">CLIENTE</string>
     <string name="gerenciarVendedor">VENDEDOR</string>
@@ -33,12 +33,13 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-    	 EXCLUIRCLIENTE    -->
+    	 EXCLUIRCLIENTE
+    -->
 
     <string name="title_activity_atualizar_cliente">Atualizar Cliente</string>
     <string name="title_activity_buscar_cliente">Buscar Cliente</string>
     <string name="title_activity_excluir_cliente">Excluir Cliente</string>
-     <string name="nomeCliente">NOME:</string>
+    <string name="nomeCliente">NOME:</string>
     <string name="enderecoCliente">ENDEREÇO:</string>
     <string name="cepCliente">CEP:</string>
     <string name="cpfCliente">CPF:</string>
@@ -63,7 +64,9 @@
     	 CADASTRARVENDEDOR 
     	 ATUALIZARVENDEDOR
     	 BUSCARVENDEDOR
-    	 EXCLUIRVENDEDOR
+    	 EXCLUIRVENDEDOR
+
+
     -->
 
     <string name="title_activity_cadastrar_vendedor">Cadastrar Vendedor</string>
@@ -83,7 +86,7 @@
     <string name="numeroCasaVendedor">NUMERO:</string>
     <string name="dadosPessoaisVendedor">DADOS PESSOAIS DO VENDEDOR:</string>
     <string name="dadosEnderecoVendedor">ENDEREÇO DO VENDEDOR:</string>
-    
+
     <!-- strings do botão SALVAR, APAGAR, EXCLUIR, BUSCAR, 	CANCELAR, PESQUISAR -->
     <string name="salvar">SALVAR</string>
     <string name="apagar">APAGAR</string>
@@ -91,15 +94,21 @@
     <string name="excluir">EXCLUIR</string>
     <string name="cancelar">CANCELAR</string>
     <string name="pesquisar">PESQUISAR</string>
-    
-    
-    <!-- Strings   -->
+
+    <!-- Strings -->
     <string name="title_activity_gerenciar_produtos">GerenciarProdutos</string>
     <string name="title_activity_gerenciar_produto">Gerenciar Produtos</string>
     <string name="tipo">Tipo do produto</string>
     <string name="title_activity_cadastrar_contas">Cadastro de Contas</string>
     <string name="title_activity_gerenciar_contas">Gerenciar Contas</string>
-    
     <string name="title_activity_login">Login</string>
+    <string name="BuscarClienteHint">Pesquisar Cliente</string>
+    <string name="BuscarClienteButton">Pesquisar</string>
+
+    <!-- String dod popups -->
+    <string name="atualizarMenuPopup">ATUALIZAR</string>
+    <string name="excluirMenuPopup">EXCLUIR</string>
+    <string name="title_activity_buscar_tela_excluir_cliente">BuscarTelaExcluirCliente</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

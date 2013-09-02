@@ -12,7 +12,7 @@ public interface ClienteDAO {
 	  //nome das colunas
 	  public final static String id = "id";
 	  public final static String nome = "nome";
-	  public final static String telefone = "nome";
+	  public final static String telefone = "telefone";
 	  public final static String rg = "rg";
 	  public final static String cpf = "cpf";
 	  public final static String rua = "rua";
@@ -42,7 +42,7 @@ public interface ClienteDAO {
 
 	  
 	  // Busca o Cliente pelo nome
-	  public Cursor buscarTodosOsClientes(Cliente cliente);
+	  public Cursor buscarTodosOsClientes();
 	  
 	  //método para retornar os valores das colunas da tabela cliente
 	  public Long getID(Cursor c);
@@ -66,6 +66,5 @@ public interface ClienteDAO {
 	  public String getCidade(Cursor c);
 	  
 	  public String getBairro(Cursor c);
-	  
 
 }

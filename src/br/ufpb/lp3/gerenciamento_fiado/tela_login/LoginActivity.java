@@ -28,7 +28,7 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.activity_login);
 		
 		//edit's fields  
-		loginEdit = (EditText)findViewById(R.id.editTextNomeVendedorTelaCadastrarVendedor);
+		loginEdit = (EditText)findViewById(R.id.editTextLoginTelaLogin);
 		senhaEdit = (EditText)findViewById(R.id.editTextSenhaTelaLogin);
 		
 		//button's fields 
