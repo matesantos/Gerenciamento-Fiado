@@ -79,7 +79,7 @@ public class BuscarClienteExcluir extends Activity {
 			
 		}
 		
-		adapter = new AdapterCliente(this, clienteLista,clientes,clienteDao);
+		adapter = new AdapterCliente(this, clienteLista,clientes);
 		
 		listarCliente.setAdapter(adapter);
 		listarCliente.setOnItemClickListener(onListClick);

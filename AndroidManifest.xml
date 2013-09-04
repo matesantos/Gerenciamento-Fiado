@@ -97,6 +97,30 @@
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.AtualizarProdutoActivity"
             android:label="@string/title_activity_atualizar_produto" >
         </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.BuscarProdutoActivity"
+            android:label="@string/title_activity_buscar_produto" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.ExcluirProdutoList"
+            android:label="@string/title_activity_excluir_produto_list" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.ExcluirProdutoActivity"
+            android:label="@string/title_activity_excluir_produto" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.configuracoes.Configuracoes"
+            android:label="@string/title_activity_configuracoes" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendas.CadastrarVendas"
+            android:label="@string/title_activity_cadastrar_vendas" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.GerenciarVenda"
+            android:label="@string/title_activity_gerenciar_venda" >
+        </activity>
     </application>
 
 </manifest>

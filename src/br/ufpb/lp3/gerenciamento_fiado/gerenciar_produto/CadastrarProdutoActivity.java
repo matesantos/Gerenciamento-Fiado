@@ -1,17 +1,23 @@
 package br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto;
 
 
+import java.io.IOException;
 import java.text.NumberFormat;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import br.ufpb.gerenciamento_fiado.URL.HttpUtils;
 import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.mesagens.Mensagens;
 import br.ufpb.lp3.gerenciamento_fiado.models.Produto;
@@ -57,22 +63,26 @@ public class CadastrarProdutoActivity extends Activity implements TextWatcher{
 				
 				mostraMensagem();
 				
+				if(cadastrarProdutoNoServidor(produto)){
+					mostraMensagem2();
+				}
+				
 			}
 		}
 		
 	}
 	
 	private void mostraMensagem(){
-		Utils.mostrarMensagens(this, "Produto cadastrado com sucesso.");
+		Utils.mostrarMensagens(this, "Produto cadastrado no seu dispositivo com sucesso.");
+	}
+	
+	private void mostraMensagem2(){
+		Utils.mostrarMensagens(this, "Produto cadastrado no servidor com sucesso.");
 	}
 	
 	private boolean cadastrarProduto(Produto produto){
 		
 		if(validarCampos(produto.getNome(), precoProduto.getText().toString()) == false){
-			return false;
-		}
-		
-		if(validarCampos(produto.getNome(), String.valueOf(produto.getPreco())) == false){
 			return false;
 		}
 		
@@ -92,6 +102,39 @@ public class CadastrarProdutoActivity extends Activity implements TextWatcher{
 		return false;
 		
 		
+	}
+	
+	private boolean cadastrarProdutoNoServidor(Produto produto){
+		
+		String baseURL = "http://192.168.0.166:8080/ServerGerenciamentoFiadoV1/gerenciarProdutos";
+
+		try {
+			
+				CadastrarProdutoInput produtoInput = new CadastrarProdutoInput(produto);
+				JSONObject inputStringProduto = new JSONObject(produtoInput.getInputMap());
+				
+				String jsonString = HttpUtils.urlContentPost(baseURL,"produto",inputStringProduto.toString());
+				
+				JSONObject jsonResult = new JSONObject(jsonString);
+				
+				Log.i("jsonResult", jsonResult.toString());
+				
+				if(jsonResult.getBoolean("resposta")){
+					return true;
+				}
+				
+		}catch (IOException exe){
+			Log.e("IOException1", exe.getMessage());
+			Log.e("IOException2",Log.getStackTraceString(exe.fillInStackTrace()));
+		}catch (JSONException json) {
+			Log.e("JSONException1", json.getMessage());
+			Log.e("JSONException2",Log.getStackTraceString(json.fillInStackTrace()));
+		}catch (Exception e) {
+			Log.e("Exception1", e.getMessage());
+			Log.e("Exception2",Log.getStackTraceString(e.fillInStackTrace()));
+		}
+		
+		return false;
 	}
 
 	@Override

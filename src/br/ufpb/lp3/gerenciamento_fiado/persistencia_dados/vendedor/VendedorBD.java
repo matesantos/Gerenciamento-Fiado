@@ -48,7 +48,7 @@ public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
 	}
 	
 	private void createProduto(SQLiteDatabase db){
-		db.execSQL("CREATE TABLE " + ProdutoDAO.tabelaProduto+"(_"+ProdutoDAO.codigo+" INTEGER PRIMARY KEY AUTOINCREMENT," +
+		db.execSQL("CREATE TABLE " + ProdutoDAO.tabelaProduto +"(_"+ProdutoDAO.codigo+" INTEGER PRIMARY KEY AUTOINCREMENT," +
 				ProdutoDAO.nome +" TEXT," + ProdutoDAO.preco +" TEXT);");
 		
 	}

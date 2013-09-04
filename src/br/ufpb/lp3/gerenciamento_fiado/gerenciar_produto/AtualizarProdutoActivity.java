@@ -31,8 +31,6 @@ public class AtualizarProdutoActivity extends Activity {
 		Bundle dados = getIntent().getExtras();
 		produtoSerializable = (Produto)dados.getSerializable("produto");
 		
-		
-		
 		// edit text
 		nomeProduto 		= (EditText) findViewById(R.id.editTextNomeProdutoTelaAtualizarProduto);
 		precoProduto		= (EditText) findViewById(R.id.editTextPrecoProdutoTelaAtualizarProduto);
@@ -50,7 +48,7 @@ public class AtualizarProdutoActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			
-			Produto produto = new Produto(nomeProduto.getText().toString(), Float.parseFloat(precoProduto.getText().toString()));
+			Produto produto = new Produto(produtoSerializable.getCodigo(),nomeProduto.getText().toString(), Float.parseFloat(precoProduto.getText().toString()));
 			
 			if(atualizarProduto(produto)){
 				
@@ -76,10 +74,7 @@ public class AtualizarProdutoActivity extends Activity {
 	}
 	
 	private boolean atualizarProduto(Produto produto) {
-		if(validarCampos(produto.getNome(), precoProduto.getText().toString()) == false){
-			return false;
-		}
-		
+
 		if(validarCampos(produto.getNome(), String.valueOf(produto.getPreco())) == false){
 			return false;
 		}
@@ -116,7 +111,7 @@ public class AtualizarProdutoActivity extends Activity {
 
 	private void preencherCampos(){
 		nomeProduto.setText(produtoSerializable.getNome());
-		precoProduto.setText(produtoSerializable.getNome());
+		precoProduto.setText(String.valueOf(produtoSerializable.getPreco()));
 	}
 
 	@Override

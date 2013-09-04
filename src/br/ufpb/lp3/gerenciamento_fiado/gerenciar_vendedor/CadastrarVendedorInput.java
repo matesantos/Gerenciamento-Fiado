@@ -13,9 +13,8 @@ public class CadastrarVendedorInput {
 	public CadastrarVendedorInput(Vendedor vendedor) {
 		cadastrarVendedorInput = new HashMap<String, String>();
 		cadastrarVendedorInput.put("operacao", OperacaoCrudInterface.salvarDados);
-		cadastrarVendedorInput.put("id", String.valueOf(vendedor.getId()));
 		cadastrarVendedorInput.put("nome",vendedor.getNome());
-		cadastrarVendedorInput.put("rg",vendedor.getNome());
+		cadastrarVendedorInput.put("rg",vendedor.getRg());
 		cadastrarVendedorInput.put("cpf",vendedor.getCpf());
 		cadastrarVendedorInput.put("telefone",vendedor.getTelefone());
 		cadastrarVendedorInput.put("login",vendedor.getLogin());

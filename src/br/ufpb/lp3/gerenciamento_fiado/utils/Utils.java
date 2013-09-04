@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
+import br.ufpb.lp3.gerenciamento_fiado.models.Produto;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
 
 import android.app.Activity;
@@ -36,7 +37,12 @@ public class Utils {
 		newActivity.putExtra("cliente", cliente);
 		currentActivity.startActivity(newActivity);
 	}
-
+	
+	public static void goToActivityProduto(Context currentActivity, Class<? extends Activity> newClass, Produto produto) {
+		Intent newActivity = new Intent(currentActivity, newClass);
+		newActivity.putExtra("produto", produto);
+		currentActivity.startActivity(newActivity);
+	}
 
 	public static List<String> getUFList() {
 		String[] list = { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO",
@@ -50,6 +56,12 @@ public class Utils {
 	public static void mostrarMensagens(Context currentActivity, String error) {
 		Toast msg = Toast.makeText(currentActivity, error, Toast.LENGTH_SHORT);
 		msg.show();
+	}
+	
+	public static void mudarFundoDeImagem(Context currentActivity){
+		
+		
+		
 	}
 	
 

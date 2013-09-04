@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuPrincipaRelativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
@@ -19,7 +20,6 @@
         android:textColorLink="@color/White"
         android:textSize="@dimen/tamanhoDaFonte" />
 
-	
     <ImageButton
         android:id="@+id/imageButtonGerenciarContasTelaMenuPrincipal"
         android:layout_width="wrap_content"
@@ -45,7 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageButtonGerenciarContasTelaMenuPrincipal"
         android:layout_alignTop="@+id/imageButtonVendasTelaMenuPrincipal"
-        android:src="@drawable/configuracoes" />
+        android:src="@drawable/configuracoes" 
+        android:onClick="Configuracoes"/>
 
     <TextView
         android:id="@+id/textViewBuscarClienteGerenciarCliente"

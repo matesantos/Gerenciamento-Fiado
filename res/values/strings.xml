@@ -33,7 +33,7 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-    	 EXCLUIRCLIENTE
+    	 EXCLUIRCLIENTE
     -->
 
     <string name="title_activity_atualizar_cliente">Atualizar Cliente</string>
@@ -64,7 +64,7 @@
     	 CADASTRARVENDEDOR 
     	 ATUALIZARVENDEDOR
     	 BUSCARVENDEDOR
-    	 EXCLUIRVENDEDOR
+    	 EXCLUIRVENDEDOR
     -->
 
     <string name="title_activity_cadastrar_vendedor">Cadastrar Vendedor</string>
@@ -92,13 +92,14 @@
     <string name="excluir">EXCLUIR</string>
     <string name="cancelar">CANCELAR</string>
     <string name="pesquisar">PESQUISAR</string>
-    
+
     <!--  -->
-    
-       <!-- strings do GERENCIARPRODUTO -->
+
+
+    <!-- strings do GERENCIARPRODUTO -->
     <string name="cadastrarProduto">CADASTRAR PRODUTO</string>
     <string name="atualizarProduto">ATUALIZAR PRODUTO</string>
-    <string name="buscarProduto">BUSCAR PTODUTO</string>
+    <string name="buscarProduto">BUSCAR PRODUTO</string>
     <string name="excluirProduto">EXCLUIR PRODUTO</string>
     <string name="title_activity_cadastrar_produto">Cadastrar Produto</string>
     <string name="title_activity_atualizar_produto">Atualizar Produto</string>
@@ -110,14 +111,11 @@
     	 CADASTRARPRODUTO 
     	 ATUALIZARPRODUTO
     	 BUSCARPRODUTO
-    	 EXCLUIRPRODUTO
+    	 EXCLUIRPRODUTO    -->
 
-    -->
-    
     <string name="nomeProduto">DESCRIÇÃO:</string>
     <string name="precoProduto">PREÇO:</string>
     <string name="dadosProduto">DADOS DO PRODUTO:</string>
-    
 
     <!-- Strings -->
     <string name="title_activity_gerenciar_produtos">GerenciarProdutos</string>
@@ -127,13 +125,44 @@
     <string name="title_activity_gerenciar_contas">Gerenciar Contas</string>
     <string name="title_activity_login">Login</string>
     <string name="BuscarClienteHint">Pesquisar Cliente</string>
+    <string name="BuscarProdutoHint">Pesquisar Produto</string>
     <string name="BuscarClienteButton">Pesquisar</string>
 
-    <!-- String dod popups -->
+    <!-- String dos popups -->
     <string name="atualizarMenuPopup">ATUALIZAR</string>
     <string name="excluirMenuPopup">EXCLUIR</string>
     <string name="title_activity_buscar_tela_excluir_cliente">BuscarTelaExcluirCliente</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_buscar_cliente_excluir">BuscarClienteExcluir</string>
+    <string name="title_activity_excluir_produto_list">ExcluirProdutoList</string>
+    <string name="title_activity_configuracoes">Configuracoes</string>
 
+    <!-- String para o arquivo de configurações -->
+    <string name="confBackgroundPadraoTitulo">Padrão</string>
+    <string name="confBackgroundRosaTitulo">Rosa</string>
+    <string name="confBackgroundAmareloTitulo">Amarelo</string>
+    <string name="confBackgroundVerdeTitulo">Verde</string>
+    <string name="salvarDadosRemotoTitulo">Salvar Remotamente</string>
+    <string name="salvarDadosRemotoTituloSummary">Sempre salvar os dados remotamente</string>
+    <string name="backgroundPadraoKey">backgroundPadraoKey</string>
+    <string name="backgroundPadraoKeySummaray">A cor de fundo padrão do sistema</string>
+    <string name="backgroundRosa">backgroundRosa</string>
+    <string name="salvarDadosRemotamenteKey">salvarDadosRemotamenteKey</string>
+    
+    <string name="idiomaTille">idioma</string>
+    <string name="idiomaTilleKey">idiomaTilleKey</string>
+    
+    <string name="TamanhoFonte">Fonte</string>
+    <string name="TamanhoFontekey">TamanhoFontekey</string>
+        
+    
+    <!-- String do GERENCIAR VENDA -->
+    <string name="cadastrarVenda">CADASTRAR VENDA</string>
+    <string name="buscarVenda">BUSCAR VENDA</string>
+    <string name="excluirVenda">EXCLUIR VENDA</string>
+    <string name="cadastrarClienteRemotamente">Cadastrar vendedor no servidor</string>
+    
+    <string name="title_activity_cadastrar_vendas">CadastrarVendas</string>
+    <string name="title_activity_gerenciar_venda">GerenciarVenda</string>
+    
 </resources>

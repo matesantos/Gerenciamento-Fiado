@@ -1,0 +1,21 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:title="@string/confBackgroundPadraoTitulo"
+        android:defaultValue="true"
+        android:key="@string/backgroundPadraoKey"/>
+
+    <CheckBoxPreference
+        android:title="@string/salvarDadosRemotoTitulo"
+        android:defaultValue="true"
+        android:key="@string/salvarDadosRemotamenteKey"
+        android:summary="@string/salvarDadosRemotoTituloSummary" />
+    
+     <ListPreference android:key="@string/idiomaTilleKey"
+            android:title="@string/idiomaTille"	 />
+
+     
+     <ListPreference android:key="@string/TamanhoFontekey"
+            android:title="@string/TamanhoFonte"	 />
+     
+</PreferenceScreen>

@@ -5,6 +5,7 @@ import java.util.List;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -76,7 +77,7 @@ public class ProdutoBD extends SQLiteOpenHelper implements ProdutoDAO{
 
 		try {
 
-			getWritableDatabase().update(ProdutoDAO.tabelaProduto, valores, "_id=?", whereArgs);
+			getWritableDatabase().update(ProdutoDAO.tabelaProduto, valores, "_codigo=?", whereArgs);
 			return true;
 
 		} catch (android.database.SQLException sql) {
@@ -92,13 +93,40 @@ public class ProdutoBD extends SQLiteOpenHelper implements ProdutoDAO{
 
 	@Override
 	public boolean deletar(Produto produto) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		try{
+			
+			String [] whereArgs = new String[]{Long.toString(produto.getCodigo())};
+
+			getReadableDatabase().delete(ProdutoDAO.tabelaProduto, "_codigo=?", whereArgs);
+			return true;
+		}catch (SQLException sql) {
+			Log.e("Excluir Produto", sql.getMessage());
+			Log.e("Excluir Produto",	Log.getStackTraceString(sql.fillInStackTrace()));
+		} catch (Exception e) {
+			Log.e("Excluir Produto", e.getMessage());
+			Log.e("Excluir Produto", Log.getStackTraceString(e.fillInStackTrace()));
+		}
+		
+		return false;		
 	}
 
 	@Override
-	public Produto getProduto(Long id) {
-		// TODO Auto-generated method stub
+	public Cursor getProduto(Long id) {
+		String query = "SELECT * FROM " + ProdutoDAO.tabelaProduto
+				+ " WHERE _" + ProdutoDAO.codigo + " = " + id + "; " ;
+
+		try {
+			return getReadableDatabase().rawQuery(query, null);
+		} catch (android.database.SQLException sql) {
+			Log.e("BuscarNome Produto", sql.getMessage());
+			Log.e("BuscarNome Produto",
+					Log.getStackTraceString(sql.fillInStackTrace()));
+		} catch (Exception e) {
+			Log.e("BuscarNome Produto", e.getMessage());
+			Log.e("BuscarNome Produto",	Log.getStackTraceString(e.fillInStackTrace()));
+		}
+		
 		return null;
 	}
 
@@ -116,32 +144,21 @@ public class ProdutoBD extends SQLiteOpenHelper implements ProdutoDAO{
 		try {
 			return getReadableDatabase().rawQuery(query, null);
 		} catch (android.database.SQLException sql) {
-			Log.e("Cadastrar Produto", sql.getMessage());
-			Log.e("Cadastrar Produto",
+			Log.e("BuscarNome Produto", sql.getMessage());
+			Log.e("BuscarNome Produto",
 					Log.getStackTraceString(sql.fillInStackTrace()));
 		} catch (Exception e) {
-			Log.e("Cadastrar Produto", e.getMessage());
-			Log.e("Cadastrar Produto",	Log.getStackTraceString(e.fillInStackTrace()));
-		}
-
-		return null;	}
-
-	@Override
-	public Cursor buscarTodosProdutos() {
-		String query = "SELECT * FROM " + ProdutoDAO.tabelaProduto +";";
-
-		try {
-			return getReadableDatabase().rawQuery(query, null);
-		} catch (android.database.SQLException sql) {
-			Log.e("Cadastrar Produto", sql.getMessage());
-			Log.e("Cadastrar Produto",
-					Log.getStackTraceString(sql.fillInStackTrace()));
-		} catch (Exception e) {
-			Log.e("Cadastrar Produto", e.getMessage());
-			Log.e("Cadastrar Produto",	Log.getStackTraceString(e.fillInStackTrace()));
+			Log.e("BuscarNome Produto", e.getMessage());
+			Log.e("BuscarNome Produto",	Log.getStackTraceString(e.fillInStackTrace()));
 		}
 
 		return null;	
+	}
+
+	@Override
+	public Cursor buscarTodosOsProdutos() {
+		String query = "SELECT * FROM " + ProdutoDAO.tabelaProduto +";";
+		return getReadableDatabase().rawQuery(query, null);
 	}
 
 	@Override

@@ -115,10 +115,6 @@ public class ExcluirClienteActivity extends Activity {
 	private boolean atualizarDados(Long id, String nome, String telefone,
 			String rg, String cpf, Endereco endereco) {
 
-		if (validarCampos(nome, telefone, rg, cpf, endereco) == false) {
-			return false;
-		}
-
 		Cliente cliente = new Cliente(id, nome, telefone, rg, cpf, endereco);
 
 		ClienteDAO cadastrarCliente = ClienteBDFactory.getClienteBD(this);
@@ -179,36 +175,6 @@ public class ExcluirClienteActivity extends Activity {
 
 		@Override
 		public void onNothingSelected(AdapterView<?> arg0) {
-		}
-
-	}
-
-	private boolean validarCampos(String nome, String telefone, String rg,
-			String cpf, Endereco endereco) {
-
-		if (nome.isEmpty()) {
-			Utils.mostrarMensagens(this, Mensagens.campoNomeClienteVazio);
-			return false;
-		} else if (rg.isEmpty()) {
-			Utils.mostrarMensagens(this, Mensagens.campoRGClienteVazio);
-			return false;
-		} else if (cpf.isEmpty()) {
-			Utils.mostrarMensagens(this, Mensagens.campoCPFClienteVazio);
-			return false;
-		} else if (telefone.isEmpty()) {
-			Utils.mostrarMensagens(this, Mensagens.campoTelefoneClienteVazio);
-			return false;
-		} else if (endereco.getRua().isEmpty()) {
-			Utils.mostrarMensagens(this, Mensagens.campoRuaClienteVazio);
-			return false;
-		} else if (endereco.getNumero().isEmpty()) {
-			Utils.mostrarMensagens(this, Mensagens.campoNumeroClienteVazio);
-			return false;
-		} else if (endereco.getCep().isEmpty()) {
-			Utils.mostrarMensagens(this, Mensagens.campoCEPClienteVazio);
-			return false;
-		} else {
-			return true;
 		}
 
 	}

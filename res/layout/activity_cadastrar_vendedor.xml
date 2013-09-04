@@ -378,6 +378,22 @@
         <!-- Parte 3 do layout -->
 
         <LinearLayout
+            android:id="@+id/linearLayoutTelaCadastrarVendedor5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        
+        
+            <Button
+                android:id="@+id/buttonCadastrarTelaCadastrarVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cadastrarVendedor" />
+         </LinearLayout> 
+         
+          <LinearLayout
             android:id="@+id/linearLayoutTelaLogin5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -389,14 +405,10 @@
                 android:id="@+id/buttonApagarTelaCadastrarVendedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/apagar" />
+                android:text="@string/cadastrarClienteRemotamente" />
 
-            <Button
-                android:id="@+id/buttonCadastrarTelaCadastrarVendedor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cadastrarVendedor" />
         </LinearLayout>
+        
     </LinearLayout>
 
 </ScrollView>

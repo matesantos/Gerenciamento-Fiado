@@ -131,7 +131,6 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 			Log.e("Atualizar Cliente", Log.getStackTraceString(e.fillInStackTrace()));
 		}
 
-		
 		return false;
 	}
 

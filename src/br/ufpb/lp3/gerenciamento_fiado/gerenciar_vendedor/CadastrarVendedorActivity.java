@@ -1,10 +1,16 @@
 package br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor;
 
+import java.io.IOException;
 import java.util.List;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -15,6 +21,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import br.ufpb.gerenciamento_fiado.URL.HttpUtils;
 import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.mesagens.Mensagens;
 import br.ufpb.lp3.gerenciamento_fiado.models.Endereco;
@@ -38,13 +45,17 @@ public class CadastrarVendedorActivity extends Activity {
 	private EditText bairroVendedor = null;
 	
 	private Spinner spinnerUF = null;
-	private Button apagar = null;
+	private Button cadastrarRemotamente = null;
 	private Button cadastrar = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_cadastrar_vendedor);
+		
+		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
+	        
+	    boolean salvarRemotamente = preference.getBoolean(getString(R.string.salvarDadosRemotamenteKey), false);
 		
 		//edit text
 		nomeVendedor 			= (EditText)findViewById(R.id.editTextNomeVendedorTelaCadastrarVendedor);
@@ -71,18 +82,23 @@ public class CadastrarVendedorActivity extends Activity {
 		spinnerUF.setOnItemSelectedListener(new SpinnerUFInfo());
 		
 		//button
-		apagar = (Button) findViewById(R.id.buttonApagarTelaCadastrarVendedor);
-		apagar.setOnClickListener(new ApagarButton());
+		cadastrarRemotamente = (Button) findViewById(R.id.buttonApagarTelaCadastrarVendedor);
+		cadastrarRemotamente.setOnClickListener(new salvaDadosRemotamente());
+		
+		if(!salvarRemotamente){
+			cadastrarRemotamente.setEnabled(true);
+		}else{
+			cadastrarRemotamente.setEnabled(true);
+		}
 		
 		cadastrar = (Button) findViewById(R.id.buttonCadastrarTelaCadastrarVendedor);
 		cadastrar.setOnClickListener(new CadastrarButton());
 	}
 	
-	private class ApagarButton implements OnClickListener{
+	private class salvaDadosRemotamente implements OnClickListener{
 
 		@Override
 		public void onClick(View v) {
-			apagarCampos(v);			
 		}
 		
 	}
@@ -93,19 +109,24 @@ public class CadastrarVendedorActivity extends Activity {
 		public void onClick(View v) {
 			
 			Endereco end = new Endereco(enderecoVendedor.getText().toString(),numeroVendedor.getText().toString(),cepVendedor.getText().toString(),
-					spinnerUF.getSelectedItem().toString(),cidadeEdit.getText().toString(), bairroVendedor.getText().toString());
+					bairroVendedor.getText().toString(),cidadeEdit.getText().toString(), spinnerUF.getSelectedItem().toString());
 			
-			if(cadastrarVendedor(1l,nomeVendedor.getText().toString(),telefoneVendedor.getText().toString(),rgVendedor.getText().toString(),
+			if(cadastrarVendedor(nomeVendedor.getText().toString(),telefoneVendedor.getText().toString(),rgVendedor.getText().toString(),
 							  cpfVendedor.getText().toString(),end,loginVendedor.getText().toString(),senhaVendedor.getText().toString())){
 				
-				Utils.mostrarMensagens(CadastrarVendedorActivity.this, "Vendedor cadastrado com Sucesso. Faça o seu login agora.");
+				Utils.mostrarMensagens(CadastrarVendedorActivity.this, "Vendedor cadastrado neste dispositivo com Sucesso. Faça o seu login agora.");
+				
+				if(cadastrarVendedorNoServidor(nomeVendedor.getText().toString(),telefoneVendedor.getText().toString(),rgVendedor.getText().toString(),
+							  cpfVendedor.getText().toString(),end,loginVendedor.getText().toString(),senhaVendedor.getText().toString())){
+					
+					Utils.mostrarMensagens(CadastrarVendedorActivity.this, "Vendedor cadastrado no servidor com sucesso.");
+					
+				}
 				
 			}
 		}
 		
 	}
-	
-	
 	
     private class SpinnerUFInfo implements OnItemSelectedListener{
     	private boolean isFirst = true;
@@ -163,27 +184,14 @@ public class CadastrarVendedorActivity extends Activity {
 		return true;
 	}
 	
-	private void apagarCampos(View v){
-		
-//		 int count = v.getChildCount();
-//		    for (int i = 0; i < count; i++) {
-//		        View view = ((ViewGroup) v).getChildAt(i);
-//		        if (view instanceof EditText) {
-//		            ((EditText)view).setText("");
-//		        }
-//		    }
-		
-	}
-	
-	
-	private boolean cadastrarVendedor(Long id,String nome, String telefone, String rg, String cpf,
+	private boolean cadastrarVendedor(String nome, String telefone, String rg, String cpf,
 			Endereco endereco,String login, String senha){
 		
-		if(validarCampos(id, nome, telefone, rg, cpf, endereco, login, senha) == false){;
+		if(validarCampos(nome, telefone, rg, cpf, endereco, login, senha) == false){;
 			return false;
 		}
 		
-		Vendedor vendedor = new Vendedor(id, nome, telefone, rg, cpf, endereco, login, senha);
+		Vendedor vendedor = new Vendedor(nome, telefone, rg, cpf, endereco, login, senha);
 		
 		try {
 			
@@ -205,24 +213,18 @@ public class CadastrarVendedorActivity extends Activity {
 			Log.e("Exception2",Log.getStackTraceString(e.fillInStackTrace()));
 		}
 		
-		return false;
+		return true;
 	}
 
 	
-	
-/*	
-	private boolean cadastrarVendedor(Long id,String nome, String telefone, String rg, String cpf,
+	private boolean cadastrarVendedorNoServidor(String nome, String telefone, String rg, String cpf,
 			Endereco endereco,String login, String senha){
-		
-		if(validarCampos(id, nome, telefone, rg, cpf, endereco, login, senha) == false){;
-			return false;
-		}
 		
 		String baseURL = "http://192.168.0.166:8080/ServerGerenciamentoFiadoV1/gerenciarVendedor";
 
 		try {
 			
-				Vendedor vendedor = new Vendedor(id, nome, telefone, rg, cpf, endereco, login, senha);
+				Vendedor vendedor = new Vendedor(nome, telefone, rg, cpf, endereco, login, senha);
 				CadastrarVendedorInput vendedorInput = new CadastrarVendedorInput(vendedor);
 				JSONObject inputStringVendedor = new JSONObject(vendedorInput.getInputMap());
 				
@@ -232,7 +234,7 @@ public class CadastrarVendedorActivity extends Activity {
 				
 				Log.i("jsonResult", jsonResult.toString());
 				
-				if(jsonResult.toString().equalsIgnoreCase("true")){
+				if(jsonResult.getBoolean("resposta")){
 					return true;
 				}
 				
@@ -248,12 +250,11 @@ public class CadastrarVendedorActivity extends Activity {
 			Log.e("Exception2",Log.getStackTraceString(e.fillInStackTrace()));
 		}
 		
-		return true;
+		return false;
 	}
 	
-*/
 	
-	private boolean validarCampos(Long id,String nome, String telefone, String rg, String cpf,
+	private boolean validarCampos(String nome, String telefone, String rg, String cpf,
 			Endereco endereco,String login, String senha){
 		
 		if(nome.isEmpty()){

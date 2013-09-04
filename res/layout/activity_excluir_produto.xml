@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayoutTelaExcluirProduto1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_image"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ExcluirProdutoActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewDadosPessoaisProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="55dip"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical"
+            android:text="@string/dadosProduto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Red"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewProdutoTelaExcluirProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            android:text="@string/nomeProduto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editTextNomeProdutoTelaExcluirProduto"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:ems="10"
+            android:inputType="text" 
+            android:enabled="false">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewPrecoTelaExcluirProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            android:text="@string/precoProduto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editTextPrecoProdutoTelaExcluirProduto"
+            android:layout_width="147dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:enabled="false">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <!-- Parte 2 do layout -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <!-- Parte 3 do layout -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExcluirProduto9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonApagarTelaExcluirProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apagar" />
+
+        <Button
+            android:id="@+id/buttonExcluirTelaExcluirProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/excluirProduto" />
+    </LinearLayout>
+
+</LinearLayout>

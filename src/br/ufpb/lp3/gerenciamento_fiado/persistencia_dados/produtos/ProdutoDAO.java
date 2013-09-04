@@ -26,7 +26,7 @@ public interface ProdutoDAO {
 	  public boolean deletar(Produto produto);
 
 	  // Busca o produto pelo id
-	  public Produto getProduto(Long id);
+	  public Cursor getProduto(Long id);
 
 	  // Retorna uma lista com todos os produtoes
 	  public List<Produto> listarproduto();
@@ -34,7 +34,7 @@ public interface ProdutoDAO {
 	  // Busca o produto pelo nome
 	  public Cursor buscarprodutoPorNome(String nome);
 	  
-	  public Cursor buscarTodosProdutos();
+	  public Cursor buscarTodosOsProdutos();
 	  
 	  //método para retornar os valores das colunas da tabela produto
 	  public Long getID(Cursor c);

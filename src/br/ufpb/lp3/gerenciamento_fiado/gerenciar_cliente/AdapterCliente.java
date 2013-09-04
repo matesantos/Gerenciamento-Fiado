@@ -3,7 +3,6 @@ package br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente;
 import java.util.List;
 
 import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
-import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteDAO;
 import android.content.Context;
 import android.database.Cursor;
 import android.view.LayoutInflater;
@@ -16,13 +15,10 @@ public class AdapterCliente extends BaseAdapter{
 	
 	List<Cliente> clientes = null;
 	
-	ClienteDAO cli = null;
-	
 	Context context = null;
 	
-	public AdapterCliente(Context context, Cursor c, List<Cliente>clientes, ClienteDAO cli) {
+	public AdapterCliente(Context context, Cursor c, List<Cliente>clientes) {
 		this.clientes = clientes;
-		this.cli = cli;
 		this.context = context;
 		
 	}

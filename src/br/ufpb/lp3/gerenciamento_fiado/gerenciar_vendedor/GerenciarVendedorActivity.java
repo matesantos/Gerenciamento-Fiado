@@ -4,14 +4,20 @@ import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
 import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.view.Menu;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 public class GerenciarVendedorActivity extends Activity {
 	
 	Vendedor vendedor = null;
+	
+	private RelativeLayout rl = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +27,19 @@ public class GerenciarVendedorActivity extends Activity {
 		Bundle dados = getIntent().getExtras();
 		
 		vendedor = (Vendedor) dados.getSerializable("vendedor");
+		
+		//confugurações da tela
+        rl = (RelativeLayout)findViewById(R.id.relativeLayoutGerenciarVendedor);
+        
+        SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
+        
+        boolean fundoImagem = preference.getBoolean(getString(R.string.backgroundRosa), false);
+        
+        if(fundoImagem){
+			rl.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_image));
+		}else{
+			rl.setBackgroundColor(Color.WHITE);
+		}
 	}
 
 	@Override
