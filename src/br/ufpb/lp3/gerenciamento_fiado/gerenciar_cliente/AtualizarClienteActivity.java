@@ -37,44 +37,46 @@ public class AtualizarClienteActivity extends Activity {
 	private Button apagar = null;
 	private Button atualizarCliente = null;
 
+	
 	private List<String> listUF = null;
 
+	
 	private Cliente clienteSerializable = null;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-			super.onCreate(savedInstanceState);
-			setContentView(R.layout.activity_atualizar_cliente);
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_atualizar_cliente);
+		
+		Bundle dados = getIntent().getExtras();
+		clienteSerializable = (Cliente)dados.getSerializable("cliente");
+		
+		
+		// edit text
+		nomeCliente 		= (EditText) findViewById(R.id.editTextNomeClienteTelaAtualizarCliente);
+		rgCliente 			= (EditText) findViewById(R.id.editTextRGClienteTelaAtualizarCliente);
+		cpfCliente 			= (EditText) findViewById(R.id.editTextCPFClienteTelaAtualizarCliente);
+		telefoneCliente 	= (EditText) findViewById(R.id.editTextTelefoneClienteTelaAtualizarCliente);
+		enderecoCliente 	= (EditText) findViewById(R.id.editTextEnderecoClienteTelaAtualizarCliente);
+		numeroCliente 		= (EditText) findViewById(R.id.editTextNumeroClienteTelaAtualizarCliente);
+		cepCliente 			= (EditText) findViewById(R.id.editTextCEPClienteTelaAtualizarCliente);
+		cidadeEdit 			= (EditText) findViewById(R.id.editTextCidadeClienteTelaAtualizarCliente);
+		bairroCliente 		= (EditText) findViewById(R.id.editTextBairroClienteTelaAtualizarCliente);
+		
+		
+		spinnerUF = (Spinner) findViewById(R.id.spinnerUFTelaAtualizarCliente);
 
-			Bundle dados = getIntent().getExtras();
-			clienteSerializable = (Cliente) dados.getSerializable("cliente");
-
-			// edit text
-			nomeCliente = (EditText) findViewById(R.id.editTextNomeClienteTelaAtualizarCliente);
-			rgCliente = (EditText) findViewById(R.id.editTextRGClienteTelaAtualizarCliente);
-			cpfCliente = (EditText) findViewById(R.id.editTextCPFClienteTelaAtualizarCliente);
-			telefoneCliente = (EditText) findViewById(R.id.editTextTelefoneClienteTelaAtualizarCliente);
-			enderecoCliente = (EditText) findViewById(R.id.editTextEnderecoClienteTelaAtualizarCliente);
-			numeroCliente = (EditText) findViewById(R.id.editTextNumeroClienteTelaAtualizarCliente);
-			cepCliente = (EditText) findViewById(R.id.editTextCEPClienteTelaAtualizarCliente);
-			cidadeEdit = (EditText) findViewById(R.id.editTextCidadeClienteTelaAtualizarCliente);
-			bairroCliente = (EditText) findViewById(R.id.editTextBairroClienteTelaAtualizarCliente);
-
-			spinnerUF = (Spinner) findViewById(R.id.spinnerUFTelaAtualizarCliente);
-
-			listUF = Utils.getUFList();
-			ArrayAdapter<String> spinnerList = new ArrayAdapter<String>(this,
-					android.R.layout.simple_spinner_item, listUF);
-			spinnerList
-					.setDropDownViewResource(android.R.layout.simple_spinner_item);
-			spinnerUF.setAdapter(spinnerList);
-			spinnerUF.setOnItemSelectedListener(new SpinnerUFInfo());
-
-			// button
-			atualizarCliente = (Button) findViewById(R.id.buttonAtualizarTelaAtualizarCliente);
-			atualizarCliente.setOnClickListener(new AtualizarButton());
-
-			preenncherCampos();
+		listUF = Utils.getUFList();
+		ArrayAdapter<String> spinnerList = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, listUF);
+		spinnerList.setDropDownViewResource(android.R.layout.simple_spinner_item);
+		spinnerUF.setAdapter(spinnerList);
+		spinnerUF.setOnItemSelectedListener(new SpinnerUFInfo());
+		
+		//button
+		atualizarCliente	= (Button)findViewById(R.id.buttonAtualizarTelaAtualizarCliente);
+		atualizarCliente.setOnClickListener(new AtualizarButton());
+		
+		preenncherCampos();
 	}
 
 	@Override
@@ -83,33 +85,76 @@ public class AtualizarClienteActivity extends Activity {
 		getMenuInflater().inflate(R.menu.atualizar_cliente, menu);
 		return true;
 	}
-
-	private class AtualizarButton implements OnClickListener {
+	
+	private class AtualizarButton implements OnClickListener{
 
 		@Override
 		public void onClick(View v) {
-
-			Endereco end = new Endereco(enderecoCliente.getText().toString(),
-					numeroCliente.getText().toString(), cepCliente.getText()
-							.toString(),
-					spinnerUF.getSelectedItem().toString(), cidadeEdit
-							.getText().toString(), bairroCliente.getText()
-							.toString());
-
-			if (atualizarDados(clienteSerializable.getId(), nomeCliente
-					.getText().toString(),
-					telefoneCliente.getText().toString(), rgCliente.getText()
-							.toString(), cpfCliente.getText().toString(), end)) {
-
-				Utils.mostrarMensagens(AtualizarClienteActivity.this,
-						"Cliente atualizado com sucesso");
-
+			
+			Endereco end = new Endereco(enderecoCliente.getText().toString(),numeroCliente.getText().toString(),cepCliente.getText().toString(),
+					spinnerUF.getSelectedItem().toString(),cidadeEdit.getText().toString(), bairroCliente.getText().toString());
+			
+			if(atualizarDados(clienteSerializable.getId(),nomeCliente.getText().toString(),telefoneCliente.getText().toString(),rgCliente.getText().toString(),
+							  cpfCliente.getText().toString(),end)){
+				
+				Utils.mostrarMensagens(AtualizarClienteActivity.this, "Cliente atualizado com sucesso");
+				
 				retornarTelaAnterior();
-
+				
 			}
 		}
-
+		
 	}
+	
+	
+	private class SpinnerUFInfo implements OnItemSelectedListener{
+    	private boolean isFirst = true;
+		@Override
+		public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+			
+			if(isFirst){
+				isFirst = false;
+			}else{
+				cidadeEdit = (EditText) findViewById(R.id.editTextCidadeClienteTelaCadastrarCliente);
+				if(isFirst){
+					isFirst = false;
+				}else{
+					int cidade = (int) spinnerUF.getSelectedItemId(); 
+					switch (cidade) {
+					case 0:
+						
+					break;
+					
+					case 1:
+						
+					break;
+					
+					case 2:
+						
+					break;
+					
+					case 3:
+						
+					break;
+					
+					case 14:
+						cidadeEdit.setText("JOAO PESSOA");
+					break;
+
+					default:
+						
+					}
+				}			
+				
+			}
+			
+		}
+		@Override
+		public void onNothingSelected(AdapterView<?> arg0) {
+		}
+		
+	}
+	
 
 	private void retornarTelaAnterior() {
 		Utils.goToActivityCliente(this, BuscarClienteActivity.class,
@@ -136,57 +181,6 @@ public class AtualizarClienteActivity extends Activity {
 		}
 
 		return false;
-
-	}
-
-	private class SpinnerUFInfo implements OnItemSelectedListener {
-		private boolean isFirst = true;
-
-		@Override
-		public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
-				long arg3) {
-
-			if (isFirst) {
-				isFirst = false;
-			} else {
-				cidadeEdit = (EditText) findViewById(R.id.editTextCidadeClienteTelaCadastrarCliente);
-				if (isFirst) {
-					isFirst = false;
-				} else {
-					int cidade = (int) spinnerUF.getSelectedItemId();
-					switch (cidade) {
-					case 0:
-
-						break;
-
-					case 1:
-
-						break;
-
-					case 2:
-
-						break;
-
-					case 3:
-
-						break;
-
-					case 14:
-						cidadeEdit.setText("JOAO PESSOA");
-						break;
-
-					default:
-
-					}
-				}
-
-			}
-
-		}
-
-		@Override
-		public void onNothingSelected(AdapterView<?> arg0) {
-		}
 
 	}
 

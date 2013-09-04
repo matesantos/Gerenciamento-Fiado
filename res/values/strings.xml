@@ -33,7 +33,11 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
+<<<<<<< HEAD
     	 EXCLUIRCLIENTE
+=======
+    	 EXCLUIRCLIENTE
+>>>>>>> 3ff7a2c2b277e8d19cca7b0aecbd5e876aed38ca
     -->
 
     <string name="title_activity_atualizar_cliente">Atualizar Cliente</string>
@@ -64,7 +68,11 @@
     	 CADASTRARVENDEDOR 
     	 ATUALIZARVENDEDOR
     	 BUSCARVENDEDOR
+<<<<<<< HEAD
     	 EXCLUIRVENDEDOR
+=======
+    	 EXCLUIRVENDEDOR
+>>>>>>> 3ff7a2c2b277e8d19cca7b0aecbd5e876aed38ca
     -->
 
     <string name="title_activity_cadastrar_vendedor">Cadastrar Vendedor</string>
@@ -93,8 +101,6 @@
     <string name="cancelar">CANCELAR</string>
     <string name="pesquisar">PESQUISAR</string>
 
-    <!--  -->
-
 
     <!-- strings do GERENCIARPRODUTO -->
     <string name="cadastrarProduto">CADASTRAR PRODUTO</string>
@@ -117,6 +123,8 @@
     <string name="precoProduto">PREÇO:</string>
     <string name="dadosProduto">DADOS DO PRODUTO:</string>
 
+=======
+>>>>>>> 3ff7a2c2b277e8d19cca7b0aecbd5e876aed38ca
     <!-- Strings -->
     <string name="title_activity_gerenciar_produtos">GerenciarProdutos</string>
     <string name="title_activity_gerenciar_produto">Gerenciar Produtos</string>
@@ -129,6 +137,9 @@
     <string name="BuscarClienteButton">Pesquisar</string>
 
     <!-- String dos popups -->
+    <string name="BuscarClienteButton">Pesquisar</string>
+
+    <!-- String dod popups -->
     <string name="atualizarMenuPopup">ATUALIZAR</string>
     <string name="excluirMenuPopup">EXCLUIR</string>
     <string name="title_activity_buscar_tela_excluir_cliente">BuscarTelaExcluirCliente</string>

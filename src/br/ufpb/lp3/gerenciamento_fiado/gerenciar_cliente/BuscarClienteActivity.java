@@ -68,8 +68,11 @@ public class BuscarClienteActivity extends Activity {
 		
 		startManagingCursor(clienteLista);
 		
+		Log.i("Tamanho da lista",String.valueOf(clienteLista.getCount()));
+		
 		for(int i = 0; i < clienteLista.getCount(); i++){
 			
+			Log.i("Nome do cliente",clienteDao.getNome(clienteLista));
 			
 			Endereco endereco = new Endereco(clienteDao.getRua(clienteLista),clienteDao.getNumero(clienteLista),
 									clienteDao.getCEP(clienteLista), clienteDao.getEstado(clienteLista),
@@ -77,8 +80,7 @@ public class BuscarClienteActivity extends Activity {
 			
 			Cliente cli = new Cliente(clienteDao.getID(clienteLista),clienteDao.getNome(clienteLista), clienteDao.getTelefone(clienteLista),
 						  clienteDao.getRG(clienteLista), clienteDao.getCPF(clienteLista), endereco);
-			
-			clientes.add(cli);
+			Log.i("Nome do cliente",cli.getEndereco().getCidade());
 			
 		}
 		

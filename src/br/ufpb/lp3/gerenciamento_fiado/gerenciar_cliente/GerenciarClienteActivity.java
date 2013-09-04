@@ -48,8 +48,9 @@ public class GerenciarClienteActivity extends Activity {
 	}
 	
 	public void atualizarCLiente (View v){
-		Utils.mostrarMensagens(this, "Você só poderá atualizar cliente " +
-				"selecionando primeiro o cliente na tela Buscar CLiente.");	}
+		Utils.mostrarMensagens(this, "Você só poderá atualizar cliente selecionando primeiro o cliente na tela Buscar CLiente.");	
+		Utils.goToActivity(this, AtualizarClienteActivity.class);
+	}
 	
 	public void buscarCLiente (View v){
 		Utils.goToActivity(this, BuscarClienteActivity.class);
@@ -57,6 +58,7 @@ public class GerenciarClienteActivity extends Activity {
 	
 	public void excluirCLiente (View v){
 		Utils.goToActivity(this, BuscarClienteExcluir.class);
+		Utils.goToActivity(this, ExcluirClienteActivity.class);
 	}
 	
 }

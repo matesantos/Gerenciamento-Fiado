@@ -78,7 +78,7 @@
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/textViewPrecoTelaCadastrarProduto"
+                android:id="@+id/textViewRGCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dip"
@@ -116,8 +116,8 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" 
-                android:enabled="false">
+                android:inputType="text"
+                android:enabled="false" >
 
             </EditText>
         </LinearLayout>
@@ -147,13 +147,20 @@
                 android:layout_marginTop="3dp"
                 android:layout_weight="0.20"
                 android:ems="10"
-                android:inputType="text" 
-                android:enabled="false">
+                android:inputType="text"
+                android:enabled="false" >
 
             </EditText>
         </LinearLayout>
 
 
+        <LinearLayout
+            android:id="@+id/linearLayoutExcluirCliente5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
 
         <!-- Parte 2 do layout -->
 
@@ -232,8 +239,8 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" 
-                android:enabled="false">
+                android:inputType="text"
+                android:enabled="false" >
 
             </EditText>
 
@@ -254,8 +261,8 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" 
-                android:enabled="false">
+                android:inputType="text"
+                android:enabled="false" >
 
             </EditText>
         </LinearLayout>
@@ -283,7 +290,7 @@
                 android:layout_width="0dip"
                 android:layout_height="38dp"
                 android:layout_weight="0.15" 
-                />
+                android:enabled="false"/>
 
             <TextView
                 android:id="@+id/textViewCidaddeTelaExcluirCliente"
@@ -302,10 +309,10 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:ems="10"
-                android:inputType="text" 
-                android:enabled="false">
+                android:inputType="text"
+                android:enabled="false" >
 
-            </EditText>
+		    </EditText>
         </LinearLayout>
 
         <LinearLayout

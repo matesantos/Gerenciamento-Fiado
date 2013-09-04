@@ -71,7 +71,7 @@ public class CadastrarVendedorActivity extends Activity {
 		bairroVendedor			= (EditText)findViewById(R.id.editTextBairroVendedorTelaCadastrarVendedor);
 		
 
-		spinnerUF = (Spinner) findViewById(R.id.spinnerUFTelaCadastrarVendedor);
+		spinnerUF 				= (Spinner) findViewById(R.id.spinnerUFTelaCadastrarVendedor);
 
 		List<String> listUF = Utils.getUFList();
 		ArrayAdapter<String> spinnerList = new ArrayAdapter<String>(this,

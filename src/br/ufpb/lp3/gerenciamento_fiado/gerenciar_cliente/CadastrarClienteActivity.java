@@ -109,7 +109,7 @@ public class CadastrarClienteActivity extends Activity {
 	private void retornarTela(){
 		Utils.goToActivity(this, GerenciarClienteActivity.class);
 	}
-	
+
 	private class SpinnerUFInfo implements OnItemSelectedListener{
     	private boolean isFirst = true;
 		@Override
@@ -160,7 +160,7 @@ public class CadastrarClienteActivity extends Activity {
 	
 	private boolean cadastrarCliente(String nome, String telefone, String rg, String cpf,Endereco endereco){
 		
-		if(validarCampos(nome, telefone, rg, cpf, endereco) == false){
+		if(validarCampos(nome, telefone, rg, cpf, endereco) == false){;
 			return false;
 		}
 		
