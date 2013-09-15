@@ -75,5 +75,4 @@ public interface VendedorDAO {
 	  
 	  public String getSenha(Cursor c);
 	  
-	  
 }

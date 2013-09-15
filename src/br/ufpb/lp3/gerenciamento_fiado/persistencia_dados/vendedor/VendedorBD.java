@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendas.VendasDAOInterface;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
 import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.produtos.ProdutoDAO;
 import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteDAO;
@@ -36,7 +37,7 @@ public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
 		//é a primeira a ser chamada pela aplicação, crio aqui todas as tabelas do sistema.
 		createCliente(db);
 		createProduto(db);
-		
+		createVendas(db);
 	}
 	
 	private void createCliente(SQLiteDatabase db){
@@ -51,6 +52,11 @@ public class VendedorBD extends SQLiteOpenHelper implements VendedorDAO {
 		db.execSQL("CREATE TABLE " + ProdutoDAO.tabelaProduto +"(_"+ProdutoDAO.codigo+" INTEGER PRIMARY KEY AUTOINCREMENT," +
 				ProdutoDAO.nome +" TEXT," + ProdutoDAO.preco +" TEXT);");
 		
+	}
+	
+	private void createVendas(SQLiteDatabase db){
+		db.execSQL("CREATE TABLE " + VendasDAOInterface.tabelaVendas+"(_"+VendasDAOInterface.id+" INTEGER PRIMARY KEY AUTOINCREMENT," +
+				VendasDAOInterface.cliente+" TEXT," + VendasDAOInterface.produto +" TEXT " +VendasDAOInterface.valor +" TEXT);");
 	}
 
 	@Override

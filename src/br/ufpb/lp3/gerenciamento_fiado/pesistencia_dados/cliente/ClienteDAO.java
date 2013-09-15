@@ -40,7 +40,8 @@ public interface ClienteDAO {
 	  // Busca o Cliente pelo nome
 	  public Cliente buscarClientePorNome(String nome);
 
-	  
+	  public Cursor buscarClientePorCPF(String cpf);
+
 	  // Busca o Cliente pelo nome
 	  public Cursor buscarTodosOsClientes();
 	  
@@ -66,5 +67,6 @@ public interface ClienteDAO {
 	  public String getCidade(Cursor c);
 	  
 	  public String getBairro(Cursor c);
+
 
 }

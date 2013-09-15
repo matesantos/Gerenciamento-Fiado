@@ -117,7 +117,8 @@
         android:layout_alignLeft="@+id/imageButtonGerenciarProdutoTelaMenuPrincipal"
         android:layout_below="@+id/imageButtonGerenciarProdutoTelaMenuPrincipal"
         android:layout_marginTop="36dp"
-        android:src="@drawable/dinheiro" />
+        android:src="@drawable/dinheiro" 
+        android:onClick="GerenciarVendas"/>
 
     <TextView
         android:id="@+id/textViewGerenciarVendasMenuPrincipal"

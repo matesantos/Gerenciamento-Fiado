@@ -15,6 +15,7 @@ import br.ufpb.lp3.gerenciamento_fiado.configuracoes.Configuracoes;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_cliente.GerenciarClienteActivity;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_contas.GerenciarContasActivity;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.GerenciarProdutoActivity;
+import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendas.GerenciarVendaActivity;
 import br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendedor.GerenciarVendedorActivity;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
 import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
@@ -76,7 +77,7 @@ public class MenuPrincipalActivity extends Activity {
     }
     
     public void GerenciarVendas(View v){
-    	
+    	Utils.goToActivity(this, GerenciarVendaActivity.class);
     }
     
     public void Configuracoes(View v){

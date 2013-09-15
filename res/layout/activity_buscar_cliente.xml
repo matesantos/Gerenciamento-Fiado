@@ -25,7 +25,6 @@
             android:hint="@string/BuscarClienteHint"
             android:inputType="textPersonName" >
 
-            <requestFocus />
         </EditText>
 
         <ImageButton

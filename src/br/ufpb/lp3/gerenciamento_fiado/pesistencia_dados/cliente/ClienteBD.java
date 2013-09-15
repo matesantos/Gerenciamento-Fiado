@@ -3,6 +3,7 @@ package br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente;
 import java.util.List;
 
 import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
+import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorDAO;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -147,6 +148,26 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 
 	@Override
 	public Cliente buscarClientePorNome(String nome) {
+		return null;
+	}
+	
+	@Override
+	public Cursor buscarClientePorCPF(String cpf) {
+		
+		String query = "SELECT * FROM " + ClienteDAO.tabelaCliente
+				+ " WHERE " + ClienteDAO.cpf+ " = '" + cpf + "';";
+
+		try {
+			return getReadableDatabase().rawQuery(query, null);
+		} catch (android.database.SQLException sql) {
+			Log.e("Cadastrar Vendedor", sql.getMessage());
+			Log.e("Cadastrar Vendedor",
+					Log.getStackTraceString(sql.fillInStackTrace()));
+		} catch (Exception e) {
+			Log.e("Cadastrar Vendedor", e.getMessage());
+			Log.e("Cadastrar Vendedor",	Log.getStackTraceString(e.fillInStackTrace()));
+		}
+
 		return null;
 	}
 

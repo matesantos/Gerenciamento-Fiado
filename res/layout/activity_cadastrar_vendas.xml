@@ -1,12 +1,195 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewAtualizarCliente"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp"
     tools:context=".CadastrarVendas" >
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_image"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastrarVenda"
+            android:textColor="@color/Red"
+            android:textSize="@dimen/tamanhoDaFonte" />
+
+        <TextView
+            android:id="@+id/textViewCodigoProdutoTelaCadastrarVenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/codigo_descricao_produto" />
+        
+        <LinearLayout  android:id="@+id/linearLayoutTelaCadastrarVenda5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+	        
+	        <EditText
+	            android:id="@+id/editTextCodigoDescricaoProdutoTelaCadastrarVenda"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:ems="10"
+	            android:inputType="text" >
+	        </EditText>
+	        
+	        <ImageButton
+	            android:id="@+id/imageButtonPesquisarProdutoTelaBuscarVenda"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/buscar_pessoa" />
+		        
+	    </LinearLayout>
+
+        <LinearLayout  android:id="@+id/linearLayoutTelaCadastrarVenda7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal" >
+        
+	        <TextView
+	            android:id="@+id/descricaoProdutoTelaCadastrarVenda"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/descricaoProduto"/>
+	        
+	        <TextView
+	            android:id="@+id/textViewDescricaoProdutoTelaCadastrarVenda"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	             />
+        
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/linearLayoutTelaCadastrarVenda6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal" >
+	        
+            <TextView
+            android:id="@+id/precoProdutoTelaCadastrarVenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/precoProduto" />
+            
+            <TextView
+            android:id="@+id/precoProdutoTelaCadastrarVenda2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/linearLayoutTelaCadastrarVenda1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textViewQuantidadeProdutoTelaCadastrarVenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantidade_prod" />
+
+            <EditText
+                android:id="@+id/editTextQuantidadeTelaCadastrarVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number|numberDecimal" />
+        </LinearLayout>
+        
+        <LinearLayout android:id="@+id/linearLayoutTelaCadastrarVenda8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/CPFClienteTelaCadastarVenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:text="@string/clienteVenda"/>
+
+          <br.ufpb.lp3.gerenciamento_fiado.utils.CpfMaskEditText
+                android:id="@+id/editTextClienteTelaCadastrarVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+        
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTelaCadastrarVenda2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        
+        
+	        <TextView
+	            android:id="@+id/textViewValorTotalTelaCadastrarVenda"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/valorTotal"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	        
+	        <TextView
+	            android:id="@+id/textViewValorTotalTelaCadastrarVenda2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/linearLayoutTelaCadastrarVenda3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+	        <Button
+	            android:id="@+id/buttonCancelarTelaCadastrarVenda"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/cancelarVenda" />
+	       
+	       <Button
+	            android:id="@+id/buttonCalcularValorTotalTelaCadastrarVenda"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/calcularValorTotal" />
+	        
+	       <Button
+	            android:id="@+id/buttonFinalizarVendaTelaCadastrarVenda"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/finalizarVenda" 
+	            android:textColorHint="@color/Green" />
+	        	        
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

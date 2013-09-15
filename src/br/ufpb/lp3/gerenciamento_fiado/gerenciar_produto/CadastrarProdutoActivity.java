@@ -1,6 +1,7 @@
 package br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto;
 
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.text.NumberFormat;
 
@@ -8,6 +9,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,6 +20,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import br.ufpb.gerenciamento_fiado.URL.HttpUtils;
 import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.mesagens.Mensagens;
@@ -31,7 +36,11 @@ public class CadastrarProdutoActivity extends Activity implements TextWatcher{
 	private EditText precoProduto = null;
 	
 	private Button cadastrarProduto = null;
-	
+    private ImageButton btCamera = null;
+    private ImageView imageViewProdutoCadastrar = null;
+    
+    private byte[] byteArray;
+
 	//váriaveis para a máscara de preço
 	private boolean isUpdating;  
 	private NumberFormat mNF = NumberFormat.getCurrencyInstance();  
@@ -45,11 +54,16 @@ public class CadastrarProdutoActivity extends Activity implements TextWatcher{
 		nomeProduto 		= (EditText) findViewById(R.id.editTextNomeProdutoTelaCadastratarProduto);
 		precoProduto		= (EditText) findViewById(R.id.editTextPrecoProdutoTelaCadastratProduto);
 		
-		
 		//button
 		cadastrarProduto 	= (Button) findViewById(R.id.buttonCadastrarTelaCadastrarProduto);
 		cadastrarProduto.setOnClickListener(new CadastrarButton());
-
+		
+		//imageView
+		imageViewProdutoCadastrar = (ImageView)findViewById(R.id.imageViewProdutoTelaCadastrarProduto);
+		
+	    btCamera = (ImageButton) findViewById(R.id.btFotoTelaCadastrarProduto);
+	    btCamera.setOnClickListener(new btCamera());
+	    
 	}
 	
 	private class CadastrarButton implements OnClickListener{
@@ -71,6 +85,42 @@ public class CadastrarProdutoActivity extends Activity implements TextWatcher{
 		}
 		
 	}
+	
+	private class btCamera implements OnClickListener{
+
+		@Override
+		public void onClick(View v) {
+		    Intent i = new Intent("android.media.action.IMAGE_CAPTURE");
+	        startActivityForResult(i, 0);			
+		}
+		
+	}
+	
+	 // Quando a camera retornar, recupera a foto (no emulador apenas uma imagem de exemplo)
+	  @Override
+	  protected void onActivityResult(int requestCode, int resultCode, Intent data)
+	  {
+	    super.onActivityResult(requestCode, resultCode, data);
+
+	    if (data != null) {
+	      Bundle bundle = data.getExtras();
+	      // Recupera o Bitmap retornado pela câmera
+	      Bitmap bitmap = (Bitmap) bundle.get("data");
+	      // Atualiza a imagem na tela
+	      imageViewProdutoCadastrar.setImageBitmap(bitmap);
+	      try {
+	        // Salva o array de bytes
+	        ByteArrayOutputStream bArray = new ByteArrayOutputStream();
+	        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bArray);
+	        bArray.flush();
+	        bArray.close();
+	        this.byteArray = bArray.toByteArray();
+	      }
+	      catch (IOException ex) {
+	        Log.e("IMAGEM: ", ex.getMessage());
+	      }
+	    }
+	  }
 	
 	private void mostraMensagem(){
 		Utils.mostrarMensagens(this, "Produto cadastrado no seu dispositivo com sucesso.");

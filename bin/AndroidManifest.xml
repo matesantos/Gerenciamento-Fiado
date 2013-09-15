@@ -15,6 +15,11 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        <provider android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.ProdutoProvider"
+            	  android:authorities="br.ufpb.lp3.gerenciamento_fiado.gerenciarProdutos">
+        </provider>
+        
         <activity
             android:name="br.ufpb.lp3.gerenciamento_fiado.menu_principal.MenuPrincipalActivity"
             android:label="@string/app_name" >
@@ -125,7 +130,7 @@
             android:label="@string/title_activity_cadastrar_vendas" >
         </activity>
         <activity
-            android:name="br.ufpb.lp3.gerenciamento_fiado.GerenciarVenda"
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendas.GerenciarVendaActivity"
             android:label="@string/title_activity_gerenciar_venda" >
         </activity>
     </application>

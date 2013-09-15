@@ -10,7 +10,7 @@
     tools:context=".CadastrarContasActivity" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editTextCodigoDescricaoProdutoTelaCadastrarProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textViewGerenciarVendasMenuPrincipal"
@@ -24,8 +24,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/editTextCodigoDescricaoProdutoTelaCadastrarProduto"
+        android:layout_below="@+id/editTextCodigoDescricaoProdutoTelaCadastrarProduto"
         android:layout_marginTop="16dp"
         android:text="Data da Venda:"
         android:textColor="@color/White" />
@@ -40,7 +40,7 @@
         android:inputType="date" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewQuantidadeProdutoTelaCadastrarVenda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText2"
@@ -53,8 +53,8 @@
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textViewQuantidadeProdutoTelaCadastrarVenda"
+        android:layout_below="@+id/textViewQuantidadeProdutoTelaCadastrarVenda"
         android:ems="10"
         android:inputType="date" />
 
@@ -118,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/textView4"
+        android:layout_toRightOf="@+id/textViewQuantidadeProdutoTelaCadastrarVenda"
         android:text="Cancelar Operacao" />
 
 </RelativeLayout>

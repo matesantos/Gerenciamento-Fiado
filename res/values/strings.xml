@@ -33,11 +33,7 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-<<<<<<< HEAD
-    	 EXCLUIRCLIENTE
-=======
-    	 EXCLUIRCLIENTE
->>>>>>> 3ff7a2c2b277e8d19cca7b0aecbd5e876aed38ca
+    	 EXCLUIRCLIENTE
     -->
 
     <string name="title_activity_atualizar_cliente">Atualizar Cliente</string>
@@ -56,7 +52,8 @@
     <string name="dadosPessoaisCliente">DADOS PESSOAIS DO CLIENTE:</string>
     <string name="dadosEnderecoCliente">ENDEREÇO DO CLIENTE:</string>
     <string name="title_activity_novo_cliente">NOVO CLIENTE</string>
-
+	<string name="cadastrarClienteRemotamente">Cadastrar vendedor no servidor</string>
+    
     <!-- strings do GERENCIARVENDEDOR -->
     <string name="cadastrarVendedor">CADASTRAR VENDEDOR</string>
     <string name="atualizarVendedor">ATUALIZAR VENDEDOR</string>
@@ -68,12 +65,7 @@
     	 CADASTRARVENDEDOR 
     	 ATUALIZARVENDEDOR
     	 BUSCARVENDEDOR
-<<<<<<< HEAD
-    	 EXCLUIRVENDEDOR
-=======
-    	 EXCLUIRVENDEDOR
->>>>>>> 3ff7a2c2b277e8d19cca7b0aecbd5e876aed38ca
-    -->
+    	 EXCLUIRVENDEDOR    -->
 
     <string name="title_activity_cadastrar_vendedor">Cadastrar Vendedor</string>
     <string name="title_activity_atualizar_vendedor">Atualizar Vendedor</string>
@@ -123,8 +115,6 @@
     <string name="precoProduto">PREÇO:</string>
     <string name="dadosProduto">DADOS DO PRODUTO:</string>
 
-=======
->>>>>>> 3ff7a2c2b277e8d19cca7b0aecbd5e876aed38ca
     <!-- Strings -->
     <string name="title_activity_gerenciar_produtos">GerenciarProdutos</string>
     <string name="title_activity_gerenciar_produto">Gerenciar Produtos</string>
@@ -134,7 +124,6 @@
     <string name="title_activity_login">Login</string>
     <string name="BuscarClienteHint">Pesquisar Cliente</string>
     <string name="BuscarProdutoHint">Pesquisar Produto</string>
-    <string name="BuscarClienteButton">Pesquisar</string>
 
     <!-- String dos popups -->
     <string name="BuscarClienteButton">Pesquisar</string>
@@ -165,13 +154,20 @@
     
     <string name="TamanhoFonte">Fonte</string>
     <string name="TamanhoFontekey">TamanhoFontekey</string>
-        
     
     <!-- String do GERENCIAR VENDA -->
     <string name="cadastrarVenda">CADASTRAR VENDA</string>
     <string name="buscarVenda">BUSCAR VENDA</string>
     <string name="excluirVenda">EXCLUIR VENDA</string>
-    <string name="cadastrarClienteRemotamente">Cadastrar vendedor no servidor</string>
+    <string name="codigo_descricao_produto">CÓDIGO / DESCRICAO DO PRODUTO</string>
+    <string name="quantidade_prod">QUANTIDADE:</string>
+    <string name="valorTotal">VALOR TOTAL:</string>
+    <string name="cancelarVenda">CANCELAR</string>
+    <string name="finalizarVenda">FINALIZAR VENDA</string>
+    <string name="calcularValorTotal">CALCULAR</string>
+    <string name="descricaoProduto">Descrição:</string>
+    <string name="clienteVenda">CLIENTE:</string>
+    
     
     <string name="title_activity_cadastrar_vendas">CadastrarVendas</string>
     <string name="title_activity_gerenciar_venda">GerenciarVenda</string>
