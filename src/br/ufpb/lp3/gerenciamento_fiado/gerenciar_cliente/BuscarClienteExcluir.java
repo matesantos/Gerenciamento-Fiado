@@ -12,6 +12,7 @@ import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
 import android.app.Activity;
 import android.database.Cursor;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -74,6 +75,8 @@ public class BuscarClienteExcluir extends Activity {
 			
 			Cliente cli = new Cliente(clienteDao.getID(clienteLista),clienteDao.getNome(clienteLista), clienteDao.getTelefone(clienteLista),
 						  clienteDao.getRG(clienteLista), clienteDao.getCPF(clienteLista), endereco);
+			
+			Log.i("cpf:", cli.getCpf());
 			
 			clientes.add(cli);
 			

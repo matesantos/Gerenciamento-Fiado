@@ -70,7 +70,7 @@ public class CadastrarVendas extends Activity {
 
 		@Override
 		public void onClick(View v) {
-			valorParcial = (float) (Long.valueOf(quantidade.getText().toString()) * Long.valueOf(preco.getText().toString())); 
+			valorParcial = (float) (Integer.valueOf((quantidade.getText().toString())) * Float.valueOf(preco.getText().toString())); 
 			valorTotal.setText(String.valueOf(valorParcial));
 		}
 		
@@ -156,22 +156,17 @@ public class CadastrarVendas extends Activity {
 	}
 	
 	private class finalizarVenda implements OnClickListener{
-
 		@Override
 		public void onClick(View v) {
-		
 			salvarVenda();
-			
 		}
-		
 	}
 	
 	private void salvarVenda(){
 		
-		Cursor cli = null;
+		Cursor cli= null;
 		VendasBD vendaBD = VendasBDFactory.getVendasBD(this);
 		ClienteBD clienteBD = ClienteBDFactory.getClienteBD(this);
-		
 		cli = clienteBD.buscarClientePorCPF(cpf.getText().toString());
 		
 		if(cli.getCount() == 0){

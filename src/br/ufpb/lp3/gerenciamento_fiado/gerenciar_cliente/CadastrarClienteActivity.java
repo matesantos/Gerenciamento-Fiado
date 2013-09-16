@@ -246,6 +246,12 @@ public class CadastrarClienteActivity extends Activity {
 		}
 		
 	}
+	
+	private void publicarNomeRedoSocial(String nome){
+		
+		
+		
+	}
 
 
 }

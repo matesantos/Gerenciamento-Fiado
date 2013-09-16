@@ -33,7 +33,7 @@
     	 CADASTRARCLIENTE 
     	 ATUALIZARCLINTE
     	 BUSCARCLIENTE
-    	 EXCLUIRCLIENTE
+    	 EXCLUIRCLIENTE
     -->
 
     <string name="title_activity_atualizar_cliente">Atualizar Cliente</string>
@@ -52,8 +52,8 @@
     <string name="dadosPessoaisCliente">DADOS PESSOAIS DO CLIENTE:</string>
     <string name="dadosEnderecoCliente">ENDEREÇO DO CLIENTE:</string>
     <string name="title_activity_novo_cliente">NOVO CLIENTE</string>
-	<string name="cadastrarClienteRemotamente">Cadastrar vendedor no servidor</string>
-    
+    <string name="cadastrarClienteRemotamente">Cadastrar vendedor no servidor</string>
+
     <!-- strings do GERENCIARVENDEDOR -->
     <string name="cadastrarVendedor">CADASTRAR VENDEDOR</string>
     <string name="atualizarVendedor">ATUALIZAR VENDEDOR</string>
@@ -65,7 +65,8 @@
     	 CADASTRARVENDEDOR 
     	 ATUALIZARVENDEDOR
     	 BUSCARVENDEDOR
-    	 EXCLUIRVENDEDOR    -->
+    	 EXCLUIRVENDEDOR
+    -->
 
     <string name="title_activity_cadastrar_vendedor">Cadastrar Vendedor</string>
     <string name="title_activity_atualizar_vendedor">Atualizar Vendedor</string>
@@ -93,7 +94,6 @@
     <string name="cancelar">CANCELAR</string>
     <string name="pesquisar">PESQUISAR</string>
 
-
     <!-- strings do GERENCIARPRODUTO -->
     <string name="cadastrarProduto">CADASTRAR PRODUTO</string>
     <string name="atualizarProduto">ATUALIZAR PRODUTO</string>
@@ -109,7 +109,8 @@
     	 CADASTRARPRODUTO 
     	 ATUALIZARPRODUTO
     	 BUSCARPRODUTO
-    	 EXCLUIRPRODUTO    -->
+    	 EXCLUIRPRODUTO
+    -->
 
     <string name="nomeProduto">DESCRIÇÃO:</string>
     <string name="precoProduto">PREÇO:</string>
@@ -148,13 +149,11 @@
     <string name="backgroundPadraoKeySummaray">A cor de fundo padrão do sistema</string>
     <string name="backgroundRosa">backgroundRosa</string>
     <string name="salvarDadosRemotamenteKey">salvarDadosRemotamenteKey</string>
-    
     <string name="idiomaTille">idioma</string>
     <string name="idiomaTilleKey">idiomaTilleKey</string>
-    
     <string name="TamanhoFonte">Fonte</string>
     <string name="TamanhoFontekey">TamanhoFontekey</string>
-    
+
     <!-- String do GERENCIAR VENDA -->
     <string name="cadastrarVenda">CADASTRAR VENDA</string>
     <string name="buscarVenda">BUSCAR VENDA</string>
@@ -167,9 +166,8 @@
     <string name="calcularValorTotal">CALCULAR</string>
     <string name="descricaoProduto">Descrição:</string>
     <string name="clienteVenda">CLIENTE:</string>
-    
-    
     <string name="title_activity_cadastrar_vendas">CadastrarVendas</string>
     <string name="title_activity_gerenciar_venda">GerenciarVenda</string>
-    
+    <string name="title_activity_compartilhar_rede_social">CompartilharRedeSocial</string>
+
 </resources>

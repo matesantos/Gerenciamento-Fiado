@@ -21,23 +21,33 @@
         android:width="400dp"/>
 
     <Button
-        android:id="@+id/buttonBuscarTelaGerenciarVenda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonExcluirTelaGerenciarVenda"
-        android:layout_below="@+id/buttonCadastrarTelaGerenciarVenda"
-        android:layout_marginTop="80dp"
-        android:text="@string/buscarCliente"
-        android:width="400dp" />
-
-    <Button
         android:id="@+id/buttonExcluirTelaGerenciarVenda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonBuscarTelaGerenciarVenda"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="@string/excluirVenda"
         android:width="400dp" />
+
+    <Button
+        android:id="@+id/buttonBuscarTelaGerenciarVenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonExcluirTelaGerenciarVenda"
+        android:layout_below="@+id/buttonCadastrarTelaGerenciarVenda"
+        android:layout_marginTop="32dp"
+        android:text="@string/buscarCliente"
+        android:width="400dp" />
+
+    <Button
+        android:id="@+id/voltarTelaGerenciarVendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonExcluirTelaGerenciarVenda"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonExcluirTelaGerenciarVenda"
+        android:layout_marginTop="30dp"
+        android:text="Voltar" />
 
 </RelativeLayout>

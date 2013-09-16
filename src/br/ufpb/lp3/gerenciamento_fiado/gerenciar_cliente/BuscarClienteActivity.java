@@ -100,7 +100,6 @@ public class BuscarClienteActivity extends Activity {
 		
 	private void mudarTela(int position){
 		clienteLista.moveToPosition(position);
-		Log.i("Nome do cliente", clientes.get(position).getNome());
 		Utils.goToActivityCliente(this, AtualizarClienteActivity.class,clientes.get(position));
 	}
 	

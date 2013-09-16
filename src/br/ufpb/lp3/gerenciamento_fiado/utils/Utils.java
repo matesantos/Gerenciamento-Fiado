@@ -32,6 +32,7 @@ public class Utils {
 		currentActivity.startActivity(newActivity);
 	}
 	
+
 	public static void goToActivityCliente(Context currentActivity, Class<? extends Activity> newClass, Cliente cliente) {
 		Intent newActivity = new Intent(currentActivity, newClass);
 		newActivity.putExtra("cliente", cliente);

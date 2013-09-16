@@ -57,7 +57,6 @@ public class GerenciarClienteActivity extends Activity {
 	}
 	
 	public void excluirCLiente (View v){
-		Utils.goToActivity(this, BuscarClienteExcluir.class);
 		Utils.goToActivity(this, ExcluirClienteActivity.class);
 	}
 	

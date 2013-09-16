@@ -9,17 +9,19 @@
         android:targetSdkVersion="10" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
-        <provider android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.ProdutoProvider"
-            	  android:authorities="br.ufpb.lp3.gerenciamento_fiado.gerenciarProdutos">
+        <provider
+            android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.ProdutoProvider"
+            android:authorities="br.ufpb.lp3.gerenciamento_fiado.gerenciarProdutos" >
         </provider>
-        
+
         <activity
             android:name="br.ufpb.lp3.gerenciamento_fiado.menu_principal.MenuPrincipalActivity"
             android:label="@string/app_name" >
@@ -38,7 +40,7 @@
             android:label="@string/title_activity_cadastrar_cliente" >
         </activity>
         <activity
-            android:name="br.ufpb.lp3.gerenciamento_fiado.GerenciarProdutosActivity"
+            android:name="br.ufpb.lp3.gerenciamento_fiado.rede_social.GerenciarProdutosActivity"
             android:label="@string/title_activity_gerenciar_produtos" >
         </activity>
         <activity
@@ -132,6 +134,10 @@
         <activity
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_vendas.GerenciarVendaActivity"
             android:label="@string/title_activity_gerenciar_venda" >
+        </activity>
+        <activity
+            android:name="br.ufpb.lp3.gerenciamento_fiado.rede_social.CompartilharRedeSocial"
+            android:label="@string/title_activity_compartilhar_rede_social" >
         </activity>
     </application>
 
