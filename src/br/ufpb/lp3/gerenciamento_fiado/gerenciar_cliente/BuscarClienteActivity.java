@@ -68,11 +68,21 @@ public class BuscarClienteActivity extends Activity {
 		
 		startManagingCursor(clienteLista);
 		
-		Log.i("Tamanho da lista",String.valueOf(clienteLista.getCount()));
+//		for(int i = 0; i < clienteLista.getCount(); i++){
+//			
+//			Endereco endereco = new Endereco(clienteDao.getRua(clienteLista),clienteDao.getNumero(clienteLista),
+//									clienteDao.getCEP(clienteLista), clienteDao.getEstado(clienteLista),
+//									clienteDao.getCidade(clienteLista), clienteDao.getBairro(clienteLista));
+//			
+//			Cliente cli = new Cliente(clienteDao.getID(clienteLista),clienteDao.getNome(clienteLista), clienteDao.getTelefone(clienteLista),
+//						  clienteDao.getRG(clienteLista), clienteDao.getCPF(clienteLista), endereco);
+//			
+//			Log.i("cli",cli.getCpf());
+//			
+//			clientes.add(cli);
+//		}
 		
-		for(int i = 0; i < clienteLista.getCount(); i++){
-			
-			Log.i("Nome do cliente",clienteDao.getNome(clienteLista));
+		do{
 			
 			Endereco endereco = new Endereco(clienteDao.getRua(clienteLista),clienteDao.getNumero(clienteLista),
 									clienteDao.getCEP(clienteLista), clienteDao.getEstado(clienteLista),
@@ -80,9 +90,11 @@ public class BuscarClienteActivity extends Activity {
 			
 			Cliente cli = new Cliente(clienteDao.getID(clienteLista),clienteDao.getNome(clienteLista), clienteDao.getTelefone(clienteLista),
 						  clienteDao.getRG(clienteLista), clienteDao.getCPF(clienteLista), endereco);
-			Log.i("Nome do cliente",cli.getEndereco().getCidade());
 			
-		}
+			Log.i("cli",cli.getCpf());
+			
+			clientes.add(cli);
+		}while(clienteLista.moveToNext());
 		
 		adapter = new AdapterCliente(this, clienteLista,clientes);
 		

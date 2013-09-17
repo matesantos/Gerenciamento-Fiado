@@ -59,7 +59,6 @@ public class BuscarProdutoActivity extends Activity {
 		
 		ProdutoBD produtoDao = ProdutoBDFactory.getProdutoBD(this); 
 		
-//		produtoCurso = (Cursor) produtoDao.getProduto(2l);
 		produtoCurso = produtoDao.buscarTodosOsProdutos();
 		
 		if(produtoCurso.isBeforeFirst()){
@@ -68,14 +67,19 @@ public class BuscarProdutoActivity extends Activity {
 		
 		startManagingCursor(produtoCurso);
 		
-		for(int i = 0; i < produtoCurso.getCount(); i++){
-			
-			Produto pro = new Produto(produtoDao.getID(produtoCurso),produtoDao.getNome(produtoCurso), Float.parseFloat(produtoDao.getPreco(produtoCurso)));
-			
-			produtoLista.add(pro);
-			
-		}
+//		for(int i = 0; i < produtoCurso.getCount(); i++){
+//			
+//			Produto pro = new Produto(produtoDao.getID(produtoCurso),produtoDao.getNome(produtoCurso), Float.parseFloat(produtoDao.getPreco(produtoCurso)));
+//			
+//			produtoLista.add(pro);
+//			
+//		}
 		
+		do{
+			Produto pro = new Produto(produtoDao.getID(produtoCurso),produtoDao.getNome(produtoCurso), Float.parseFloat(produtoDao.getPreco(produtoCurso)));
+			produtoLista.add(pro);
+		}while(produtoCurso.moveToNext());
+
 		adapterProduto = new AdapterProduto(this, produtoCurso,produtoLista);
 		
 		listProduto.setAdapter(adapterProduto);

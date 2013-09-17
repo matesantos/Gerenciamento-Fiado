@@ -55,7 +55,7 @@ public class GerenciarVendaActivity extends Activity {
 	}
 	
 	public void CadastrarVenda(){
-		Utils.goToActivity(this, CadastrarVendas.class);
+		Utils.goToActivityVendedor(this, CadastrarVendas.class,vendedor);
 	}
 	
 	public void Voltar(){

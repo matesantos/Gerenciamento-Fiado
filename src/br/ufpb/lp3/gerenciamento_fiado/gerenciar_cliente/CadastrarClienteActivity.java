@@ -13,6 +13,7 @@ import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
 import br.ufpb.lp3.gerenciamento_fiado.models.Endereco;
 import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteBDFactory;
 import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteDAO;
+import br.ufpb.lp3.gerenciamento_fiado.rede_social.CompartilharRedeSocial;
 import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 import android.os.Bundle;
 import android.app.Activity;
@@ -107,7 +108,7 @@ public class CadastrarClienteActivity extends Activity {
 	}
 	
 	private void retornarTela(){
-		Utils.goToActivity(this, GerenciarClienteActivity.class);
+		Utils.goToActivity(this, CompartilharRedeSocial.class);
 	}
 
 	private class SpinnerUFInfo implements OnItemSelectedListener{

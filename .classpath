@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="libs/Models.jar"/>
 	<classpathentry kind="lib" path="libs/socialauth-4.2.jar"/>
 	<classpathentry kind="lib" path="libs/socialauth-android-2.6.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FacebookSDK"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

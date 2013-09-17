@@ -4,30 +4,10 @@
     android:layout_height="fill_parent"
     android:background="#000000" >
 
-    <LinearLayout
-        android:id="@+id/topbar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/blue_gradient"
-        android:orientation="horizontal"
-        android:padding="7dp" >
-
-        <TextView
-            android:id="@+id/textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Compartilhar em uma rede social"
-            android:textColor="#ffffff"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
     <View
         android:id="@+id/view01"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:layout_below="@+id/topbar"
         android:background="#313437" />
 
     <TextView
@@ -56,7 +36,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTxt"
+        android:id="@+id/editTextCompartilharTelaRedeSocial"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dialogTitle"
@@ -66,22 +46,7 @@
         android:hint="Entre com a Mensagem"
         android:textColor="#000000"
         android:textSize="12sp" />
-
-    <Button
-        android:id="@+id/update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editTxt"
-        android:layout_below="@+id/editTxt"
-        android:layout_marginRight="10dp"
-        android:background="#147af8"
-        android:padding="5dp"
-        android:text="Compartilhar"
-        android:textColor="#ffffff"
-        android:textSize="12sp" />
     
-    
-
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -97,12 +62,16 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/buttonVoltarTelaRedeSocial"
+        android:id="@+id/update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/dialogTitle"
-        android:layout_alignTop="@+id/update"
-        android:layout_marginLeft="17dp"
-        android:text="Voltar" />
+        android:layout_alignRight="@+id/dialogTitle"
+        android:layout_below="@+id/editTextCompartilharTelaRedeSocial"
+        android:layout_marginTop="43dp"
+        android:background="#147af8"
+        android:padding="5dp"
+        android:text="Compartilhar"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
 
 </RelativeLayout>

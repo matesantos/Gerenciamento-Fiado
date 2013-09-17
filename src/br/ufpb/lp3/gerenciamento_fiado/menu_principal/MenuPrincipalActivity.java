@@ -77,7 +77,7 @@ public class MenuPrincipalActivity extends Activity {
     }
     
     public void GerenciarVendas(View v){
-    	Utils.goToActivity(this, GerenciarVendaActivity.class);
+    	Utils.goToActivityVendedor(this, GerenciarVendaActivity.class,vendedor);
     }
     
     public void Configuracoes(View v){

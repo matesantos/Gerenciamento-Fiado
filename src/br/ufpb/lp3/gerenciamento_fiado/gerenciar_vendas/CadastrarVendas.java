@@ -14,6 +14,7 @@ import br.ufpb.lp3.gerenciamento_fiado.R;
 import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
 import br.ufpb.lp3.gerenciamento_fiado.models.Produto;
 import br.ufpb.lp3.gerenciamento_fiado.models.Venda;
+import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
 import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.produtos.ProdutoBD;
 import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.produtos.ProdutoBDFactory;
 import br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente.ClienteBD;
@@ -38,14 +39,17 @@ public class CadastrarVendas extends Activity {
 	static Float valorParcial = (float) 0;
 	
 	private Produto prod =  null;
-
+	private Vendedor vendedor = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_cadastrar_vendas);
 		
-		cancelar		 = (Button)findViewById(R.id.buttonCancelarTelaCadastrarVenda);
+		Bundle dados = getIntent().getExtras();
+	    vendedor = (Vendedor)dados.getSerializable("vendedor");		
+		
+	    cancelar		 = (Button)findViewById(R.id.buttonCancelarTelaCadastrarVenda);
 		finalizarVenda   = (Button)findViewById(R.id.buttonFinalizarVendaTelaCadastrarVenda);
 		pesquisar 		 = (ImageButton)findViewById(R.id.imageButtonPesquisarProdutoTelaBuscarVenda);
 		calcular 		 = (Button)findViewById(R.id.buttonCalcularValorTotalTelaCadastrarVenda);
@@ -55,7 +59,7 @@ public class CadastrarVendas extends Activity {
 		quantidade.setEnabled(false);
 		
 		descricao 		= (TextView)findViewById(R.id.textViewDescricaoProdutoTelaCadastrarVenda);
-		cpf 			= (TextView)findViewById(R.id.CPFClienteTelaCadastarVenda);
+		cpf 			= (TextView)findViewById(R.id.editTextCpfClienteTelaCadastrarVenda);
 		preco 			= (TextView)findViewById(R.id.precoProdutoTelaCadastrarVenda2);
 		valorTotal 		= (TextView)findViewById(R.id.textViewValorTotalTelaCadastrarVenda2);
 		
@@ -152,7 +156,7 @@ public class CadastrarVendas extends Activity {
 		descricao.setText("");
 		cpf.setText("");
 		
-		Utils.goToActivity(this, GerenciarVendaActivity.class);
+		Utils.goToActivityVendedor(this, GerenciarVendaActivity.class,vendedor);
 	}
 	
 	private class finalizarVenda implements OnClickListener{

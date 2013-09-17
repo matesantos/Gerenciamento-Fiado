@@ -131,7 +131,7 @@
             android:text="@string/clienteVenda"/>
 
           <br.ufpb.lp3.gerenciamento_fiado.utils.CpfMaskEditText
-                android:id="@+id/editTextClienteTelaCadastrarVenda"
+                android:id="@+id/editTextCpfClienteTelaCadastrarVenda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

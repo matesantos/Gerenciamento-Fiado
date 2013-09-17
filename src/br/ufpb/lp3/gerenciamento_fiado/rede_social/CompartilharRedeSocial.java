@@ -38,20 +38,14 @@ public class CompartilharRedeSocial extends Activity {
 		share.setText("Share");
 		share.setTextColor(Color.WHITE);
 		share.setBackgroundResource(R.drawable.button_gradient);
+		
+		update = (Button) findViewById(R.id.update);
 
 		// Add it to Library
 		adapter = new SocialAuthAdapter(new ResponseListener());
 
 		// Add providers
 		adapter.addProvider(Provider.FACEBOOK, R.drawable.facebook);
-		adapter.addProvider(Provider.TWITTER, R.drawable.twitter);
-		adapter.addProvider(Provider.YAMMER, R.drawable.yammer);
-
-		// Providers require setting user call Back url
-		adapter.addCallBack(Provider.TWITTER,
-				"http://socialauth.in/socialauthdemo/socialAuthSuccessAction.do");
-		adapter.addCallBack(Provider.YAMMER,
-				"http://socialauth.in/socialauthdemo/socialAuthSuccessAction.do");
 
 		// Enable Provider
 		adapter.enable(share);
@@ -64,14 +58,12 @@ public class CompartilharRedeSocial extends Activity {
 			Log.d("ShareButton", "Authentication Successful");
 
 			// Get name of provider after authentication
-			final String providerName = values
-					.getString(SocialAuthAdapter.PROVIDER);
+			final String providerName = values.getString(SocialAuthAdapter.PROVIDER);
 			Log.d("ShareButton", "Provider Name = " + providerName);
-			Toast.makeText(CompartilharRedeSocial.this,
-					providerName + " connected", Toast.LENGTH_LONG).show();
+			Toast.makeText(CompartilharRedeSocial.this,	providerName + " connected", Toast.LENGTH_LONG).show();
 
 			update = (Button) findViewById(R.id.update);
-			edit = (EditText) findViewById(R.id.editTxt);
+			edit = (EditText) findViewById(R.id.editTextCompartilharTelaRedeSocial);
 
 			// Please avoid sending duplicate message. Social Media Providers
 			// block duplicate messages.
@@ -80,12 +72,8 @@ public class CompartilharRedeSocial extends Activity {
 
 				@Override
 				public void onClick(View v) {
-					adapter.updateStatus(edit.getText().toString(),
-							new MessageListener(), false);
+					adapter.updateStatus(edit.getText().toString(),	new MessageListener(), false);
 
-					// to share on multiple providers
-					adapter.updateStatus(edit.getText().toString(),
-							new MessageListener(), false);
 				}
 			});
 
