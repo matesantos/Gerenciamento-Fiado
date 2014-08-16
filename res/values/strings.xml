@@ -133,7 +133,6 @@
     <string name="atualizarMenuPopup">ATUALIZAR</string>
     <string name="excluirMenuPopup">EXCLUIR</string>
     <string name="title_activity_buscar_tela_excluir_cliente">BuscarTelaExcluirCliente</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_buscar_cliente_excluir">BuscarClienteExcluir</string>
     <string name="title_activity_excluir_produto_list">ExcluirProdutoList</string>
     <string name="title_activity_configuracoes">Configuracoes</string>
@@ -170,4 +169,7 @@
     <string name="title_activity_gerenciar_venda">GerenciarVenda</string>
     <string name="title_activity_compartilhar_rede_social">CompartilharRedeSocial</string>
 
+    <!-- Strings do BUSCAR CLIENTE -->
+    <string name="atualizarClienteBuscar">Atualizar dados do cliente</string>
+    <string name="searchClienteMap">Procurar o cliente no mapa</string>
 </resources>

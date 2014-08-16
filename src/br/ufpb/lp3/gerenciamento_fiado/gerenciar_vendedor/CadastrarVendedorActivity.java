@@ -23,11 +23,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import br.ufpb.gerenciamento_fiado.URL.HttpUtils;
 import br.ufpb.lp3.gerenciamento_fiado.R;
+import br.ufpb.lp3.gerenciamento_fiado.menu_principal.MenuPrincipalActivity;
 import br.ufpb.lp3.gerenciamento_fiado.mesagens.Mensagens;
 import br.ufpb.lp3.gerenciamento_fiado.models.Endereco;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
 import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorBDFactory;
 import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorDAO;
+import br.ufpb.lp3.gerenciamento_fiado.tela_login.LoginActivity;
 import br.ufpb.lp3.gerenciamento_fiado.utils.Utils;
 
 public class CadastrarVendedorActivity extends Activity {
@@ -53,9 +55,9 @@ public class CadastrarVendedorActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_cadastrar_vendedor);
 		
-		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
+		//SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
 	        
-	    boolean salvarRemotamente = preference.getBoolean(getString(R.string.salvarDadosRemotamenteKey), false);
+	    //boolean salvarRemotamente = preference.getBoolean(getString(R.string.salvarDadosRemotamenteKey), false);
 		
 		//edit text
 		nomeVendedor 			= (EditText)findViewById(R.id.editTextNomeVendedorTelaCadastrarVendedor);
@@ -82,15 +84,16 @@ public class CadastrarVendedorActivity extends Activity {
 		spinnerUF.setOnItemSelectedListener(new SpinnerUFInfo());
 		
 		//button
-		cadastrarRemotamente = (Button) findViewById(R.id.buttonApagarTelaCadastrarVendedor);
-		cadastrarRemotamente.setOnClickListener(new salvaDadosRemotamente());
 		
+		/*cadastrarRemotamente = (Button) findViewById(R.id.buttonApagarTelaCadastrarVendedor);
+		cadastrarRemotamente.setOnClickListener(new salvaDadosRemotamente());*/
+		/*
 		if(!salvarRemotamente){
 			cadastrarRemotamente.setEnabled(true);
 		}else{
 			cadastrarRemotamente.setEnabled(true);
 		}
-		
+		*/
 		cadastrar = (Button) findViewById(R.id.buttonCadastrarTelaCadastrarVendedor);
 		cadastrar.setOnClickListener(new CadastrarButton());
 	}
@@ -116,16 +119,19 @@ public class CadastrarVendedorActivity extends Activity {
 				
 				Utils.mostrarMensagens(CadastrarVendedorActivity.this, "Vendedor cadastrado neste dispositivo com Sucesso. Faça o seu login agora.");
 				
+				retornarTelaLogin();
+				
+				/*
 				if(cadastrarVendedorNoServidor(nomeVendedor.getText().toString(),telefoneVendedor.getText().toString(),rgVendedor.getText().toString(),
 							  cpfVendedor.getText().toString(),end,loginVendedor.getText().toString(),senhaVendedor.getText().toString())){
 					
 					Utils.mostrarMensagens(CadastrarVendedorActivity.this, "Vendedor cadastrado no servidor com sucesso.");
 					
-				}
+				}*/
 				
 			}
 		}
-		
+
 	}
 	
     private class SpinnerUFInfo implements OnItemSelectedListener{
@@ -288,6 +294,10 @@ public class CadastrarVendedorActivity extends Activity {
 			return true;
 		}
 		
+	}
+	
+	private void retornarTelaLogin() {
+		Utils.goToActivity(this, LoginActivity.class);
 	}
 
 }

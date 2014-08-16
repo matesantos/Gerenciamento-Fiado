@@ -38,7 +38,7 @@ public class MenuPrincipalActivity extends Activity {
         
         Utils.mostrarMensagens(this, String.valueOf("Bem vindo "+vendedor.getNome()));
         
-        //confugurações da tela
+        //configurações da tela
         rl = (RelativeLayout)findViewById(R.id.menuPrincipaRelativeLayout);
         
         SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);

@@ -6,7 +6,6 @@ import java.util.List;
 import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
 import br.ufpb.lp3.gerenciamento_fiado.models.Produto;
 import br.ufpb.lp3.gerenciamento_fiado.models.Vendedor;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -61,9 +60,6 @@ public class Utils {
 	
 	public static void mudarFundoDeImagem(Context currentActivity){
 		
-		
-		
 	}
-	
 
 }

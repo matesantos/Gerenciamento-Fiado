@@ -17,6 +17,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        
+		        
         <provider
             android:name="br.ufpb.lp3.gerenciamento_fiado.gerenciar_produto.ProdutoProvider"
             android:authorities="br.ufpb.lp3.gerenciamento_fiado.gerenciarProdutos" >

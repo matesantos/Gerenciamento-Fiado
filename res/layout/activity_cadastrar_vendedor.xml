@@ -392,7 +392,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/cadastrarVendedor" />
          </LinearLayout> 
-         
+         <!-- 
           <LinearLayout
             android:id="@+id/linearLayoutTelaLogin5"
             android:layout_width="match_parent"
@@ -408,7 +408,7 @@
                 android:text="@string/cadastrarClienteRemotamente" />
 
         </LinearLayout>
-        
+         -->
     </LinearLayout>
 
 </ScrollView>
