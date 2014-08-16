@@ -3,7 +3,6 @@ package br.ufpb.lp3.gerenciamento_fiado.pesistencia_dados.cliente;
 import java.util.List;
 
 import br.ufpb.lp3.gerenciamento_fiado.models.Cliente;
-import br.ufpb.lp3.gerenciamento_fiado.persistencia_dados.vendedor.VendedorDAO;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -147,7 +146,21 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 	}
 
 	@Override
-	public Cliente buscarClientePorNome(String nome) {
+	public Cursor buscarClientePorNome(String nome) {
+		String query = "SELECT * FROM " + ClienteDAO.tabelaCliente
+				+ " WHERE " + ClienteDAO.nome+ " = '" + nome + "';";
+
+		try {
+			return getReadableDatabase().rawQuery(query, null);
+		} catch (android.database.SQLException sql) {
+			Log.e("Cadastrar Cliente", sql.getMessage());
+			Log.e("Cadastrar Cliente",
+					Log.getStackTraceString(sql.fillInStackTrace()));
+		} catch (Exception e) {
+			Log.e("Cadastrar Cliente", e.getMessage());
+			Log.e("Cadastrar Cliente",	Log.getStackTraceString(e.fillInStackTrace()));
+		}
+		
 		return null;
 	}
 	
@@ -160,12 +173,12 @@ public class ClienteBD extends SQLiteOpenHelper implements ClienteDAO{
 		try {
 			return getReadableDatabase().rawQuery(query, null);
 		} catch (android.database.SQLException sql) {
-			Log.e("Cadastrar Vendedor", sql.getMessage());
-			Log.e("Cadastrar Vendedor",
+			Log.e("Cadastrar Cliente", sql.getMessage());
+			Log.e("Cadastrar Cliente",
 					Log.getStackTraceString(sql.fillInStackTrace()));
 		} catch (Exception e) {
-			Log.e("Cadastrar Vendedor", e.getMessage());
-			Log.e("Cadastrar Vendedor",	Log.getStackTraceString(e.fillInStackTrace()));
+			Log.e("Cadastrar Cliente", e.getMessage());
+			Log.e("Cadastrar Cliente",	Log.getStackTraceString(e.fillInStackTrace()));
 		}
 
 		return null;

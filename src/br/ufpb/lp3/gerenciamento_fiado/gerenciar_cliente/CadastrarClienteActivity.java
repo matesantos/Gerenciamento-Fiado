@@ -94,14 +94,14 @@ public class CadastrarClienteActivity extends Activity {
 							  cpfCliente.getText().toString(),end)){
 				
 				Utils.mostrarMensagens(CadastrarClienteActivity.this, "Cliente cadastrado com sucesso");
-				
+				/*
 				if(cadastrarClienteNoServidor(nomeCliente.getText().toString(),telefoneCliente.getText().toString(),rgCliente.getText().toString(),
 							  cpfCliente.getText().toString(),end)){
 					Utils.mostrarMensagens(CadastrarClienteActivity.this, "Cliente cadastrado no servidor com sucesso");
 					
-					retornarTela();
-				}
-				
+					
+				}*/
+				retornarTela();
 			}
 		}
 		

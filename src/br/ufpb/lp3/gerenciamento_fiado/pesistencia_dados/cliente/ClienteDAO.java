@@ -38,7 +38,7 @@ public interface ClienteDAO {
 	  public List<Cliente> listarCliente();
 
 	  // Busca o Cliente pelo nome
-	  public Cliente buscarClientePorNome(String nome);
+	  public Cursor buscarClientePorNome(String nome);
 
 	  public Cursor buscarClientePorCPF(String cpf);
 

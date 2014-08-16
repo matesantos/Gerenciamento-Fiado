@@ -48,7 +48,7 @@ public class GerenciarClienteActivity extends Activity {
 	}
 	
 	public void atualizarCLiente (View v){
-		Utils.mostrarMensagens(this, "Você só poderá atualizar cliente selecionando primeiro o cliente na tela Buscar CLiente.");	
+		Utils.mostrarMensagens(this, "Você só poderá atualizar cliente selecionando primeiro o cliente na tela Buscar Cliente.");	
 	}
 	
 	public void buscarCLiente (View v){
